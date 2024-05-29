@@ -1,8 +1,9 @@
 ![온 정 헤더 배너](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&animation=twinkling)
 
-## 🪷 소개
+## 🪷 소개 
 
 - **온 정**은 동국대학교의 정각원을 모티브로 한 특별한 서비스입니다.
+- 김연진 메롱
 ---
 
 ## ⚙️ 기능 소개
