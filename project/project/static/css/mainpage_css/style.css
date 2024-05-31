@@ -1,0 +1,374 @@
+.macbook-pro {
+  background-color:  #ffbb6c;
+  width: 100%;
+  height: 100%;
+}
+
+.macbook-pro .overlap {
+    background-color:  #ffbb6c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50%;
+}
+
+.macbook-pro .overlap-group {
+  position: absolute;
+  transform: scale(0.7, 0.7);
+  
+}
+
+.macbook-pro .group {
+  position: relative;
+  width: 480px;
+  height: 404px;
+  top: 639px;
+  left: 71px;
+  background-color: #f8e9dc;
+  border-radius: 144px;
+}
+
+.macbook-pro .frame {
+  position: relative;
+  top: 252px;
+  left: 73px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 26px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.macbook-pro .element {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "210 Hayanbaram-Light", Helvetica;
+  font-weight: 300;
+  color: #2a1400;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.macbook-pro .rectangle {
+  position: absolute;
+  width: 622px;
+  height: 460px;
+  top: 68px;
+  left: 0;
+  background-color: #f8e9dc;
+  border-radius: 192.5px;
+}
+
+.macbook-pro .text-wrapper {
+  position: absolute;
+  top: 256px;
+  left: 215px;
+  font-family: "210 Hayanbaram-Bold", Helvetica;
+  font-weight: 700;
+  color: #2a1400;
+  font-size: 107px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.macbook-pro .div {
+  position: absolute;
+  width: 321px;
+  top: 224px;
+  left: 151px;
+  font-family: "210 Hayanbaram-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.macbook-pro .div-wrapper {
+  position: absolute;
+  top: 411px;
+  left: 143px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 26px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.macbook-pro .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "210 Hayanbaram-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 30px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.macbook-pro .group-wrapper {
+  position: absolute;
+  width: 235px;
+  height: 73px;
+  top: 136px;
+  left: 194px;
+  background-color: #2a2122;
+  border: 10px solid;
+  border-color: #c0c0c0;
+}
+
+.macbook-pro .img {
+  position: absolute;
+  width: 95px;
+  height: 36px;
+  top: 9px;
+  left: 60px;
+}
+
+.macbook-pro .element-2 {
+  position: absolute;
+  width: 461px;
+  height: 298px;
+  top: 0;
+  left: 81px;
+}
+
+.macbook-pro .vector {
+  position: absolute;
+  width: 26px;
+  height: 95px;
+  top: 262px;
+  left: 164px;
+}
+
+.macbook-pro .rectangle-2 {
+  position: absolute;
+  width: 37px;
+  height: 10px;
+  top: 354px;
+  left: 159px;
+  background-color: #b8b8b8;
+  border-radius: 8px;
+}
+
+.macbook-pro .vector-2 {
+  position: absolute;
+  width: 26px;
+  height: 95px;
+  top: 260px;
+  left: 427px;
+}
+
+.macbook-pro .rectangle-3 {
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 353px;
+  left: 422px;
+  background-color: #b8b8b8;
+  border-radius: 8px;
+}
+
+.macbook-pro .overlap-group-wrapper {
+  position: absolute;
+  width: 461px;
+  height: 334px;
+  top: 504px;
+  left: 79px;
+}
+
+.macbook-pro .overlap-group-2 {
+  position: relative;
+  height: 334px;
+}
+
+.macbook-pro .element-3 {
+  position: absolute;
+  width: 461px;
+  height: 307px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.macbook-pro .group-2 {
+  position: absolute;
+  width: 134px;
+  height: 157px;
+  top: 178px;
+  left: 164px;
+}
+
+.macbook-pro .overlap-2 {
+    transform: scale(0.7, 0.7);
+  position: absolute;
+  
+}
+
+.macbook-pro .frame-wrapper {
+  position: absolute;
+  width: 480px;
+  height: 404px;
+  top: 133px;
+  left: 0;
+  background-color: #f8e9dc;
+  border-radius: 144px;
+}
+
+.macbook-pro .frame-2 {
+  position: relative;
+  top: 264px;
+  left: 116px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 26px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.macbook-pro .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "210 Hayanbaram-Light", Helvetica;
+  font-weight: 300;
+  color: #2a1400;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.macbook-pro .group-3 {
+  position: absolute;
+  width: 461px;
+  height: 334px;
+  top: 0;
+  left: 9px;
+}
+
+.macbook-pro .overlap-3 {
+transform: scale(0.7, 0.7);
+  position: absolute;
+  width: 480px;
+  height: 539px;
+  top: 504px;
+  left: 52px;
+}
+
+.macbook-pro .rectangle-4 {
+  position: absolute;
+  width: 480px;
+  height: 404px;
+  top: 135px;
+  left: 0;
+  background-color: #f8e9dc;
+  border-radius: 144px;
+}
+
+.macbook-pro .frame-3 {
+  position: absolute;
+  top: 356px;
+  left: 116px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 26px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.macbook-pro .frame-4 {
+  position: absolute;
+  top: 433px;
+  left: 116px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 26px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.macbook-pro .group-4 {
+  position: absolute;
+  width: 259px;
+  height: 60px;
+  top: 84px;
+  left: 1350px;
+}
+
+.macbook-pro .group-5 {
+  height: 60px;
+}
+
+.macbook-pro .overlap-group-3 {
+  position: relative;
+  width: 259px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.macbook-pro .group-6 {
+  position: absolute;
+  width: 205px;
+  height: 33px;
+  top: 14px;
+  left: 28px;
+}
+
+.macbook-pro .codicon-music {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 0;
+  left: 0;
+}
+
+.macbook-pro .text-wrapper-4 {
+  position: absolute;
+  top: 5px;
+  left: 49px;
+  font-family: "210 Hayanbaram-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.macbook-pro .rectangle-5 {
+  position: absolute;
+  width: 259px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+
+

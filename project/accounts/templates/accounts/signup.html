@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>온 정</title>
+    <meta name="description" content="온 정">
+    <meta name="author" content="온 정">
+    <link href="https://fonts.googleapis.com/css?family=210+Hayanbaram&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <style>
+        body {background: #E5E5E5;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <span class="title">법명 설정하기</span>
+        <div class="separator"></div>
+        <span class="logo">온정</span>
+        <div class="main-content">
+            <div class="input-section">
+                <label for="name-input" class="input-label">사용할 법명을 설정해주세요.</label>
+                <input type="text" id="name-input" class="input-box" placeholder="이름을 입력해주세요.">
+            </div>
+            <div class="input-section">
+                <label for="password-input" class="input-label">비밀번호를 입력해주세요.</label>
+                <input type="password" id="password-input" class="input-box" placeholder="비밀번호를 입력해주세요.">
+            </div>
+            <div class="start-button-container">
+                <div class="start-button"><span class="button-text">시작하기</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
