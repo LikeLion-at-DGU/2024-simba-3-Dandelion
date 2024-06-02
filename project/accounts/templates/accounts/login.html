@@ -15,14 +15,14 @@
 <body>
     <div class="container">
         <div class="background"></div>
-        <span class="title">회원가입</span>
+        <span class="title">로그인</span>
         <div class="separator"></div>
-        <span class="logo">회원가입</span>
+        <span class="logo">로그인</span>
         <div class="main-content">
-            <form action="{% url "accounts:signup" %}" method="POST">
+            <form action="{% url "accounts:login" %}" method="POST">
                 {% csrf_token %}
                 <div class="input-section">
-                    <label for="name-input" class="input-label">사용할 법명을 설정해주세요.</label>
+                    <label for="name-input" class="input-label">법명을 입력해주세요.</label>
                     
                     <input type="text" id="name-input" class="input-box" name="username">
                     

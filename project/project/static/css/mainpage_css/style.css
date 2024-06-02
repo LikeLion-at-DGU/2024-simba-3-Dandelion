@@ -7,17 +7,20 @@
 .macbook-pro .overlap {
     background-color:  #ffbb6c;
     display: flex;
+    transform: scale(0.7, 0.7);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vw;
-    height: 50%;
+    width: 100dvw;
+  height: 100dvh;
 }
 
 .macbook-pro .overlap-group {
   position: absolute;
-  transform: scale(0.7, 0.7);
-  
+  width: 622px;
+  height: 1043px;
+  top: 0;
+  left: 553px;
 }
 
 .macbook-pro .group {
@@ -214,9 +217,11 @@
 }
 
 .macbook-pro .overlap-2 {
-    transform: scale(0.7, 0.7);
   position: absolute;
-  
+  width: 480px;
+  height: 537px;
+  top: 504px;
+  left: 1196px;
 }
 
 .macbook-pro .frame-wrapper {
@@ -265,7 +270,6 @@
 }
 
 .macbook-pro .overlap-3 {
-transform: scale(0.7, 0.7);
   position: absolute;
   width: 480px;
   height: 539px;
@@ -369,6 +373,4 @@ transform: scale(0.7, 0.7);
   border: 1px solid;
   border-color: #000000;
 }
-
-
 

@@ -5,16 +5,15 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="{% static "css/mainpage_css/globals.css" %}" />
     <link rel="stylesheet" href="{% static "css/mainpage_css/style.css" %}"/>
-    <link rel="stylesheet" href="{% static "css/mainpage_css/styleguide.css" %}"/>
+
   </head>
   <body>
     <div class="macbook-pro">
         <div class="overlap">
           <div class="overlap-group">
             <div class="group">
-
               <div class="frame">
-                <div class="element">부처님께 108배 드리고<br />소원빌기/회고하기</div>
+                <div class="element" >부처님께 108배 드리고<br />소원빌기/회고하기</div>
               </div>
 
             </div>
@@ -22,7 +21,22 @@
             <div class="rectangle"></div>
             <div class="text-wrapper">온정</div>
             <p class="div">내 마음의 방향을 잡아줄 온라인 정각원</p>
-            <div class="div-wrapper"><div class="text-wrapper-2">법명 설정하고 시작하기</div>
+            <div class="div-wrapper">
+              {% if user.is_authenticated %}
+                <!-- 로그인 시 보이는 화면-->
+                <a class="nav-link-account">
+                  <a class="nav-link-user">{{user.username}}님 환영합니다! &nbsp</a> 
+                  <a href="{% url "accounts:logout" %}">로그아웃 &nbsp</a> 
+                </a>
+                {% else %}
+                <!-- 로그아웃 시 보이는 화면-->
+                <a class="nav-link-account">
+                  <a href="{% url "accounts:login" %}" method="POST" >로그인 &nbsp</a>
+                </a>
+                <a class="nav-link-account">
+                  <a href="{% url "accounts:signup" %}" method="POST" >회원가입 &nbsp</a>
+                </a>
+                {% endif %}
           </div>
 
           <div class="group-wrapper"><img class="img" src="{% static "images/mainpage_img/onjung.png" %}" /></div>
@@ -51,7 +65,7 @@
           <div class="overlap-3">
             <div class="rectangle-4"></div>
             <div class="frame-3"><div class="text-wrapper-3">미래 들여다보기</div></div>
-            <div class="frame-4"><div class="text-wrapper-3">과거를 참회하기</div></div>
+            <div class="frame-4"><a class="text-wrapper-3" href="{% url "post:past" %}">과거를 참회하기</a></div>
             <div class="group-3">
               <div class="overlap-group-2">
                 <img class="element-3" src="{% static "images/mainpage_img/house.png" %} " /> <img class="group-2" src="{% static "images/mainpage_img/acho.png" %} " />
