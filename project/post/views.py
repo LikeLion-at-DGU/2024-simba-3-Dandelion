@@ -25,3 +25,5 @@ def past_result(request):
     return render(request, 'post/past_result.html', {'past' : past})
    
         
+def future_result(request):
+    pass #잠깐 비워둠
