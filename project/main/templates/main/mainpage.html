@@ -31,10 +31,10 @@
                 {% else %}
                 <!-- 로그아웃 시 보이는 화면-->
                 <a class="nav-link-account">
-                  <a href="{% url "accounts:login" %}" method="POST" >로그인 &nbsp</a>
+                  <a href="{% url "accounts:login" %}" method="GET" >로그인 &nbsp</a>
                 </a>
                 <a class="nav-link-account">
-                  <a href="{% url "accounts:signup" %}" method="POST" >회원가입 &nbsp</a>
+                  <a href="{% url "accounts:signup" %}" method="GET" >회원가입 &nbsp</a>
                 </a>
                 {% endif %}
           </div>
