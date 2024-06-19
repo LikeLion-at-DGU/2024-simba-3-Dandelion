@@ -61,3 +61,9 @@ def post_108(request):
 
 def community_108(request):
     return render(request, 'post/community.html')
+
+def talisman(request): # POST 에 카테고리를 함께 전달
+    if request.method == 'POST':
+        pass
+    else:
+        return render(request, 'post/make_talisman.html')
