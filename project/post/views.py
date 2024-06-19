@@ -70,7 +70,7 @@ def talisman(request): # POST 에 카테고리를 함께 전달
 
 def future(request):
     if request.user.is_authenticated:
-        return render(request, 'post/future.html')
+        return render(request, 'post/future_page.html')
     else:
         return redirect('accounts:login')
 
