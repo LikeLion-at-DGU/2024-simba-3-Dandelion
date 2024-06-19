@@ -23,7 +23,7 @@ def past_result(request):
     past.category = Category.objects.get(id=1) # 참회로 고정
     past.save()
     return render(request, 'post/past_result.html', {'past' : past})
-   
+
 def start_108(request):
     return render(request, 'post/start_108.html')
 
@@ -67,3 +67,24 @@ def talisman(request): # POST 에 카테고리를 함께 전달
         pass
     else:
         return render(request, 'post/make_talisman.html')
+
+def future(request):
+    if request.user.is_authenticated:
+        return render(request, 'post/future.html')
+    else:
+        return redirect('accounts:login')
+
+def future_result(request):
+    
+    future = future()
+
+    future.text = request.POST["user_text"]
+    sutras = Sutra.objects.filter(category=2)
+    if sutras.exists():
+        sutra = random.choice(sutras)
+        future.my_sutra = sutra
+    future.user = request.user
+    
+    future.category = Category.objects.get(id=2) # 소망으로 고정
+    future.save()
+    return render(request, 'post/future_result.html', {'future' : future})
