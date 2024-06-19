@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
 
-<<<<<<< HEAD
-# Create your views here.
-=======
 # Create your views here.
 def signup(request):
     if request.method == 'POST' :
@@ -42,4 +39,3 @@ def logout(request):
     auth.logout(request)
     return redirect("main:mainpage")
 
->>>>>>> cc93022112c7dceb2811903372a0ab470e492c4e
