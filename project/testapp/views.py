@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def past (request):
-    return render(request, 'main/frame8.html')
+    return render(request, 'main/future_page.html')
 
 
 
