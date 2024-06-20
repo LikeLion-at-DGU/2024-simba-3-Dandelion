@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    width: 100vw;
+    min-height: 1080px;
+    background: #FFF;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    /*배경화면 url 넣는 코드 */
+    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+
+
+}
+
+
+.topnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 80px;
+    background-color: orange;
+    padding-right: 100px;
+
+}
+
+.onjung {
+    color: #FF80DB;
+    font-family: "GamtanRoad Batang TTF";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#text-center {
+    text-align: center;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 64.34px;
+
+}
+
+.text-center1 {
+    margin-bottom: 50px;
+}
+
+.text-center1 span {
+color: #FF6C05;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+    width: 199.458px;
+    height: 240.668px;
+    flex-shrink: 0;
+    margin-top: 52.78px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 10px solid pink;
+}
+
+button {
+    width: 180px;
+    height: 30px;
+    display: inline-flex;
+    padding: 20px 71px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 18.787px;
+background: linear-gradient(90deg, #FCBE92 0%, #F5914A 100%);
+}

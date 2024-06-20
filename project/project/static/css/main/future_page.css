@@ -1,6 +1,8 @@
+
 body{
   background-image: url('https://ifh.cc/g/pky7cp.png');
-  height: 100%;
+  width: 100vw;
+  min-height: 1080px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
@@ -11,8 +13,6 @@ body{
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-
-  gap: 30px;
   padding-bottom: 180px;
   @media (max-width: 1050px) {
     align-items: start;
@@ -23,13 +23,23 @@ body{
 }
 
 .screen .topnavbar{
-  width: 1500px;
-  height: 80px;
-  background-color: orange;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 80px;
+  background-color: orange;
+  padding-right: 100px;
 }
+
+.screen .onjung{
+  font-family: inter;
+  font-family: "Inter-Medium", Hevetica;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+
 .screen .frame-reply{
   width:100%;
   display: flex;
@@ -37,7 +47,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-.screen .icon-reply{
+/* .screen .icon-reply{
   display: flex;
   width:100%;
   height: 200px;
@@ -45,16 +55,21 @@ body{
   justify-content: center;
   overflow: hidden;
 
-}
-.screen .icon-acco{
+} */
+.screen .icon-wrap{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 232px;
-  height: 232px;
-  background-color: #D17A6A;
+  width: 355px;
+  height: 355px;
+  background: radial-gradient(40% 40% at 50% 50%, rgba(252, 190, 146, 0.40) 0%, rgba(70, 57, 55, 0.12) 100%);
+  z-index: -1; /* 배경 그라디언트를 이미지 뒤로 보냄 */
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; 
+}
+.screen .icon{
+  width: 190.24px;
+  height: 231.26px;
 }
 
 .screen .reply-text{

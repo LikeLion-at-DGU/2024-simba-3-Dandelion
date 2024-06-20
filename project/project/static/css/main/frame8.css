@@ -1,11 +1,11 @@
 body {
     display: flex;
     width: 100vw;
+    min-height: 1080px;
     background: #FFF;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-   
     /*배경화면 url 넣는 코드 */
     background-image: url('https://ifh.cc/g/pky7cp.png');
     height: 100%;
