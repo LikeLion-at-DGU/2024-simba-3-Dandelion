@@ -44,7 +44,7 @@ def do_108(request):
     sharedwish.num108_count += 1
     sharedwish.save()
     if sharedwish.num108_count >= 108:
-         return render(request, 'post/result_108.html')
+         return render(request, 'post/post_108.html')
     else:
         context = {
             'count' : sharedwish.num108_count
@@ -57,20 +57,20 @@ def post_108(request):
         sharedwish.text = request.POST["text"]
         sharedwish.save()
 
-    return render(request, 'post/community.html') # 글 작성 후 커뮤니티 페이지로 이동
+    return render(request, 'post/community_108.html') # 글 작성 후 커뮤니티 페이지로 이동
 
 def community_108(request):
-    return render(request, 'post/community.html')
+    return render(request, 'post/community_108.html')
 
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
         pass
     else:
-        return render(request, 'post/make_talisman.html')
+        return render(request, 'post/talisman_post.html')
 
 def future(request):
     if request.user.is_authenticated:
-        return render(request, 'post/future_page.html')
+        return render(request, 'post/future.html')
     else:
         return redirect('accounts:login')
 

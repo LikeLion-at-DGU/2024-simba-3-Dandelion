@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    background: #FFF;
+    width: 100%;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+   
+    /*배경화면 url 넣는 코드 */
+    background-image: url('https://ifh.cc/g/pky7cp.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+
+
+}
+
+.onjung {
+    color: #FFCD9F;
+    font-family: "GamtanRoad Batang TTF";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 49.01px;
+    margin-left: 66.52px;
+
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 74.3px;
+    
+}
+
+
+.babyaco{
+    width: 218.159px;
+    height: 255.875px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 49.97px;
+}
+
+.babyaco::before {
+    content: "";
+    position: absolute;
+    width: 355.545px;
+    height: 355.545px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(252, 190, 146, 0.40) 0%, rgba(70, 57, 55, 0.12) 100%);
+    z-index: -1; /* 배경 그라디언트를 이미지 뒤로 보냄 */
+}
+
+.text_babyaco {
+    color: #FFF;
+    text-align: center;
+    
+    /* 질문11 */
+    font-family: "GamtanRoad Dotum TTF";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 148.148% */
+}
+
+.container {
+    padding-top: 49.97px;
+}
+
+/* .review-container {
+    width: 1044.754px;
+    height: 265.978px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+background: #FFF;
+    position: relative;
+}
+
+.review-box {
+    color: #838383;
+text-align: left;
+font-family: "GamtanRoad Batang TTF";
+font-size: 23px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+align-self: flex-start; /* 버튼을 왼쪽 정렬 */
+/* }  */
+
+.saytoaco {
+    display:flex;
+    position: relative;
+
+}
+
+#review-box {
+    width: 1044.754px;
+    height: 265.978px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+opacity: 0.7;
+background: #FFF;
+display:flex;
+
+}
+
+button {
+    width: 142.757px;
+    height: 55.591px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+    background: #2A1400;
+color: white;
+position: absolute;
+bottom: 10px;
+right: 10px;
+
+}
+
+/*맞추려고 하면 조상요소에 position: relative를
+자식 요소에 position:absolute를 해주면 된다.*/
+
