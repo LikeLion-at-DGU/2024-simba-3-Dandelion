@@ -109,6 +109,8 @@ align-self: flex-start; /* 버튼을 왼쪽 정렬 */
 opacity: 0.7;
 background: #FFF;
 display:flex;
+text-align: start;
+
 
 }
 
