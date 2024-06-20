@@ -13,4 +13,6 @@ urlpatterns = [
     path('do_108/', do_108, name="do_108"),
     path('post_108/', post_108, name="post_108"),
     path('community_108/', community_108, name="community_108"),
+    path('talisman/', talisman, name="talisman"),
+    path('talisman_end/', talisman_end, name="talisman_end"),
 ]
