@@ -4,38 +4,51 @@
 <head>
     <meta charset="utf-8">
     <title>온 정</title>
-    <meta name="description" content="온 정">
-    <meta name="author" content="온 정">
     <link href="https://fonts.googleapis.com/css?family=210+Hayanbaram&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/login/project.css' %}">
-    <style>
-        body {background: #E5E5E5;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static "css/accounts/login.css" %}">
+    
+
+</head>
+<head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" type="text/css" href="{% static "css/accounts/login.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
 </head>
 <body>
-    <div class="container">
-        <div class="background"></div>
-        <span class="title">로그인</span>
-        <div class="separator"></div>
-        <span class="logo">로그인</span>
-        <div class="main-content">
-            <form action="{% url "accounts:login" %}" method="POST">
-                {% csrf_token %}
-                <div class="input-section">
-                    <label for="name-input" class="input-label">법명을 입력해주세요.</label>
-                    
-                    <input type="text" id="name-input" class="input-box" name="username">
-                    
-                    <label for="password-input" class="input-label">비밀번호를 입력해주세요.</label>
-                    <input type="password" id="password-input" class="input-box" name="password">
+    <div class="body">
+        <div class="frame-login">
+            <div class = "topnav">
+                <div class = "onjung">
+                    온정
                 </div>
-                <div class="start-button-container">
-                    <div class="start-button">
-                        <input type="submit" id="button-text" class="start-button" value="시작하기">
+            </div>
+            <div class="text-wrapper">로그인하기</div>
+            <div class = "frame-boxes">
+                <form action="{% url 'accounts:login' %}" method="post" class="form-login">
+                    {% csrf_token %}
+                    <div class="input-list">
+                        <div class="username">
+                            <input type="text" class="input-username" name="username" placeholder="법명을 입력해주세요">
+                        </div>
+                        <div class="password">
+                            <input type="password" class="input-password" name="password" placeholder="비밀번호를 입력해주세요">
+                        </div>
                     </div>
-                </div>
-        </form>
+                    <div class="error">법명 혹은 비밀번호가 틀렸습니다.</div>
+                    <div class="buttons">
+                        <button disabled type="submit" class="login-submit">
+                            로그인
+                        </button>
+                        <button type="submit" class="link-signup">
+                            회원가입
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
+        
     </div>
+    
 </body>
 </html>
