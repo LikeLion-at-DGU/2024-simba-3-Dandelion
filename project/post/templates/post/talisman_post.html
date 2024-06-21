@@ -15,23 +15,36 @@
             <div class="text2">아코 스님의 기를 받고 싶은 분야를 선택하고 법명 님의 이야기를 작성해주세요.</div>
         </div>
 
-        <div id="nemobox">
-            <div class="nemobox1">학업</div>
+        <div id="nemobox" class="nemobox">
+            <div class="nemobox1" onclick="selectCategory(1)">학업</div>
             <div class='v-line'></div>
-            <div class="nemobox2">연애</div>
+            <div class="nemobox2" onclick="selectCategory(2)">연애</div>
             <div class='v-line'></div>
-            <div class="nemobox3">재물</div>
+            <div class="nemobox3" onclick="selectCategory(3)">재물</div>
             <div class='v-line'></div>
-            <div class="nemobox4">취업</div>
+            <div class="nemobox4" onclick="selectCategory(4)">취업</div>
             <div class='v-line'></div>
-            <div class="nemobox5">건강</div>
+            <div class="nemobox5" onclick="selectCategory(5)">건강</div>
         </div>
-
-        <form id="review-form" class="review-container">
-            <div class="review-box" contenteditable="true" id="review" placeholder="내용을 입력해주세요">이야기 작성하기</div>
-            <button type="button" class="submit-button" onclick="submitReview()">제출</button> <!-- 링크 page2 연결해야 함-->
+        
+        <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}">
+            {% csrf_token %}
+            <input type="hidden" id="selected-category" name="category">
+            <textarea class="review-box" name="text" id="review" placeholder="내용을 입력해주세요"></textarea>
+            <button type="submit" class="submit-button">제출</button>
         </form>
-
-        <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div>
+        
+        <script>
+            let selectedCategory = null;
+        
+            function selectCategory(category) {
+                if (selectedCategory !== null) {
+                    document.querySelector('.nemobox' + selectedCategory).classList.remove('selected');
+                }
+                selectedCategory = category;
+                document.querySelector('.nemobox' + category).classList.add('selected');
+                document.getElementById('selected-category').value = category;
+            }
+        </script>
 </body>
 </html>

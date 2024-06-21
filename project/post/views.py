@@ -67,7 +67,14 @@ def community_108(request):
 
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
-        pass # talisman_ing.html 연결 할 예정
+        print(request.POST['category'])
+        talisman = Talisman.objects.create(user=request.user)
+        talisman.talisman_category = request.POST['category']
+        talisman.save()
+        context = {
+            'talisman' : talisman
+        }
+        return render(request, 'post/talisman_ing.html', context)
     else:
         return render(request, 'post/talisman_post.html')
 

@@ -71,7 +71,7 @@
         </div> <!-- text_babyaco 닫는 태그-->
 
         <div class="container">
-            <form id="review-form"  method="POST">
+            <form id="review-form"  method="POST" action="{% url "post:past_result" %}">
                 {% csrf_token %}
                 <div class="saytoaco">
                 <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
