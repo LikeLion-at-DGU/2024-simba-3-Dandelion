@@ -44,7 +44,7 @@ def do_108(request):
     sharedwish.num108_count += 1
     sharedwish.save()
     if sharedwish.num108_count >= 108:
-         return render(request, 'post/result_108.html')
+        return render(request, 'post/result_108.html')
     else:
         context = {
             'count' : sharedwish.num108_count
