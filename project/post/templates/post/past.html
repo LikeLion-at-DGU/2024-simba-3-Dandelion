@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="onjung">온정 수정중</div>
+    <div class="onjung">온정</div>
     <div class="all">
         <div class="babyaco">
             <svg xmlns="http://www.w3.org/2000/svg" width="220" height="257" viewBox="0 0 220 257" fill="none">
@@ -71,7 +71,7 @@
         </div> <!-- text_babyaco 닫는 태그-->
 
         <div class="container">
-            <form id="review-form" action="{% url “post:past_result” %}" method="POST">
+            <form id="review-form"  method="POST">
                 {% csrf_token %}
                 <div class="saytoaco">
                 <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
