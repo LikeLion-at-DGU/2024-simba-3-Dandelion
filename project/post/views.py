@@ -1,8 +1,9 @@
 import random
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from main.models import Category, Sutra, Talisman
 import time
+
 # Create your views here.
 def past(request):
     if request.user.is_authenticated:
@@ -39,31 +40,47 @@ def init_108(request):
     }
     return render(request, 'post/do_108.html', context)
 
+
+def post_108(request):
+    if request.method == 'POST':
+        post_108 = SharedWish(
+            title=request.POST['title'],
+            user=request.user,
+            text=request.POST['text']
+        )
+        post_108.save()  # 새로운 게시물 저장
+    return render(request, 'post/do_108.html')  # 글쓰기 완료 후 do_108로 넘어감
+
+
+def likes(request, post_id):
+    post = get_object_or_404(SharedWish, id=post_id)
+    if request.user in post.like.all():
+        post.like.remove(request.user)
+        post.like_count -= 1
+        post.save()
+
+    else:
+        post.like.add(request.user)
+        post.like_count += 1
+        post.save()
+    return redirect('post:community_108', post.id)  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지
+    
 def do_108(request):
 
     sharedwish = SharedWish.objects.filter(user=request.user, text="").first()
     sharedwish.num108_count += 1
     sharedwish.save()
     if sharedwish.num108_count >= 108:
-         return render(request, 'post/ing_108.html')
+        return render(request, 'post/ing_108.html')
     else:
         context = {
             'count' : sharedwish.num108_count
         }
         return render(request, 'post/do_108.html', context)
 
-
-def post_108(request):
-    if request.method == 'POST':
-        sharedwish = SharedWish.objects.filter(user=request.user, text="").first()
-        sharedwish.text = request.POST["text"]
-        sharedwish.save()
-
-    return render(request, 'post/community_108.html') # 글 작성 후 커뮤니티 페이지로 이동
-
 def community_108(request):
     sharedwish = SharedWish.objects.all()
-    return render(request, 'post/community.html', {'wish' : sharedwish})
+    return render(request, 'post/community_108.html', {'wish' : sharedwish})
 
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
