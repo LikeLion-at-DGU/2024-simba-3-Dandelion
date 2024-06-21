@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" type="text/css" href="{% static "css/main/talisman_post.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
+</head>
+
+<body>
+
+    <div class="onjung">온정</div>
+        <div class="text">
+            <div class="text1"><strong>(법명)님이 간절히 바라는 염원은 무엇인가요?</strong></div>
+            <div class="text2">아코 스님의 기를 받고 싶은 분야를 선택하고 법명 님의 이야기를 작성해주세요.</div>
+        </div>
+
+        <div id="nemobox" class="nemobox">
+            <div class="nemobox1" onclick="selectCategory(1)">학업</div>
+            <div class='v-line'></div>
+            <div class="nemobox2" onclick="selectCategory(2)">연애</div>
+            <div class='v-line'></div>
+            <div class="nemobox3" onclick="selectCategory(3)">재물</div>
+            <div class='v-line'></div>
+            <div class="nemobox4" onclick="selectCategory(4)">취업</div>
+            <div class='v-line'></div>
+            <div class="nemobox5" onclick="selectCategory(5)">건강</div>
+        </div>
+<<<<<<< HEAD
+        
+        <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}">
+            {% csrf_token %}
+            <input type="hidden" id="selected-category" name="category">
+            <textarea class="review-box" name="text" id="review" placeholder="내용을 입력해주세요"></textarea>
+            <button type="submit" class="submit-button">제출</button>
+        </form>
+        
+        <script>
+            let selectedCategory = null;
+        
+            function selectCategory(category) {
+                if (selectedCategory !== null) {
+                    document.querySelector('.nemobox' + selectedCategory).classList.remove('selected');
+                }
+                selectedCategory = category;
+                document.querySelector('.nemobox' + category).classList.add('selected');
+                document.getElementById('selected-category').value = category;
+            }
+        </script>
+=======
+
+        <div class="container">
+            <form id="review-form"  method="POST">
+                {% csrf_token %}
+                <div class="saytoaco">
+                <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
+                <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
+                
+            </form>
+
+        <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div>
+>>>>>>> KYJ
+</body>
+</html>

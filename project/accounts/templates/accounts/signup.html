@@ -22,7 +22,7 @@
             <form action="{% url "accounts:signup" %}" method="POST">
                 {% csrf_token %}
                 <div class="input-section">
-                    <label for="name-input" class="input-label">사용할 법명을 설정해주세요.</label>
+                    <label for="name-input" class="input-label">법명을 입력해주세요.</label>
                     
                     <input type="text" id="name-input" class="input-box" name="username">
                     

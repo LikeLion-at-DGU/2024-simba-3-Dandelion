@@ -1,0 +1,40 @@
+body {
+    width: 100vw;
+min-height: 1080px;
+background-image: url(https://ifh.cc/g/T1L3zR.png) ;
+height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.onjung{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FF7B00;
+font-family: "GamtanRoad Batang TTF";
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: absolute;
+right: 59.75px;
+top:51.82px;
+}
+
+
+.aco {
+    width: 91.685px;
+height: 107.536px;
+flex-shrink: 0;
+
+}
+
+.aco::before {
+    width: 104.317px;
+    height: 104.317px;
+    flex-shrink: 0;
+    fill: linear-gradient(180deg, #FFE2D2 0%, #99887E 100%);
+    z-index:-1;
+}

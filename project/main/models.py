@@ -17,6 +17,6 @@ class Sutra(models.Model):
 class Talisman(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to="post/", blank=True, null=True)
-    talisman_category = models.CharField(max_length=10, unique=True) # 법 구경 카테고리와는 다름!!
+    talisman_category = models.CharField(max_length=10) # 법 구경 카테고리와는 다름!!
     text = models.TextField()
     
