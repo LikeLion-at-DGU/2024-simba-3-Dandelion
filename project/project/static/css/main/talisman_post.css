@@ -10,7 +10,8 @@ background-image: url(https://ifh.cc/g/T1L3zR.png) ;
 }
 
 .onjung {
-    color: #FF7B00;
+    /* color: #FF7B00; */
+    color:#000;
     font-family: "GamtanRoad Batang TTF";
     font-size: 50px;
     font-style: normal;
@@ -23,7 +24,7 @@ background-image: url(https://ifh.cc/g/T1L3zR.png) ;
 }
 
 .text {
-    color: blue;
+
 text-align: center;
 font-family: "GamtanRoad Dotum TTF";
 font-size: 27px;
@@ -37,6 +38,7 @@ margin-top: 193.21px;
 
 .text1 {
     margin-bottom: 70px;
+
 }
 
 #nemobox {
@@ -142,7 +144,7 @@ line-height: normal;
 }
 
 
-
+/* 
 .review-container {
     width: 1044.754px;
     height: 303.374px;
@@ -152,6 +154,31 @@ background: #FFF;
     position: relative;
     margin-left: 437.62px;
     border: 1px solid black;
+} */
+
+/* button {
+    width: 85.015px;
+    height: 58.063px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+    background: #2A1400;
+color: white;
+position: absolute;
+right: 10px;
+bottom: 10px;
+} */
+
+.container {
+    padding-top: 49.97px;
+}
+
+/* .review-container {
+    width: 1044.754px;
+    height: 265.978px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+background: #FFF;
+    position: relative;
 }
 
 .review-box {
@@ -163,20 +190,39 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 align-self: flex-start; /* 버튼을 왼쪽 정렬 */
+/* }  */
+
+.saytoaco {
+    display:flex;
+    position: relative;
+
+}
+
+#review-box {
+    width: 1044.754px;
+    height: 265.978px;
+    flex-shrink: 0;
+    border-radius: 19.149px;
+opacity: 0.7;
+background: #FFF;
+display:flex;
+text-align: start;
+
+
 }
 
 button {
-    width: 85.015px;
-    height: 58.063px;
+    width: 142.757px;
+    height: 55.591px;
     flex-shrink: 0;
     border-radius: 19.149px;
     background: #2A1400;
 color: white;
 position: absolute;
-right: 10px;
 bottom: 10px;
-}
+right: 10px;
 
+}
 .textbottom {
     display: flex;
     margin-left: 458.52px;

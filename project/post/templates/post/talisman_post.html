@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />    
     <link rel="stylesheet" type="text/css" href="{% static "css/main/talisman_post.css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
 </head>
 
 <body>
@@ -26,6 +27,7 @@
             <div class='v-line'></div>
             <div class="nemobox5" onclick="selectCategory(5)">건강</div>
         </div>
+<<<<<<< HEAD
         
         <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}">
             {% csrf_token %}
@@ -46,5 +48,18 @@
                 document.getElementById('selected-category').value = category;
             }
         </script>
+=======
+
+        <div class="container">
+            <form id="review-form"  method="POST">
+                {% csrf_token %}
+                <div class="saytoaco">
+                <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
+                <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
+                
+            </form>
+
+        <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div>
+>>>>>>> KYJ
 </body>
 </html>
