@@ -19,15 +19,15 @@ body {
 
 .onjung {
     color: #FF80DB;
-    font-family: "GamtanRoad Batang TTF";
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 49.01px;
-    margin-left: 66.52px;
-    display: flex;
-
+        font-family: "GamtanRoad Batang TTF";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 49.01px;
+        margin-left: 66.52px;
+    
+    
 }
 
 #text-center {
@@ -66,19 +66,32 @@ svg {
 }
 
 button{
-    width: 180px;
+    margin-top: 52.78px;
+    width: 200px;
     height: 30px;
-    display: inline-flex;
-padding: 20px 71px;
-align-items: flex-start;
-gap: 10px;
-border-radius: 18.787px;
+    padding: 20px 71px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 18.787px;
 background: linear-gradient(90deg, #FCBE92 0%, #F5914A 100%);
+border: none;
+display:flex;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
 }
+
+button:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+    position: relative;
+    top:2px;
+}
+
 
 #ipjang-text {
     font-family: "GamtanRoad Dotum TTF";
-font-size: 30px;
+    text-align: center;
+font-size: 15px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -90,3 +103,19 @@ display: flex;
 
 }
 
+.say {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content1{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate( -50%, -50% );
+    color: black;
+    width: 100%;
+    gap: 10px;
+    line-height: 40px;
+
+}

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />    
     <link rel="stylesheet" type="text/css" href="{% static "css/main/talisman_post.css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
 </head>
 
 <body>
@@ -27,10 +28,14 @@
             <div class="nemobox5">건강</div>
         </div>
 
-        <form id="review-form" class="review-container">
-            <div class="review-box" contenteditable="true" id="review" placeholder="내용을 입력해주세요">이야기 작성하기</div>
-            <button type="button" class="submit-button" onclick="submitReview()">제출</button> <!-- 링크 page2 연결해야 함-->
-        </form>
+        <div class="container">
+            <form id="review-form"  method="POST">
+                {% csrf_token %}
+                <div class="saytoaco">
+                <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
+                <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
+                
+            </form>
 
         <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div>
 </body>
