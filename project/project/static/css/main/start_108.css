@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    width: 100vw;
+    min-height: 1080px;
+    background: #FFF;
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    /* align-items: center; */
+    /*배경화면 url 넣는 코드 */
+    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+
+
+}
+
+
+.onjung {
+    color: #FF80DB;
+        font-family: "GamtanRoad Batang TTF";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 49.01px;
+        margin-left: 66.52px;
+    
+    
+}
+
+#text-center {
+    text-align: center;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 64.34px;
+
+}
+
+.text-center1 {
+    margin-bottom: 50px;
+}
+
+.text-center1 span {
+color: #FF6C05;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+    width: 199.458px;
+    height: 240.668px;
+    flex-shrink: 0;
+    margin-top: 52.78px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-top: 52.78px;
+    width: 200px;
+    height: 30px;
+    padding: 20px 71px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 18.787px;
+background: linear-gradient(90deg, #FCBE92 0%, #F5914A 100%);
+border: none;
+display:flex;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
+}
+
+button:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+    position: relative;
+    top:2px;
+}
+
+
+#ipjang-text {
+    font-family: "GamtanRoad Dotum TTF";
+    text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.80) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+display: flex;
+
+}
+
+.say {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content1{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate( -50%, -50% );
+    color: black;
+    width: 100%;
+    gap: 10px;
+    line-height: 40px;
+
+}

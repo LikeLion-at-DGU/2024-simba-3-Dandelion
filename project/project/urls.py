@@ -24,6 +24,8 @@ urlpatterns = [
     path('', include('main.urls')),
     path('accounts/', include('accounts.urls')),
     path('post/', include('post.urls')),
+
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #testapp이라는 url로 이동을 하고, 이제 우리가 include를 했잖아. 
