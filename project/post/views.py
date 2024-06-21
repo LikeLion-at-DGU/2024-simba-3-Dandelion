@@ -67,8 +67,10 @@ def community_108(request):
 
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
-        print(request.POST['category'])
-        talisman = Talisman.objects.create(user=request.user)
+        if Talisman.objects.filter(user=request.user).first() is None:
+            Talisman.objects.create(user=request.user)
+            
+        talisman = Talisman.objects.filter(user=request.user).first()
         talisman.talisman_category = request.POST['category']
         talisman.save()
         context = {
@@ -86,13 +88,6 @@ def talisman_end(request):
         'category' : category
     }
     return render(request, 'post/talisman_end.html', context)
-
-# def talisman_save(request):
-#     image = request.POST['image']
-#     talisman = Talisman.objects.get(user=request.user)
-#     talisman.image = image
-#     talisman.save()
-#     return 
 
 def future(request):
     if request.user.is_authenticated:
