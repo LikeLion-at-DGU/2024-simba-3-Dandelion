@@ -47,7 +47,7 @@ def login(request):
         else:
             return render(request, 'accounts/login.html', {'error': '아이디나 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
     else:
-        return render(request, 'accounts/login.html', {'error': '로그인 실패'})
+        return render(request, 'accounts/login.html')
 
 def logout(request):
     auth.logout(request)

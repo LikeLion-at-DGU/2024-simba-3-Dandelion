@@ -39,10 +39,15 @@
         <br>그럼에도 풀리지 않는 번뇌가 있다면, 부처님께 말씀드려 훌훌 털어주세요.</div>
 
     </div>
-            
-            <a href="@@@"><button>
-                <div id="ipjang-text">입장하기</div>
-                </button></a> <!--백 분들께!!! @@@ 이 부분 다음으로 넘어가는 페이지 링크 필요합니다!!!-->
+            <div class="allbutton">
+            <a href="{% url "post:post_108" %}">
+                <button class="button_cham">
+                <div id="ipjang-text">참여하기</div>
+                </button></a>
+                <a href="{% url "main:mainpage" %}"><button class="button_main">
+                    <div id="ipjang-text2">홈으로 돌아가기</div>
+                    </button></a> <!--백 분들께!!! @@@ 이 부분 다음으로 넘어가는 페이지 링크 필요합니다!!!-->
+            </div>
         </div> <!--center 닫는 태그-->
 
     
