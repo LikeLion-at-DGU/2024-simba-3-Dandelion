@@ -49,7 +49,7 @@ def post_108(request):
             text=request.POST['text']
         )
         post_108.save()  # 새로운 게시물 저장
-    return render(request, 'post/do_108.html')  # 글쓰기 완료 후 do_108로 넘어감
+    return render(request, 'post/do_108.html')  # 글쓰기 완료 후 do_108로 넘어감(do페이지 맞나요? + 5페이지라 하나 더 구성 해야함)
 
 
 def likes(request, post_id):
