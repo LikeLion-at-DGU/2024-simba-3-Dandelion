@@ -1,10 +1,10 @@
     body{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        width: 1920px;
-        height: 1080px;
+        width: 100vw;
+        height: fit-content;
+        margin: 0;
         background-image: url('https://ifh.cc/g/pky7cp.png');
         background-position: center;
         background-repeat: no-repeat;
