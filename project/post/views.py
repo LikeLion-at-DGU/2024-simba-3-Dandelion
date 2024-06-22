@@ -59,7 +59,12 @@ def post_108(request):
         sharedwish.text = request.POST["text"]
         sharedwish.save()
 
-    return render(request, 'post/community.html') # 글 작성 후 커뮤니티 페이지로 이동
+        return redirect(request, 'post:init_108') # 글 작성 후 do_108 페이지로 이동
+    else:
+        return render(request, 'post/post_108.html')
+
+def result_108(request):
+    return render(request, 'post/result_108.html')
 
 def community_108(request):
     sharedwish = SharedWish.objects.all()
@@ -91,7 +96,7 @@ def talisman_end(request):
 
 def future(request):
     if request.user.is_authenticated:
-        return render(request, 'post/future_page.html')
+        return render(request, 'post/future.html')
     else:
         return redirect('accounts:login')
 
