@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!--페이지 1-->
+{% load static %}
+<html>
+  <head>
+      <meta charset="utf-8" />    
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main/future.css'%}"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Title</title>
+</head>
+
+<body>
+  <div class = "screen">
+    <div class = "topnavbar">
+      <div class = "onjung">온정</div>
+    </div>
+    <div class = "frame-reply">
+      <div class = "icon-wrap">
+        <img class="icon" alt="안뜸" src="{%static 'images/mainpage_img/acho.png'%}"/>
+      </div>
+    </div>
+      <div class = "ask-acco">
+        <div class = "text-ask">나는 어떤 방향으로 나아가야 할까요?</div>
+        <div class = "text-ask">꺠달음이 필요하다면 스님 아코에게 여쭤보세요.</div>
+      </div>
+      <div class="userinput"> <!--container-->
+        <form action="{% url 'post:future_result' %}" method="post" class="future-userinput">              {% csrf_token %}
+            <div class="textbox-askacco">
+              <input type="text" class="ask-acco" name="user-text" placeholder="스님 아코께 드릴 말씀 작성하기">                
+              <button type="submit" class="submit-button" >제출</button> 
+            </div>
+          </form>
+      </div> 
+    </div>
+  </div>
+</body>
+</html>

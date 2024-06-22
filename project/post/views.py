@@ -89,7 +89,7 @@ def talisman_end(request):
 
 def future(request):
     if request.user.is_authenticated:
-        return render(request, 'post/future_page.html')
+        return render(request, 'post/future.html')
     else:
         return redirect('accounts:login')
 
