@@ -65,7 +65,13 @@ svg {
     align-items: center;
 }
 
-button{
+.allbutton {
+    display: flex;
+    gap: 39.68px;
+    
+}
+
+.button_cham{
     margin-top: 52.78px;
     width: 200px;
     height: 30px;
@@ -79,6 +85,22 @@ display:flex;
     text-align: center;
     align-items:center;
     text-decoration: none;
+}
+
+.button_main {
+    margin-top: 52.78px;
+    width: 200px;
+    height: 30px;
+    padding: 20px 71px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 18.787px;
+    border: 2px solid var(--Color-2, #F38C43);
+display:flex;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
+    opacity: 100%;
 }
 
 button:active {
@@ -119,3 +141,4 @@ display: flex;
     line-height: 40px;
 
 }
+

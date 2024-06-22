@@ -33,7 +33,7 @@
                 {% csrf_token %}
                 <div class="saytoaco">
                 <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
-                <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
+                <a href="{% url "post:talisman" %}"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
                 
             </form>
 

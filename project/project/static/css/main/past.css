@@ -128,6 +128,8 @@ right: 10px;
 
 }
 
+
+
 /*맞추려고 하면 조상요소에 position: relative를
 자식 요소에 position:absolute를 해주면 된다.*/
 
