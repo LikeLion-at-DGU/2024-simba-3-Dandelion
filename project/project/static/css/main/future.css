@@ -1,8 +1,12 @@
 
 body{
   background-image: url('https://ifh.cc/g/pky7cp.png');
-  width: 1920px;
-  min-height: 1080px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
