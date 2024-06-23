@@ -1,23 +1,23 @@
-body {
+/* body {
     display: flex;
     width: 100vw;
     min-height: 1080px;
-    background: #FFF;
+    background: #FFF; */
     /* justify-content: flex-start; */
-    flex-direction: column;
+    /* flex-direction: column; */
     /* align-items: center; */
     /*배경화면 url 넣는 코드 */
-    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    /* background-image: url('https://ifh.cc/g/B3C9wK.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover;   */
 
 
-}
+/* } */
 
 
-.onjung {
+/* .onjung {
     color: #FF80DB;
         font-family: "GamtanRoad Batang TTF";
         font-size: 50px;
@@ -28,6 +28,44 @@ body {
         margin-left: 360.42px;
     
     
+} */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
 }
 
 #text-center {

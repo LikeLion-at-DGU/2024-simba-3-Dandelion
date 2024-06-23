@@ -9,8 +9,14 @@
 </head>
 
 <body>
+    <div class = "screen">
+        <div class = "topnav">
+            <a href="{% url "main:mainpage" %}">
+                <div class = "onjung">온정</div>
+            </a>
+        </div> <!--topnav 닫는 태그-->
 
-    <div class="onjung">온정</div>
+
 
 
     <div id="text-center">
@@ -52,5 +58,5 @@
 
     
     </div>
-
+{% comment %} </div> <!--스크린 닫는 태그--> {% endcomment %}
 </body>
