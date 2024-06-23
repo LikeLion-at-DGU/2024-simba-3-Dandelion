@@ -31,25 +31,27 @@ def start_108(request):
 
 def init_108(request):
     
-    sharedwish = SharedWish.objects.create(user=request.user)
+    sharedwish = MyWish.objects.get(user=request.user)
     sharedwish.num108_count = 0 # 0으로 초기화
     sharedwish.save()
 
     context = {
-        'count' : sharedwish.num108_count
+        'count' : 108 - sharedwish.num108_count
     }
     return render(request, 'post/do_108.html', context)
 
 
 def post_108(request):
     if request.method == 'POST':
-        post_108 = SharedWish(
-            title=request.POST['title'],
-            user=request.user,
-            text=request.POST['text']
-        )
+        if MyWish.objects.filter(user=request.user).first() is None:
+            MyWish.objects.create(user=request.user)
+
+        post_108 = MyWish.objects.filter(user=request.user).first()
+        post_108.title = request.POST['title']
+        post_108.text = request.POST['text']
+        
         post_108.save()  # 새로운 게시물 저장
-        return render(request, 'post/do_108.html')  # 글쓰기 완료 후 do_108로 넘어감(do페이지 맞나요? + 5페이지라 하나 더 구성 해야함)
+        return redirect('post:init_108') 
     else:
         return render(request, 'post/post_108.html')
 
@@ -69,14 +71,14 @@ def likes(request, post_id):
     
 def do_108(request):
 
-    sharedwish = SharedWish.objects.filter(user=request.user, text="").first()
-    sharedwish.num108_count += 1
-    sharedwish.save()
-    if sharedwish.num108_count >= 108:
-        return render(request, 'post/ing_108.html')
+    mywish = MyWish.objects.filter(user=request.user).first()
+    mywish.num108_count += 1
+    mywish.save()
+    if mywish.num108_count >= 108:
+        return render(request, 'post/result_108.html')
     else:
         context = {
-            'count' : sharedwish.num108_count
+            'count' : 108 - mywish.num108_count
         }
         return render(request, 'post/do_108.html', context)
 

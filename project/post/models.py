@@ -17,7 +17,7 @@ class Future(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-class SharedWish(models.Model):
+class MyWish(models.Model):
     title = models.CharField(max_length=10)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
@@ -31,3 +31,5 @@ class SharedWish(models.Model):
 
     def __str__(self):
         return self.text[:50] + "..."
+class SharedWish(models.Model):
+    wish = models.ForeignKey(MyWish, on_delete=models.CASCADE, related_name='my_wish')
