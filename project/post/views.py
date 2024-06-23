@@ -4,6 +4,12 @@ from .models import *
 from main.models import Category, Sutra, Talisman
 import time
 
+
+from django.views.generic.detail import SingleObjectMixin
+from django.http import FileResponse
+from django.core.files.storage import FileSystemStorage
+from django.views import View
+
 # Create your views here.
 def past(request):
     if request.user.is_authenticated:
@@ -133,3 +139,4 @@ def future_result(request):
     future.category = Category.objects.get(id=2) # 소망으로 고정
     future.save()
     return render(request, 'post/future_result.html', {'future' : future})
+
