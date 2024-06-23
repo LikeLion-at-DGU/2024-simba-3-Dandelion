@@ -92,6 +92,7 @@ line-height: 40px; /* 133.333% */
 
 
 }
+
 /* .aco {
     display: flex;
     justify-content: center;
@@ -141,3 +142,15 @@ width: 1000px;
     left: 568.3px;
     top: 611.46px;
 } */
+
+.brush{
+    animation: moveBrush 3s linear forwards; /* 애니메이션 적용 */
+}
+@keyframes moveBrush {
+    from {
+        left: 0;
+    }
+    to {
+        left: 503px; /* 519px (전체 길이) - 브러시 너비 */
+    }
+}

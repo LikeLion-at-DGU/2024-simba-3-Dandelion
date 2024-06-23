@@ -111,8 +111,8 @@ svg {
 
 .button_cham{
     margin-top: 52.78px;
-    width: 200px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     padding: 20px 71px;
     align-items: flex-start;
     gap: 10px;
@@ -127,8 +127,8 @@ display:flex;
 
 .button_main {
     margin-top: 52.78px;
-    width: 200px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     padding: 20px 71px;
     align-items: flex-start;
     gap: 10px;
@@ -151,7 +151,7 @@ button:active {
 #ipjang-text {
     font-family: "GamtanRoad Dotum TTF";
     text-align: center;
-font-size: 15px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -160,6 +160,24 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 display: flex;
+
+
+}
+
+
+#ipjang-text2 {
+    font-family: "GamtanRoad Dotum TTF";
+    text-align: center;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.80) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+display: flex;
+
 
 }
 

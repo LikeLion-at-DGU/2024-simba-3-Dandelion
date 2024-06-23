@@ -49,13 +49,23 @@ body .onjung{
 #acoong {
     display: flex;
     justify-content: center;
-    margin-top: 139.53px;
+    /* margin-top: 139.53px; */
 
 }
 
 .naranhi {
     display: flex;
-    gap: 60px;
+    gap: 30px;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.malmal {
+    width: fit-content;
+    height: fit-content;
 }
 
 #nemo {
