@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: fit-content;
+    /* height: fit-content; */
     margin: 0;
     background-image: url('https://ifh.cc/g/T1L3zR.png');
     background-position: center;
@@ -286,4 +286,52 @@ right: 10px;
     font-weight: 400;
     line-height: 40px; /* 200% */
 }
+
+  
+  .click {
+    background-color: #fc9937;
+  }
+
+.nemobox1:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+
+.nemobox2:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox3:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox4:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox5:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+
+/*자연스러운 페이지 전환*/
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+  }
+  
+  @keyframes fadein {
+    0%, 15% {
+      background-color: #ffffff;
+      opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+      opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+  }
+/*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 
