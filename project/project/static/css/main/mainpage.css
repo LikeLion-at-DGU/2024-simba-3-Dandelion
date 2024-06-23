@@ -47,8 +47,13 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    gap: 16px;
+    width: 600px;
+    gap: 30px;
+}
+.screen .text-welcome{
+    font-size: 25px;
+    color:#FF8128;
+    font-weight: 600;
 }
 
 .buttons a {
