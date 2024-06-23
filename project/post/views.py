@@ -52,6 +52,17 @@ def post_108(request):
         return render(request, 'post/do_108.html')  # 글쓰기 완료 후 do_108로 넘어감(do페이지 맞나요? + 5페이지라 하나 더 구성 해야함)
     else:
         return render(request, 'post/post_108.html')
+    
+
+def detail_108(request, id):
+    my_wish = get_object_or_404(SharedWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
+    return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
+
+def delete(request, id):
+    delete_post = SharedWish.objects.get(pk=id)
+
+    delete_post.delete()
+    return redirect('post:detail_108')
 
 
 def likes(request, post_id):
