@@ -1,0 +1,205 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+
+#flower {
+    display: flex;
+    gap: 20px;   
+    justify-content: center;
+}
+
+#flower p {
+    color: #000;
+text-align: center;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 111.111% */
+}
+
+#flower img {
+    object-fit: contain; /*contain 속성을 사용하면 됨!!!*/
+}
+
+.orangetext {
+    color: var(--Color, #FF6A00);
+font-family: "GamtanRoad Dotum TTF";
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+display: flex;
+justify-content: center;
+}
+
+.nemobox {
+    width: 1179.431px;
+height: 587.501px;
+flex-shrink: 0;
+border-radius: 21px;
+background: rgba(255, 255, 255, 0.70);
+display: flex;
+justify-content: center;
+margin-top: 30.74px;
+position: relative;
+}
+
+#name1 {
+    display: flex;
+    position:absolute;
+    top: 34.04px;
+    left:57.76px;
+
+    /*텍스트 효과... 아래로*/
+    color: var(--Color, #FF6A00);
+    color: #000;
+    font-family: "GamtanRoad Dotum TTF";
+    font-size: 28.35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.5px;
+}
+
+#name2 {
+    display: flex;
+    position:absolute;
+    top: 173.89px;
+    left:57.76px;
+
+    /*텍스트 효과... 아래로*/
+    color: var(--Color, #FF6A00);
+    color: #000;
+    font-family: "GamtanRoad Dotum TTF";
+    font-size: 28.35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.5px;
+}
+
+
+span {
+    color: var(--Color, #FF6A00);
+text-align: center;
+font-family: "GamtanRoad Tantan TTF";
+font-size: 28.35px;
+font-style: normal;
+font-weight: 400;
+line-height: 31.5px; /* 111.111% */
+}
+
+.warning {
+    display: flex;
+    position:absolute;
+    top: 44.54px;
+    left: 178.22px;
+    color: #F00;
+text-align: center;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 18.9px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+input#inputField{
+    width: 1061.733px;
+height: 58.6px;
+flex-shrink: 0;
+border-radius: 10.5px;
+border: 1.05px solid #D9D9D9;
+font-size: 23px;
+position: absolute;
+left:57.76px;
+top:85.82px;
+padding: 5px;
+
+
+}
+
+textarea#textareaField{
+    width: 1061.733px;
+    height: 252.937px;
+    flex-shrink: 0;
+    border-radius: 10.5px;
+border: 1.05px solid #D9D9D9;
+font-size: 23px;
+position: absolute;
+left:57.76px;
+top:228.64px;
+resize: none;
+padding: 5px;
+
+}
+
+input#inputField::placeholder {
+    color: #838383;
+text-align: start;
+align-items: center;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 23px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+button {
+    width: 147.149px;
+height: 62.858px;
+flex-shrink: 0;
+border-radius: 21px;
+background: #000;
+position: absolute;
+bottom: 23.27px;
+right: 59.72px;
+
+}
+
+button p {
+    /* width: 94.5px;
+height: 27.065px; */
+/* flex-shrink: 0; */
+color: #FFF;
+font-family: "GamtanRoad Dotum TTF";
+font-size: 20px;
+/* font-style: normal; */
+/* font-weight: 400; */
+/* line-height: normal; */
+display: flex;
+justify-content: center;
+align-items: center;
+}

@@ -1,93 +1,71 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static "css/globals.css" %}" />
-    <link rel="stylesheet" href="{% static "css/mainpage_css/style.css" %}"/>
-
-  </head>
-  <body>
-    <div class="macbook-pro">
-        <div class="overlap">
-          <div class="overlap-group">
-            <div class="group">
-              <div class="frame">
-                <div class="element" > <a class="text-wrapper-3" href="{% url "post:start_108" %}">부처님께 108배 드리고<br/>소원빌기/회고하기</a></div>
-              </div>
-              
-              <div class="frame">
-                <div class="element" > <a class="text-wrapper-3" href="{% url "post:community_108" %}">번뇌 게시판</a></div>
-              </div>
-
-            </div>
-
-            <div class="rectangle"></div>
-            <div class="text-wrapper">온정</div>
-            <p class="div">내 마음의 방향을 잡아줄 온라인 정각원</p>
-            <div class="div-wrapper">
-              {% if user.is_authenticated %}
-                <!-- 로그인 시 보이는 화면-->
-                <a class="nav-link-account">
-                  <a class="nav-link-user">{{user.username}}님 환영합니다! &nbsp</a> 
-                  <a href="{% url "accounts:logout" %}">로그아웃 &nbsp</a> 
-                </a>
-                {% else %}
-                <!-- 로그아웃 시 보이는 화면-->
-                <a class="nav-link-account">
-                  <a href="{% url "accounts:login" %}" method="GET" >로그인 &nbsp</a>
-                </a>
-                <a class="nav-link-account">
-                  <a href="{% url "accounts:signup" %}" method="GET" >회원가입 &nbsp</a>
-                </a>
-                {% endif %}
-          </div>
-
-          <div class="group-wrapper"><img class="img" src="{% static "images/mainpage_img/onjung.png" %}" /></div>
-            <img class="element-2" src="{% static "images/mainpage_img/roof.png" %} "/>
-            <img class="vector" src="{% static "images/mainpage_img/vector-68.svg"%} "/>
-            <div class="rectangle-2"></div>
-            <img class="vector-2" src="{% static "images/mainpage_img/vector-68.svg" %} "/>
-            <div class="rectangle-3"></div>
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group-2">
-                <img class="element-3" src="{% static "images/mainpage_img/house.png" %} " /> <img class="group-2" src="{% static "images/mainpage_img/acho.png" %} " />
-              </div>
-            </div>
-          </div>
-
-          <div class="overlap-2">
-            <div class="frame-wrapper">
-              <div class="frame-2"><a class="text-wrapper-3" href="{% url "post:talisman" %}">스님께 부적 받기</a></div>
-            </div>
-            <div class="group-3">
-              <div class="overlap-group-2">
-                <img class="element-3" src="{% static "images/mainpage_img/house.png" %} " /> <img class="group-2" src="{% static "images/mainpage_img/acho.png" %} " />
-              </div>
-            </div>
-          </div>
-          <div class="overlap-3">
-            <div class="rectangle-4"></div>
-            <div class="frame-3"><a class="text-wrapper-3" href ="{% url "post:future" %}">미래 들여다보기</div></div>
-            <div class="frame-4"><a class="text-wrapper-3" href="{% url "post:past" %}">과거를 참회하기</a></div>
-            <div class="group-3">
-              <div class="overlap-group-2">
-                <img class="element-3" src="{% static "images/mainpage_img/house.png" %} " /> <img class="group-2" src="{% static "images/mainpage_img/acho.png" %} " />
-              </div>
-            </div>
-          </div>
-          <div class="group-4">
-            <div class="group-5">
-              <div class="overlap-group-3">
-                <div class="group-6">
-                  <img class="codicon-music" src="{% static "images/mainpage_img/codicon-music.svg" %} " />
-                  <div class="text-wrapper-4">BGM ON/OFF</div>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/mainpage.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mainpage-온정</title>
+</head>
+<body>
+    <div class="screen">
+        <div class="title">
+            <div class="title-group">
+                <img class="img-title" alt="안뜸" src="{% static 'images/mainpage_img/img-title.png' %}" />
+                <div class="buttons">
+                    <a class="login-button" href="{% url 'accounts:login' %}">로그인</a>
+                    <a class="signup-button" href="{% url 'accounts:signup' %}">회원가입</a>
                 </div>
-                <div class="rectangle-5"></div>
-              </div>
             </div>
-          </div>
+            <div class="bgm-button">
+                <img class="img-bgm" alt="안뜸" src="{% static 'images/mainpage_img/img-bgm.png' %}" />
+            </div>
         </div>
-      </div> 
-  </body>
+        <div class="menus">
+            <div class="menu-box">
+                <div class="img-menu">
+                    <img class="img-menu1" alt="안뜸" src="{% static 'images/mainpage_img/img-menu1.png' %}" />
+                </div>
+                <div class="link-future">
+                    <a class="text-wrapper-3" href="{% url 'post:future' %}">
+                        <img class="menu-future" alt="안뜸" src="{% static 'images/mainpage_img/menu-future.png' %}" />
+                    </a>
+                </div>
+                <div class="link-past">
+                    <a class="text-wrapper-3" href="{% url 'post:past' %}">
+                        <img class="menu-past" alt="안뜸" src="{% static 'images/mainpage_img/menu-past.png' %}" />
+                    </a>
+                </div>
+            </div>
+            <div class="menu-box2">
+                <div class="img-menu">
+                    <img class="img-menu2" alt="안뜸" src="{% static 'images/mainpage_img/img-menu2.png' %}" />
+                </div>
+                <div class="link-talisman">
+                  <a class="text-wrapper-3" href="{% url 'post:talisman' %}">
+                    <img class="menu-talisman" alt="안뜸" src="{% static 'images/mainpage_img/menu-talisman.png' %}" />
+                  </a>
+                </div>
+                <div class="link-talisman">
+                    <img /> <!--위치 맞추려고 해놓음-->
+                </div>
+            </div>
+            <div class="menu-box">
+                <div class="img-menu">
+                    <img class="img-menu3" alt="안뜸" src="{% static 'images/mainpage_img/img-menu3.png' %}" />
+                </div>
+                <div class="link-108">
+                    <a class="text-wrapper-3" href="{% url 'post:start_108' %}">
+                        <img class="menu-108" alt="안뜸" src="{% static 'images/mainpage_img/menu-108.png' %}" />
+                    </a>
+                </div>
+                <div class="link-community">
+                    <a class="text-wrapper-3" href="{% url 'post:community_108' %}">
+                        <img class="menu-community" alt="안뜸" src="{% static 'images/mainpage_img/menu-community.png' %}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

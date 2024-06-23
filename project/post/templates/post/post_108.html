@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!--페이지 1-->
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" type="text/css" href="{% static "css/main/post_108.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
+</head>
+
+    <body>
+        <div class = "screen">
+            <div class = "topnav">
+                <a href="{% url "main:mainpage" %}">
+                    <div class = "onjung">온정</div>
+                </a>
+            </div> <!--topnav 닫는 태그-->
+
+        <div class="flowerandtext">
+            <div id="flower">
+                <img src="https://ifh.cc/g/3TZ46x.png">
+                <p>수행에 앞서, 현재 머리속에 있는 번뇌들을 털어내듯 적어주세요.</p>
+                <img src="https://ifh.cc/g/3TZ46x.png">
+            </div>
+
+            <div class="orangetext"> 추후 수행을 통해 끊어내고자 하는 번뇌들을 간단하게 작성해 주세요. </div>
+
+        {% comment %} <div class="nemobox"> <!--아무런 기능 없음 그냥 투명한 네모박스-->
+            <div>
+                <div id="name"> <span>ㅣ</span>번뇌명 </div>
+                <div class="warning">10글자 이내로 작성해주세요.</div>
+            </div> {% endcomment %}
+
+            <div class="nemobox">
+            <form action="your-action-url-here" method="POST">
+                <div>
+                    <div id="name1"> <span>ㅣ</span>번뇌명 </div>
+                <div class="warning">10글자 이내로 작성해주세요.</div>
+                    <input type="text" id="inputField" name="inputField" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
+                </div>
+                
+                <div>
+                    <div id="name2" > <span>ㅣ</span>번뇌 작성하기 </div>
+                    <textarea id="textareaField" name="textareaField" placeholder="마음 속 복잡한 번뇌들을 자유롭게 작성해주세요."></textarea>
+                </div>
+                
+                <div>
+
+                    <button type="submit">
+                        <p>제출하기</p>
+                    </button>
+               
+
+                </div>
+            </form>
+        </div> <!--nemobox 닫는 태그-->
+
+
+            
+
+        </div> <!--nemobox 닫는 태그-->
+
+
+        </div> <!--screen 닫는 태그-->
+    
+    </body>
+
+
+
+</html>

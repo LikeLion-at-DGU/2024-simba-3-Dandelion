@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1920px;
+    height: 1080px;
+    background-image: url('https://ifh.cc/g/pky7cp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+.body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+.body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+.body .replybox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    gap: 42px;
+    padding-top: 50px;
+    
+}
+.body .flower-textbox-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.body .icon-text{
+    width: 750px;
+    height: 42px;
+}
+
+.body .textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFD4B4;
+    font-size: 35px;
+    font-weight: 400;
+    opacity: 0.7;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    width: 800px;
+    height: 550px;
+    gap: 30px;
+}
+
+.body .reply-text{
+    color: #FFD4B4;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.body .reply-src{
+    color: #FFD4B4;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.body .botnavbar{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 57px;
+
+}
+
+.body .icon-menu{
+    width: fit-content;
+    height: fit-content;
+}

@@ -1,33 +1,57 @@
-body {
+/* body {
     display: flex;
     width: 1920px;
     height: 1080px;
     background: #FFF;
-    width: 100%;
+    width: 100%; */
     /* justify-content: center; */
-    flex-direction: column;
+    /* flex-direction: column; */
     /* align-items: center; */
-   
     /*배경화면 url 넣는 코드 */
-    background-image: url('https://ifh.cc/g/pky7cp.png');
+    /* background-image: url('https://ifh.cc/g/pky7cp.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
 
 
+} */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/pky7cp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 
-.onjung {
-    color: #FFCD9F;
-    font-family: "GamtanRoad Batang TTF";
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 49.01px;
-    margin-left: 66.52px;
 
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
 }
 
 .all {
@@ -35,7 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 74.3px;
+    margin-top:139.53px;
     
 }
 
@@ -127,6 +151,15 @@ bottom: 10px;
 right: 10px;
 
 }
+
+textarea {
+    resize: none;
+    font-size: 30px;
+}
+
+textarea::placeholder {
+    font-size: 30px;
+  }
 
 /*맞추려고 하면 조상요소에 position: relative를
 자식 요소에 position:absolute를 해주면 된다.*/

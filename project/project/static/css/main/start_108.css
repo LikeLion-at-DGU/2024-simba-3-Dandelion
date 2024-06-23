@@ -1,23 +1,23 @@
-body {
+/* body {
     display: flex;
     width: 100vw;
     min-height: 1080px;
-    background: #FFF;
+    background: #FFF; */
     /* justify-content: flex-start; */
-    flex-direction: column;
+    /* flex-direction: column; */
     /* align-items: center; */
     /*배경화면 url 넣는 코드 */
-    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    /* background-image: url('https://ifh.cc/g/B3C9wK.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover;   */
 
 
-}
+/* } */
 
 
-.onjung {
+/* .onjung {
     color: #FF80DB;
         font-family: "GamtanRoad Batang TTF";
         font-size: 50px;
@@ -25,9 +25,47 @@ body {
         font-weight: 400;
         line-height: normal;
         margin-top: 49.01px;
-        margin-left: 66.52px;
+        margin-left: 360.42px;
     
     
+} */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/B3C9wK.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
 }
 
 #text-center {
@@ -65,7 +103,13 @@ svg {
     align-items: center;
 }
 
-button{
+.allbutton {
+    display: flex;
+    gap: 39.68px;
+    
+}
+
+.button_cham{
     margin-top: 52.78px;
     width: 200px;
     height: 30px;
@@ -79,6 +123,22 @@ display:flex;
     text-align: center;
     align-items:center;
     text-decoration: none;
+}
+
+.button_main {
+    margin-top: 52.78px;
+    width: 200px;
+    height: 30px;
+    padding: 20px 71px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 18.787px;
+    border: 2px solid var(--Color-2, #F38C43);
+display:flex;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
+    opacity: 100%;
 }
 
 button:active {
@@ -119,3 +179,4 @@ display: flex;
     line-height: 40px;
 
 }
+

@@ -19,20 +19,34 @@ def signup(request):
             return render(request, 'main/mainpage.html')
     return render(request, 'accounts/signup.html')
 
+# def login(request):
+#     if request.method == 'POST' :
+#         username = request.POST['username']
+#         password = request.POST['password']
+
+#         user = auth.authenticate(request, username=username, password=password)
+        
+#         if user is not None:
+#             auth.login(request,user)
+#             return redirect("main:mainpage")
+#         else:
+#             return render(request, "accounts/signup.html")
+        
+#     elif request.method == 'GET' :
+#         return render(request, 'accounts/login.html')
 def login(request):
-    if request.method == 'POST' :
+    if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
 
-        user = auth.authenticate(request, username=username, password=password)
-        
+        user = auth.authenticate(username=username, password=password)
+
         if user is not None:
-            auth.login(request,user)
-            return redirect("main:mainpage")
+            auth.login(request, user)
+            return redirect('main:mainpage')
         else:
-            return render(request, "accounts/signup.html")
-        
-    elif request.method == 'GET' :
+            return render(request, 'accounts/login.html', {'error': '아이디나 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
+    else:
         return render(request, 'accounts/login.html')
 
 def logout(request):

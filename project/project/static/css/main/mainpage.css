@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://ifh.cc/g/vQrOqJ.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1800px;
+}
+
+.screen .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1800px;
+    height: 375px;
+}
+
+.screen .title-group {
+    width: 400px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.screen .img-title {
+    width: fit-content;
+    height: fit-content;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    gap: 16px;
+}
+
+.buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #FF8128;
+    border: 1px solid #FF8128;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1; /* Add z-index to ensure it is clickable */
+}
+
+.buttons a:hover {
+    background-color: #FF8128;
+    color: #FFFFFF;
+}
+
+.screen .bgm-button {
+    position: absolute;
+    padding-left: 1336px;
+    padding-top: 50px;
+    padding-bottom: 266px;
+    padding-right: 220.08px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen .img-bgm {
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen .menus {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 98px;
+    width: 100%;
+}
+
+.screen .menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.screen .menu-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.screen .img-menu,
+.screen .img-menu1,
+.screen .img-menu2,
+.screen .img-menu3 {
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen .link-future,
+.screen .link-past,
+.screen .link-tailsman,
+.screen .link-108,
+.screen .link-community,
+.screen .text-wrapper-3,
+.screen .menu-future,
+.screen .menu-past,
+.screen .menu-talisman,
+.screen .menu-108,
+.screen .menu-community {
+    width: fit-content;
+    height: fit-content;
+}
