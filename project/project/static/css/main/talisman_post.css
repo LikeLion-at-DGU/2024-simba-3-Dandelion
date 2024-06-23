@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: fit-content;
+    /* height: fit-content; */
     margin: 0;
     background-image: url('https://ifh.cc/g/T1L3zR.png');
     background-position: center;
@@ -287,3 +287,34 @@ right: 10px;
     line-height: 40px; /* 200% */
 }
 
+  
+  .click {
+    background-color: #fc9937;
+  }
+
+.nemobox1:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+
+.nemobox2:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox3:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox4:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   
+.nemobox5:active {
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;
+}   

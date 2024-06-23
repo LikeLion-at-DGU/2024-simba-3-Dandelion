@@ -23,15 +23,15 @@
         </div>
 
         <div id="nemobox" class="nemobox">
-            <div class="nemobox1" onclick="selectCategory(1)">학업</div>
+            <div id="non-click" class="nemobox1" onclick="selectCategory(1)">학업</div>
             <div class='v-line'></div>
-            <div class="nemobox2" onclick="selectCategory(2)">연애</div>
+            <div id="non-click" class="nemobox2" onclick="selectCategory(2)">연애</div>
             <div class='v-line'></div>
-            <div class="nemobox3" onclick="selectCategory(3)">재물</div>
+            <div id="non-click" class="nemobox3" onclick="selectCategory(3)">재물</div>
+            <div  class='v-line'></div>
+            <div id="non-click" class="nemobox4" onclick="selectCategory(4)">취업</div>
             <div class='v-line'></div>
-            <div class="nemobox4" onclick="selectCategory(4)">취업</div>
-            <div class='v-line'></div>
-            <div class="nemobox5" onclick="selectCategory(5)">건강</div>
+            <div id="non-click" class="nemobox5" onclick="selectCategory(5)">건강</div>
         </div>
         
         <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}">
@@ -52,6 +52,22 @@
                 document.querySelector('.nemobox' + category).classList.add('selected');
                 document.getElementById('selected-category').value = category;
             }
+
+
+            const nonClick = document.querySelectorAll("#non-click");
+
+function handleClick(event) {
+  // div에서 모든 "click" 클래스 제거
+  nonClick.forEach((e) => {
+    e.classList.remove("click");
+  });
+  // 클릭한 div만 "click"클래스 추가
+  event.target.classList.add("click");
+}
+
+nonClick.forEach((e) => {
+  e.addEventListener("click", handleClick);
+});
         </script>
 
         <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div>
