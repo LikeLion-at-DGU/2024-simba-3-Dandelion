@@ -78,17 +78,6 @@ def do_108(request):
         }
         return render(request, 'post/do_108.html', context)
 
-
-def post_108(request):
-    if request.method == 'POST':
-        sharedwish = SharedWish.objects.filter(user=request.user, text="").first()
-        sharedwish.text = request.POST["text"]
-        sharedwish.save()
-
-        return redirect(request, 'post:init_108') # 글 작성 후 do_108 페이지로 이동
-    else:
-        return render(request, 'post/post_108.html')
-
 def result_108(request):
     return render(request, 'post/result_108.html')
 
