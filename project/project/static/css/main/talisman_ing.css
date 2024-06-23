@@ -154,5 +154,7 @@ width: 1000px;
         left: 503px; /* 519px (전체 길이) - 브러시 너비 */
     }
 }
-
+a {
+    text-decoration-line: none;
+}
 
