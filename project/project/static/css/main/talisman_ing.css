@@ -35,7 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: fit-content;
+    /* height: fit-content; */
     margin: 0;
     background-image: url('https://ifh.cc/g/T1L3zR.png');
     background-position: center;
@@ -154,3 +154,5 @@ width: 1000px;
         left: 503px; /* 519px (전체 길이) - 브러시 너비 */
     }
 }
+
+
