@@ -67,11 +67,18 @@ def detail_108(request, id):
     return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
 
 def delete(request, id):
-    delete_post = SharedWish.objects.get(pk=id)
+    # 로그인 여부 확인
+    if not request.user.is_authenticated:
+        return redirect('accounts:login')  # 로그인 페이지로 리디렉션
 
-    delete_post.delete()
-    return redirect('post:detail_108')
+    delete_post = get_object_or_404(SharedWish, pk=id)
 
+    # 권한 확인 (현재 사용자가 글쓴이인지 확인)
+    if request.user == delete_post.user:
+        delete_post.delete()
+        return redirect('post:community_108')  # 삭제 후 커뮤니티 목록 페이지로 이동
+    else:
+        return redirect('post:detail_108', id=id)  # 권한이 없으면 해당 글 상세 페이지로 이동
 
 def likes(request, post_id):
     post = get_object_or_404(SharedWish, id=post_id)
