@@ -1,10 +1,10 @@
-
+/* 
 html{
     width: 1920px; /*100으로 할 건지 */
-height: 1080px;;
-}
+/* height: 1080px;; */
+/* } */ 
 
-body {
+/* body {
     width: 100%;
 height: 100%;
 flex-shrink: 0;
@@ -13,9 +13,9 @@ height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
-}
+} */
 
-.onjung{
+/* .onjung{
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -28,10 +28,71 @@ line-height: normal;
 position: absolute;
 right: 59.75px;
 top:51.82px;
+} */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/T1L3zR.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 
 
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+
+.aco_center {
+    width: fit-content;
+height: fit-content;
+}
+
 .aco {
+    width: fit-content;
+height: fit-content;
+flex-shrink: 0;
+margin-top: 133.93px;
+position: relative;
+}
+
+.bujuck {
+    color: #000;
+text-align: center;
+font-family: "GamtanRoad Dotum";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 133.333% */
+
+
+}
+/* .aco {
     display: flex;
     justify-content: center;
     position: relative;
@@ -40,8 +101,8 @@ top:51.82px;
     width: 185.4px;
     height: 209.431px;
     flex-shrink: 0;
-}
-
+} */
+/* 
 .aco1{
     width: 694.563px;
 height: 415.788px;
@@ -52,9 +113,9 @@ position: absolute;
 top: 196.87px;
 left: 612.22px;
 z-index: -1;
-}
+} */
 
-.texting {
+/* .texting {
     color: #000;
 text-align: center;
 font-family: "GamtanRoad Dotum TTF";
@@ -62,9 +123,9 @@ font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: 40px; /* 133.333% */
-margin-top: 500px;
-}
-
+/* margin-top: 500px;
+} */
+/* 
 #gage {
 display: flex;
 justify-content: center;
@@ -72,11 +133,11 @@ flex-shrink: 0;
 margin-top: 200.46px;
 margin-left: 568.3px;
 width: 1000px;
-}
+}  */
 
-.brush {
+/* .brush {
     display: flex;
     position: absolute;
     left: 568.3px;
     top: 611.46px;
-}
+} */
