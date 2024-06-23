@@ -1,0 +1,129 @@
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: fit-content;
+        margin: 0;
+        background-image: url('https://ifh.cc/g/7HHHlD.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;  
+    }
+    
+    .screen{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1200px;
+        padding-bottom: 90px;
+        gap: 20px;
+    }
+    
+    .screen .topnav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width : 1200px; 
+        height: 120px;
+        
+    }
+    .screen .onjung{
+        font-size: 40px;
+        font-weight: 600;
+        color: #FF6A00;
+    }
+    .screen .text-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    .screen .textbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;  
+    }
+    .screen .text-108{
+        font-size: 25px;
+        width: fit-content;
+        height: fit-content;
+        font-weight: 400;
+    }
+    .screen .frame-img{
+        display: flex;
+        width: 1200px;
+        height: 440px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 72px;  
+    }
+    
+    .screen .icon-108{
+        width: fit-content;
+        height: fit-content;
+    }
+    .screen .frame-notice{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1200px;
+        height: 30px;
+    }
+    .screen .text-notice{
+        font-size: 26px;
+        font-weight: 800;
+        color: #FF6A00;
+    }
+    
+    .screen .frame-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        height: 50px;
+    }
+    
+    .screen .bar{
+        height: 12px;
+        width: 450px;
+        background-color: #ECECEC;
+        border: 1px solid #FF8128;
+        border-radius: 25px;
+    }
+    .screen .img-lotus{
+        width: fit-content;
+        height:n fit-content;
+    }
+    .screen .frame-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        height: 100px;
+    }
+    .frame-button a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 60px;
+        border-radius: 20px;
+        font-size: 25px;
+        color: #FF8128;
+        border: 1px solid #FF8128;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 1; /* Add z-index to ensure it is clickable */
+    }
+    
+    .frame-button a:hover {
+        background-color: #FF8128;
+        color: #FFFFFF;
+    }

@@ -1,139 +1,149 @@
 
 body{ 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin: 0;
-    background-image: url('https://ifh.cc/g/pky7cp.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+  background-image: url('https://ifh.cc/g/pky7cp.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 1200px;
-  padding-bottom: 90px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+width: 1200px;
+padding-bottom: 90px;
 }
 
 .screen .topnavbar{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width : 1200px; 
-  height: 120px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width : 1200px; 
+height: 120px;
 }
 
 .screen .onjung{
-  font-size: 40px;
-  font-weight: 600;
-  color: #FF6A00;
+font-size: 40px;
+font-weight: 600;
+color: #FF6A00;
 }
 
 
 .screen .frame-icon{
-  width:1200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 430px;
+width:1200px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+height: 430px;
 }
 
 .screen .icon-wrap{
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: fit-content;
+height: fit-content;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .screen .icon{
-  width: fit-content;
-  height: fit-content;
+width: fit-content;
+height: fit-content;
 }
 
 .screen .text-wrapper{
-  width: 1200px;
-  height: 88px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+width: 1200px;
+height: 88px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+gap: 20px;
 }
 
 .screen .text-ask{
-  width: fit-content;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: inter;
-  font-family: "Inter-Medium", Hevetica;
-  font-size: 25px;
-  color: #FFFFFF;
+width: fit-content;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: inter;
+font-family: "Inter-Medium", Hevetica;
+font-size: 25px;
+color: #FFFFFF;
 }
 
 .screen .frame-userinput{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 75px;
-  padding-right: 75px;
-  width: 1200px;
-  height: 400px;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 75px;
+padding-right: 75px;
+width: 1200px;
+height: 400px;
 }
 
 .screen .form-future{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 75px;
-  padding-right: 75px;
-  width: 1200px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 75px;
+padding-right: 75px;
+width: 1200px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .screen .textbox-future{
-  width: 1050px;
-  height: 300px;
+width: 1050px;
+height: 300px;
 }
 
 .screen .ask-acco{
-  width: 1050px;
-  height: 300px;
-  flex-shrink: 0;
-  border-radius: 19.149px;
-  opacity: 0.7;
-  background: #FFF;
-  display:flex;
-  font-size: 30px;
-  padding-top: 30px;
-    padding-left: 30px;
+width: 1050px;
+height: 300px;
+flex-shrink: 0;
+border-radius: 19.149px;
+opacity: 0.7;
+background: #FFF;
+display:flex;
+font-size: 30px;
+padding-top: 30px;
+  padding-left: 30px;
 }
 .ask-acco::placeholder{
-    color: #999999;
-    vertical-align: top;
-    
-    font-size: 30px;
+  color: #999999;
+  vertical-align: top;
+  
+  font-size: 30px;
 }
-
+.screen .submit-button{
+width: 142.757px;
+height: 55.591px;
+flex-shrink: 0;
+border-radius: 19.149px;
+background: #2A1400;
+color: white;
+position: absolute;
+bottom: 10px;
+right: 10px;
+}
 .screen .submit-button {
-  width: 142.757px;
-  height: 55.591px;
-  flex-shrink: 0;
-  border-radius: 19.149px;
-  background: #2A1400;
-  color: white;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+width: 142.757px;
+height: 55.591px;
+flex-shrink: 0;
+border-radius: 19.149px;
+background: #2A1400;
+color: white;
+position: absolute;
+bottom: 10px;
+right: 10px;
 
 }
 
