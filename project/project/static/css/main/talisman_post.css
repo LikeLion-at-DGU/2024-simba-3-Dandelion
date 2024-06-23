@@ -59,6 +59,7 @@ justify-content: center;
     justify-content: center;
     margin-bottom: 43.5px;
     margin-top: 80.34px;
+   
 }
 
 .nemobox1{
@@ -74,7 +75,7 @@ justify-content: center;
 
 /* 부적 */
 font-family: "Kyobo Handwriting 2023";
-font-size: 40px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -93,7 +94,7 @@ line-height: normal;
 
 /* 부적 */
 font-family: "Kyobo Handwriting 2023";
-font-size: 40px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -112,7 +113,7 @@ line-height: normal;
 
 /* 부적 */
 font-family: "Kyobo Handwriting 2023";
-font-size: 40px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -131,7 +132,7 @@ line-height: normal;
 
 /* 부적 */
 font-family: "Kyobo Handwriting 2023";
-font-size: 40px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -150,7 +151,7 @@ line-height: normal;
 
 /* 부적 */
 font-family: "Kyobo Handwriting 2023";
-font-size: 40px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -237,6 +238,11 @@ right: 10px;
 
 } */
 
+#review-form {
+    display: flex;
+    position: relative;
+}
+
 .review-box {
     width: 1044.754px;
     height: 265.978px;
@@ -244,8 +250,13 @@ right: 10px;
     border-radius: 19.149px;
 opacity: 0.7;
 background: #FFF;
-display:flex;
 text-align: start;
+resize: none;
+border: none;
+padding: 10px;
+display: flex;
+position: relative;
+font-size: 23px;
 
 
 }
