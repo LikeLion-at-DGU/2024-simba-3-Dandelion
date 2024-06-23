@@ -102,7 +102,7 @@ def future(request):
 
 def future_result(request):
     
-    future = future()
+    future = Future()
 
     future.text = request.POST["user_text"]
     sutras = Sutra.objects.filter(category=2)
