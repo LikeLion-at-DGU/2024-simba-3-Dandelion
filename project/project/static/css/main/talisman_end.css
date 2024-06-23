@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: fit-content;
+    /* height: fit-content; */
     margin: 0;
     background-image: url('https://ifh.cc/g/T1L3zR.png');
     background-position: center;
@@ -49,13 +49,23 @@ body .onjung{
 #acoong {
     display: flex;
     justify-content: center;
-    margin-top: 139.53px;
+    /* margin-top: 139.53px; */
 
 }
 
 .naranhi {
     display: flex;
-    gap: 60px;
+    gap: 30px;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.malmal {
+    width: fit-content;
+    height: fit-content;
 }
 
 #nemo {
@@ -117,3 +127,20 @@ flex-shrink: 0;
     align-items: center;
     justify-content: center;
 }
+
+/*자연스러운 페이지 전환*/
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+  }
+  
+  @keyframes fadein {
+    0%, 15% {
+      background-color: #ffffff;
+      opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+      opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+  }
+/*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
+

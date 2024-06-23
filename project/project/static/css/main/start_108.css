@@ -111,8 +111,8 @@ svg {
 
 .button_cham{
     margin-top: 52.78px;
-    width: 200px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     padding: 20px 71px;
     align-items: flex-start;
     gap: 10px;
@@ -127,8 +127,8 @@ display:flex;
 
 .button_main {
     margin-top: 52.78px;
-    width: 200px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     padding: 20px 71px;
     align-items: flex-start;
     gap: 10px;
@@ -138,7 +138,9 @@ display:flex;
     text-align: center;
     align-items:center;
     text-decoration: none;
-    opacity: 100%;
+    background-color:transparent;
+    color: var(--Color-2, #F38C43);
+
 }
 
 button:active {
@@ -151,7 +153,7 @@ button:active {
 #ipjang-text {
     font-family: "GamtanRoad Dotum TTF";
     text-align: center;
-font-size: 15px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -160,6 +162,24 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 display: flex;
+
+
+}
+
+
+#ipjang-text2 {
+    font-family: "GamtanRoad Dotum TTF";
+    text-align: center;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+/* background: linear-gradient(180deg,  #F38C43 0%,  #F38C43(255, 255, 255, 0.80) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+display: flex;
+
 
 }
 
@@ -179,4 +199,20 @@ display: flex;
     line-height: 40px;
 
 }
+
+/*자연스러운 페이지 전환*/
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+  }
+  
+  @keyframes fadein {
+    0%, 15% {
+      background-color: #ffffff;
+      opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+      opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+  }
+/*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 
