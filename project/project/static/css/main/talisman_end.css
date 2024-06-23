@@ -1,4 +1,4 @@
-body {
+/* body {
     width: 100vw;
 min-height: 1080px;
 background-image: url(https://ifh.cc/g/T1L3zR.png) ;
@@ -6,35 +6,113 @@ height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
-}
 
-.onjung{
+} */
+
+body{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    color: #FF7B00;
-font-family: "GamtanRoad Batang TTF";
-font-size: 50px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-position: absolute;
-right: 59.75px;
-top:51.82px;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/T1L3zR.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 
 
-.aco {
-    width: 91.685px;
-height: 107.536px;
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+body .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+body .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+
+#acoong {
+    display: flex;
+    justify-content: center;
+    margin-top: 139.53px;
+
+}
+
+.naranhi {
+    display: flex;
+    gap: 60px;
+}
+
+#nemo {
+    width: 400px;
+height: 600px;
 flex-shrink: 0;
+background: #FBBC35;
+display: flex;
+justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 42.58px;
+}
+
+#three_buttons {
+    width: 1000px;
+height: 54px;
+display: inline-flex;
+justify-content: center;
+gap: 57px;
+padding-top: 31.59px;
+}
+
+#btn {
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#btn_img {
+    width: 39.75px;
+height: 40.5px;
+flex-shrink: 0;
+}
+
+#btn_text {
+    font-family: "GamtanRoad Dotum";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+    color:#FF8128;
 
 }
 
-.aco::before {
-    width: 104.317px;
-    height: 104.317px;
-    flex-shrink: 0;
-    fill: linear-gradient(180deg, #FFE2D2 0%, #99887E 100%);
-    z-index:-1;
+.malmal {
+    width: 273px;
+}
+
+#btn a{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
 }

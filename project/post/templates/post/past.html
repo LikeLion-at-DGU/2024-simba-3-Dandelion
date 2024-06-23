@@ -9,7 +9,14 @@
 </head>
 
 <body>
-    <div class="onjung">온정</div>
+    <div class = "screen">
+        <div class = "topnav">
+            <a href="{% url "main:mainpage" %}">
+                <div class = "onjung">온정</div>
+            </a>
+        </div> <!--topnav 닫는 태그-->
+
+
     <div class="all">
         <div class="babyaco">
             <svg xmlns="http://www.w3.org/2000/svg" width="220" height="257" viewBox="0 0 220 257" fill="none">
@@ -74,7 +81,7 @@
             <form id="review-form"  method="POST" action="{% url "post:past_result" %}">
                 {% csrf_token %}
                 <div class="saytoaco">
-                <input type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기">
+                <textarea type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기"></textarea>
                 <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
                 
             </form>
