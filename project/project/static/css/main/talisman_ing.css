@@ -145,24 +145,27 @@ width: 1000px;
 
 .brushandgage {
     margin-top: 30px;
+    position:relative;
 }
 
 .brush{
     display: flex;
     position:absolute;
-    top: 550px;
-    right: 370px;
+    top: -140px;
+    z-index: 1;
     
-    animation: moveBrush 3s linear forwards;
+    animation: moveBrush 3.2s linear forwards;
 }
-@keyframes moveBrush {
+ @keyframes moveBrush {
     from {
-        right: 0;
+        left: 0;
     }
     to {
-        left: 503px; /* 519px (전체 길이) - 브러시 너비 */
-    }
-}
+        left: 757px; /* 519px (전체 길이) - 브러시 너비 */
+     }
+} 
+
+
 a {
     text-decoration-line: none;
 }
