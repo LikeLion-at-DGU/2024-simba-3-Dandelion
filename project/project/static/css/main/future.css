@@ -1,15 +1,15 @@
 
-body{
-  background-image: url('https://ifh.cc/g/pky7cp.png');
-  display: flex;
+body{ 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
     margin: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;  
+    background-image: url('https://ifh.cc/g/pky7cp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .screen {
@@ -17,85 +17,90 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 1200px;
+  padding-bottom: 90px;
 }
 
 .screen .topnavbar{
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-
-  width: 1200px;
+  align-items: center;
+  width : 1200px; 
   height: 120px;
-  padding-left: 50px;
 }
 
 .screen .onjung{
-  font-family: inter;
-  font-family: "Inter-Medium", Hevetica;
   font-size: 40px;
   font-weight: 600;
-  color: #FF7B00;
+  color: #FF6A00;
 }
 
 
-.screen .frame-reply{
-  width:100%;
+.screen .frame-icon{
+  width:1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 430px;
 }
 
 .screen .icon-wrap{
+  width: fit-content;
+  height: fit-content;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 355px;
-  height: 355px;
-  background: radial-gradient(40% 40% at 50% 50%, rgba(252, 190, 146, 0.40) 0%, rgba(70, 57, 55, 0.12) 100%);
-  z-index: -1; /* 배경 그라디언트를 이미지 뒤로 보냄 */
-  border-radius: 50%;
-  overflow: hidden; 
+  align-items: center;
 }
 .screen .icon{
-  width: 183.21px;
-  height: 221.78px;
+  width: fit-content;
+  height: fit-content;
 }
 
-.screen .ask-acco{
-  display: flex;
+.screen .text-wrapper{
   width: 1200px;
-  height:fit-content;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
 }
 
 .screen .text-ask{
+  width: fit-content;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: inter;
   font-family: "Inter-Medium", Hevetica;
   font-size: 25px;
   color: #FFFFFF;
 }
 
-.screen .userinput{
+.screen .frame-userinput{
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 75px;
   padding-right: 75px;
   width: 1200px;
-  height: 950px;
+  height: 400px;
 }
 
-.screen .future-userinput{
+.screen .form-future{
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 75px;
   padding-right: 75px;
   width: 1200px;
-  height: 950px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.screen .textbox-askacco{
+.screen .textbox-future{
   width: 1050px;
   height: 300px;
 }
@@ -108,6 +113,15 @@ body{
   opacity: 0.7;
   background: #FFF;
   display:flex;
+  font-size: 30px;
+  padding-top: 30px;
+    padding-left: 30px;
+}
+.ask-acco::placeholder{
+    color: #999999;
+    vertical-align: top;
+    
+    font-size: 30px;
 }
 
 .screen .submit-button {
