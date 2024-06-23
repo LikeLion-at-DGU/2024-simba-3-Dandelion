@@ -143,12 +143,21 @@ width: 1000px;
     top: 611.46px;
 } */
 
+.brushandgage {
+    margin-top: 30px;
+}
+
 .brush{
-    animation: moveBrush 3s linear forwards; /* 애니메이션 적용 */
+    display: flex;
+    position:absolute;
+    top: 550px;
+    right: 370px;
+    
+    animation: moveBrush 3s linear forwards;
 }
 @keyframes moveBrush {
     from {
-        left: 0;
+        right: 0;
     }
     to {
         left: 503px; /* 519px (전체 길이) - 브러시 너비 */
@@ -158,3 +167,21 @@ a {
     text-decoration-line: none;
 }
 
+#progress {
+    appearance: none;
+    width: 783px;
+    justify-content: center;
+    position: relative;
+}
+#progress::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#progress::-webkit-progress-value {
+    border-radius:10px;
+    background: #ff9d00;
+    background: -webkit-linear-gradient(to right, #ffc800, #ffe600);
+    background: linear-gradient(to right, #ffd262, #ff8000);
+
+}
