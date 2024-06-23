@@ -54,6 +54,17 @@ def post_108(request):
         return redirect('post:init_108') 
     else:
         return render(request, 'post/post_108.html')
+    
+
+def detail_108(request, id):
+    my_wish = get_object_or_404(SharedWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
+    return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
+
+def delete(request, id):
+    delete_post = SharedWish.objects.get(pk=id)
+
+    delete_post.delete()
+    return redirect('post:detail_108')
 
 
 def likes(request, post_id):
