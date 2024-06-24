@@ -218,5 +218,18 @@ body {
       opacity: 1; /* 100%에서 투명도 1로 변화 */
     }
   }
+
+  a {
+    text-decoration-line: none;
+}
 /*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 
+/*여기는 글자수 10자가 넘었을 때 경고문 뜨는 코드*/
+.hidden {
+    display: none;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}

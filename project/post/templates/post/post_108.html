@@ -32,12 +32,11 @@
             </div> {% endcomment %}
 
             <div class="nemobox">
-            <form action="{% url "post:post_108" %}" method="POST">
-                {% csrf_token %}
+            <form id="myform" action="your-action-url-here" method="POST">
                 <div>
                     <div id="name1"> <span>ㅣ</span>번뇌명 </div>
-                <div class="warning">10글자 이내로 작성해주세요.</div>
-                    <input type="text" id="inputField" name="title" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
+                <div class="warning" id="warning">10글자 이내로 작성해주세요.</div>
+                    <input type="text" id="inputField" name="inputField" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
                 </div>
                 
                 <div>
@@ -64,6 +63,56 @@
 
         </div> <!--screen 닫는 태그-->
     
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const textElement = document.getElementById('text');
+                const warningElement = document.querySelector("#hidden")
+                ;
+            
+                if (textElement.textContent.length > 10) {
+                    warningElement.classList.remove('.warning');
+                }
+            });
+
+            // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('inputField');
+    const warningElement = document.getElementById('warning');
+
+    // 초기 상태에서 경고 메시지를 숨깁니다.
+    warningElement.classList.add('hidden');
+
+    inputField.addEventListener('input', () => {
+        if (inputField.value.length > 10) {
+            warningElement.classList.remove('hidden');
+        } else {
+            warningElement.classList.add('hidden');
+        }
+    });
+});
+
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('inputField');
+    const warningElement = document.getElementById('warning');
+    const form = document.getElementById('myForm');
+
+    inputField.addEventListener('input', () => {
+        if (inputField.value.length > 10) {
+            warningElement.classList.remove('hidden');
+        } else {
+            warningElement.classList.add('hidden');
+        }
+    });
+
+    form.addEventListener('submit', (event) => {
+        if (inputField.value.length > 10) {
+            event.preventDefault(); // 폼 제출을 막습니다.
+            alert("10글자 이내로 작성해주세요."); // 경고 메시지를 표시합니다.
+        }
+    });
+});
+        </script>
     </body>
 
 
