@@ -5,8 +5,10 @@
 <html>
     <head>
             <meta charset="utf-8" />    
+            
             <link rel="stylesheet" type="text/css" href="{% static 'css/main/future_result.css'%}"/>
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            
         <title>Page Title</title>
     </head>
 
@@ -36,10 +38,16 @@
                 </div>
             </div>
             <div class = "botnavbar">
+                <!-- 이 부분 버튼 눌리게 수정 완료-->
+                <a href="{% url "post:future" %}">
                 <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/ask-again.png'%}"/>
-                <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/save-text.png'%}"/>
+                </a>
+                
+                <a href="{% url "main:mainpage" %}">
                 <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/link-home.png'%}"/>
+                </a>
             </div>
         </div>
+
     </body>
 </html>

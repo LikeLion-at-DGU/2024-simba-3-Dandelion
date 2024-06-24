@@ -31,6 +31,6 @@ class MyWish(models.Model):
         return self.title
 
     def __str__(self):
-        return self.text[:50] + "..."
+        return self.text[:10] + "..."
 class SharedWish(models.Model):
     wish = models.ForeignKey(MyWish, on_delete=models.CASCADE, related_name='my_wish')

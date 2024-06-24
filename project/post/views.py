@@ -35,15 +35,17 @@ def past(request):
 
 def past_result(request):
     
-    past = Past()
+    if Past.objects.filter(user=request.user).first() is None:
+        Past.objects.create(user=request.user, category=Category.objects.get(id=1))
 
+    past = Past.objects.filter(user=request.user).first()
     past.text = request.POST["user_text"]
+
     sutras = Sutra.objects.filter(category=1)
     if sutras.exists():
         sutra = random.choice(sutras)
-        past.my_sutra = sutra
+        past.my_sutra = sutra.text
         past.user = request.user
-        past.category = Category.objects.get(id=1) # 참회로 고정
         past.save()
         
         chunks, last_part = split_text(sutra.text)
@@ -134,8 +136,7 @@ def result_108(request):
 
 def write_108(request):
     my_wish = MyWish.objects.get(user=request.user)
-    if SharedWish.objects.filter(wish=my_wish).first() is None:
-        SharedWish.objects.create(wish=my_wish)
+    SharedWish.objects.create(wish=my_wish)
 
     sharedwish = SharedWish.objects.all()
     return render(request, 'post/community_108.html', {'sharedwishes' : sharedwish})
@@ -176,15 +177,17 @@ def future(request):
 
 def future_result(request):
     
-    future = Future()
+    if Future.objects.filter(user=request.user).first() is None:
+        Future.objects.create(user=request.user, category=Category.objects.get(id=2))
 
+    future = Future.objects.filter(user=request.user).first()
     future.text = request.POST["user_text"]
+
     sutras = Sutra.objects.filter(category=2)
     if sutras.exists():
         sutra = random.choice(sutras)
-        future.my_sutra = sutra
+        future.my_sutra = sutra.text
         future.user = request.user
-        future.category = Category.objects.get(id=2) # 소망으로 고정
         future.save()
 
         chunks, last_part = split_text(sutra.text)
