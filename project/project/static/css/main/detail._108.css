@@ -10,25 +10,26 @@ body{
     background-repeat: no-repeat;
     background-size: cover;  
 }
-body {
-    animation: fadein 2s forwards; /* 애니메이션 실행 */
-}
+    body {
+        animation: fadein 2s forwards; /* 애니메이션 실행 */
+    }
+    
+    @keyframes fadein {
+        0%, 15% {
+        background-color: #ffffff;
+        opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+        }
+        100% {
+        opacity: 1; /* 100%에서 투명도 1로 변화 */
+        }
+    }
 
-@keyframes fadein {
-    0%, 15% {
-    background-color: #ffffff;
-    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
-    }
-    100% {
-    opacity: 1; /* 100%에서 투명도 1로 변화 */
-    }
-}
 .screen{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 1600px;
+    width: 1200px;
     padding-bottom: 90px;
 }
 
@@ -50,9 +51,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width : 1600px; 
+    width : 1200px; 
     height: 142px;
-    gap: 296.87px;
+    gap: 96.87px;
 }
 .screen .icon-place{
     width: fit-content;
@@ -65,29 +66,13 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: 12px;
 }
-.screen .do108-button {
+.screen .community-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: 65px;
-    border-radius: 20px;
-    font-size: 25px;
-    color: #FF8128;
-    border: 1px solid #FF8128;
-    background-color: #FFFFFF;
-    text-decoration: none;
-    cursor: pointer;
-    z-index: 1; /* Add z-index to ensure it is clickable */
-}
-.screen .mainpage-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 330px;
-    height: 65px;
+    height: 60px;
     border-radius: 20px;
     font-size: 25px;
     color: #FF8128;
@@ -98,10 +83,94 @@ body {
     z-index: 1; /* Add z-index to ensure it is clickable */
 }
 
+
 .buttons a:hover {
     background-color: #FF8128;
     color: #FFFFFF;
 }
+
+.screen .post-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 26.37px;
+    width: 1200px;
+    height: 650px;
+
+}
+.screen .post-username{
+    width: fit-content;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.screen .lotus-username{
+    width: fit-content;
+    height: fit-content;
+}
+.screen .db_username{
+    width: fit-content;
+    font-size: 30px;
+    font-weight: 800;
+}
+.screen .post-time,
+.screen .post-title,
+.screen .post-content{
+    width: 1200px;
+    height: 30px;
+    padding-left: 100px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.screen .img-time,
+.screen .img-title,
+.screen .img-content,
+.screen .img-like{
+    width: fit-content;
+    height: fit-content;
+}
+.screen .db_time,
+.screen .db_title{
+    font-size: 25px;
+    font-weight: 400px;
+}
+.screen .ok108{
+    font-size: 25px;
+    color: #FF8128;
+    font-weight: 400;
+}
+.screen .long-bar {
+    position: relative;
+    width: 1150px;
+    height: 0px;
+    border-top: 1px solid #d9d9d9; 
+}
+.screen .content-box{
+    width: 1060px;
+    height: 250px;
+    padding-left: 67.36px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 22px;
+    margin-top: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+}
+.screen .db_content{
+    font-size: 22px;
+    font-weight: 500px;
+    color: #606060;
+
+}
+
 
 .screen .postbox{
     display: flex;
@@ -154,15 +223,7 @@ body {
     height: 50px;
     color: #000000;
 }
-.screen .lotus-username{
-    width: fit-content;
-    height: fit-content;
-}
-.screen .db_username{
-    width: fit-content;
-    font-size: 22px;
-    font-weight: 800;
-}
+
 .screen .post-time{
     display: flex;
     justify-content: center;

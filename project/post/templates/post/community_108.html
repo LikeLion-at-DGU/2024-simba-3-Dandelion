@@ -22,36 +22,12 @@
                 </div>
             </div>
             
-            <div class="frame-post">
-                {% comment %} <a href="{% url 'post:detail_108' %}">  {% endcomment %}
-                    <img class="post-background" alt="안뜸" src="{%static 'images/mainpage_img/img-post-background.png'%}"/>
-                    <div class="frame-text">
-                        <div class="post-username">
-                            <img class="lotus-username" alt="안뜸" src="{%static 'images/mainpage_img/img-lotus-mini.png'%}"/>
-                            <div class="db_username">민희진</div>
-                        </div>
-                        <div class="post-time">
-                            <div class="db_time">12시12시</div>
-                        </div>
-                        <div class="post-title">
-                            <div class="db_title">번뇌명 | 나는 짱이다</div>
-                            <div class="ok108">108배 수행 성공</div>
-                        </div>
-                        <div class="icons">
-                            <div class = "likes">
-                                <img class="img-like" alt="안뜸" src="{%static 'images/mainpage_img/img-like.png'%}"/>
-                                <div class ="db_like">공감 삼만팔천개</div>
-                            </div>
-                            <img class="img-detail" alt="안뜸" src="{%static 'images/mainpage_img/img-detail.png'%}"/>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            
             <div class="postbox">
                 <div style="display: flex; flex-wrap: wrap; gap: 50px;">
                     {% for sharedwish in sharedwishes %}
                     <div class="frame-post">
-                        {% comment %} <a href="{% url 'post:detail_108' %}">  {% endcomment %}
+                        <a href="{% url 'post:detail_108' %}"> 
                             <img class="post-background" alt="안뜸" src="{%static 'images/mainpage_img/img-post-background.png'%}"/>
                             <div class="frame-text">
                                 <div class="post-username">
