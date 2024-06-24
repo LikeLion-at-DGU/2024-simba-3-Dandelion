@@ -2,8 +2,9 @@ import random, re
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from main.models import Category, Sutra, Talisman
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
+@csrf_exempt
 def split_text(text):
     # 마지막 부분 추출 (예: "- 법구경 116장 -")
     match = re.search(r"(- 법구경 \d+장 -)$", text)
@@ -27,12 +28,14 @@ def split_text(text):
     
     return result_chunks, last_phrase
 
+@csrf_exempt
 def past(request):
     if request.user.is_authenticated:
         return render(request, 'post/past.html')
     else:
         return redirect('accounts:login')
 
+@csrf_exempt
 def past_result(request):
     
     if Past.objects.filter(user=request.user).first() is None:
@@ -57,9 +60,11 @@ def past_result(request):
 
     return render(request, 'post/past_result.html', context)
 
+@csrf_exempt
 def start_108(request):
     return render(request, 'post/start_108.html')
 
+@csrf_exempt
 def init_108(request):
     
     sharedwish = MyWish.objects.get(user=request.user)
@@ -71,7 +76,7 @@ def init_108(request):
     }
     return render(request, 'post/do_108.html', context)
 
-
+@csrf_exempt
 def post_108(request):
     if request.method == 'POST':
         if MyWish.objects.filter(user=request.user).first() is None:
@@ -86,11 +91,12 @@ def post_108(request):
     else:
         return render(request, 'post/post_108.html')
     
-
+@csrf_exempt
 def detail_108(request, id):
     my_wish = get_object_or_404(SharedWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
     return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
 
+@csrf_exempt
 def delete(request, id):
     # 로그인 여부 확인
     if not request.user.is_authenticated:
@@ -105,6 +111,7 @@ def delete(request, id):
     else:
         return redirect('post:detail_108', id=id)  # 권한이 없으면 해당 글 상세 페이지로 이동
 
+@csrf_exempt
 def likes(request, post_id):
     post = get_object_or_404(SharedWish, id=post_id)
     if request.user in post.like.all():
@@ -117,7 +124,8 @@ def likes(request, post_id):
         post.like_count += 1
         post.save()
     return redirect('post:community_108', post.id)  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지
-    
+
+@csrf_exempt   
 def do_108(request):
 
     mywish = MyWish.objects.filter(user=request.user).first()
@@ -131,26 +139,36 @@ def do_108(request):
         }
         return render(request, 'post/do_108.html', context)
 
+@csrf_exempt
 def result_108(request):
     return render(request, 'post/result_108.html')
 
+@csrf_exempt
 def write_108(request):
     my_wish = MyWish.objects.get(user=request.user)
-    SharedWish.objects.create(wish=my_wish)
+    SharedWish.objects.create(
+        title = my_wish.title,
+        user = my_wish.user,
+        text = my_wish.text,
+        created_at = my_wish.created_at,
+        like_count = my_wish.like_count,
+        num108_count = my_wish.num108_count
+    )
+    return redirect('post:community_108')
 
-    sharedwish = SharedWish.objects.all()
-    return render(request, 'post/community_108.html', {'sharedwishes' : sharedwish})
-
+@csrf_exempt
 def community_108(request):
     sharedwish = SharedWish.objects.all()
     return render(request, 'post/community_108.html', {'sharedwishes' : sharedwish})
 
+@csrf_exempt
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
         if Talisman.objects.filter(user=request.user).first() is None:
             Talisman.objects.create(user=request.user)
             
         talisman = Talisman.objects.filter(user=request.user).first()
+        talisman.text = request.POST['text']
         talisman.talisman_category = request.POST['category']
         talisman.save()
         context = {
@@ -160,6 +178,7 @@ def talisman(request): # POST 에 카테고리를 함께 전달
     else:
         return render(request, 'post/talisman_post.html')
 
+@csrf_exempt
 def talisman_end(request):
     talisman = Talisman.objects.get(user=request.user)
     category = talisman.talisman_category
@@ -169,12 +188,14 @@ def talisman_end(request):
     }
     return render(request, 'post/talisman_end.html', context)
 
+@csrf_exempt
 def future(request):
     if request.user.is_authenticated:
         return render(request, 'post/future.html')
     else:
         return redirect('accounts:login')
 
+@csrf_exempt
 def future_result(request):
     
     if Future.objects.filter(user=request.user).first() is None:

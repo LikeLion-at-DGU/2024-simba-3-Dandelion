@@ -25,21 +25,33 @@
 
     <div class="brushandgage">
       <img class="brush" src="https://ifh.cc/g/QM8GVp.png">
-      <svg class="gage" xmlns="http://www.w3.org/2000/svg" width="519" height="16" viewBox="0 0 519 16" fill="none">
-        <path d="M7.5293 8.36621H511.492" stroke="url(#paint0_linear_2696_1296)" stroke-width="15" stroke-linecap="round"/>
-        <defs>
-          <linearGradient id="paint0_linear_2696_1296" x1="511.492" y1="8.86622" x2="7.5293" y2="8.86622" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FFB55E"/>
-            <stop offset="1" stop-color="#FF9C27"/>
-          </linearGradient>
-        </defs>
-      </svg>
+      <progress id="progress" value="1" min="0" max="100"></progress>
     </div>
 
   </div>  <!--스크린 닫는 태그-->
 
   <script>
-    setTimeout("location.href='{% url "post:talisman_end" %}'", 3000);  
+    setTimeout("location.href='{% url "post:talisman_end" %}'", 4000);  
+    // progress.js
+document.addEventListener('DOMContentLoaded', () => {
+  const progress = document.getElementById('progress');
+
+  let start = 1;
+  const end = 100;
+  const duration = 3000; // 3 seconds
+  const increment = (end - start) / (duration / 10);
+
+  const updateProgress = () => {
+      start += increment;
+      if (start <= end) {
+          progress.value = start;
+          setTimeout(updateProgress, 10);
+      }
+  };
+
+  updateProgress();
+});
+
 </script>
 
       

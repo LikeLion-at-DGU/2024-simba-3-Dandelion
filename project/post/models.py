@@ -23,7 +23,15 @@ class MyWish(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    like = models.ManyToManyField(User, related_name='likes', blank=True)
+    like_count = models.IntegerField(default=0)
+    num108_count = models.IntegerField(default=0)
+
+class SharedWish(models.Model):
+    title = models.CharField(max_length=10)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    like = models.ManyToManyField(User, related_name='sharedwish_likes', blank=True)
     like_count = models.IntegerField(default=0)
     num108_count = models.IntegerField(default=0)
 
@@ -32,5 +40,3 @@ class MyWish(models.Model):
 
     def __str__(self):
         return self.text[:10] + "..."
-class SharedWish(models.Model):
-    wish = models.ForeignKey(MyWish, on_delete=models.CASCADE, related_name='my_wish')
