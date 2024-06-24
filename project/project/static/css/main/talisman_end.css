@@ -53,20 +53,7 @@ body .onjung{
 
 }
 
-.naranhi {
-    display: flex;
-    gap: 30px;
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
 
-}
-
-.malmal {
-    width: fit-content;
-    height: fit-content;
-}
 
 #nemo {
     width: 400px;
@@ -142,5 +129,9 @@ body {
       opacity: 1; /* 100%에서 투명도 1로 변화 */
     }
   }
+
+  a {
+    text-decoration-line: none;
+}
 /*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 

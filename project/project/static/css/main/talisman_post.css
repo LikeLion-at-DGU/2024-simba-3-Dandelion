@@ -271,13 +271,16 @@ color: white;
 position: absolute;
 bottom: 10px;
 right: 10px;
+}
 
+.submit-button {
+    font-size: 20px;
 }
 
 .textbottom {
     display: flex;
-    margin-left: 458.52px;
-    margin-top: 10.45px;
+    position: relative;
+   left: -300px;
     color: #000;
     text-align: center;
     font-family: "GamtanRoad Dotum TTF";
@@ -333,5 +336,19 @@ body {
       opacity: 1; /* 100%에서 투명도 1로 변화 */
     }
   }
+
+a {
+    text-decoration-line: none;
+}
 /*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
+
+/* .content1 span {
+    color: var(--Color, #FF6A00);
+font-family: "GamtanRoad Dotum TTF";
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+} */
 
