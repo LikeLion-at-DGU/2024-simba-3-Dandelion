@@ -123,7 +123,7 @@ def likes(request, post_id):
         post.like.add(request.user)
         post.like_count += 1
         post.save()
-    return redirect('post:community_108', post.id)  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지
+    return redirect('post:community_108')  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지 # 수정: post.id 제거
 
 @csrf_exempt   
 def do_108(request):
