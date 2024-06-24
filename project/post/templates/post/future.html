@@ -21,7 +21,7 @@
         <img class="icon" alt="안뜸" src="{%static 'images/mainpage_img/img-acco.png'%}"/>
       </div>
       <div class = "text-wrapper">
-        <div class = "text-ask">나는 어떤 방향으로 나아가야 할까요?</div>
+        <div class = "text-ask1"><strong>나는 어떤 방향으로 나아가야 할까요?</strong></div>
         <div class = "text-ask">깨달음이 필요하다면 스님 아코에게 여쭤보세요.</div>
       </div>
     </div>
@@ -30,8 +30,7 @@
             {% csrf_token %}
             <div class="textbox-future">
               <textarea class="ask-acco" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기"></textarea> 
-              <a class="submit-button" href="{% url 'post:future_result' %}">
-                <button type="submit" class="submit-button">제출</button> 
+              <a href="{% url 'post:future_result' %}"><button type="submit" class="submit-button">전달하기</button> 
               </a>               
             </div>
         </form>

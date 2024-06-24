@@ -1,114 +1,101 @@
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: fit-content;
-        margin: 0;
-        background-image: url('https://ifh.cc/g/pky7cp.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;  
-    }
-    body {
-        animation: fadein 2s forwards; /* 애니메이션 실행 */
-    }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/pky7cp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 90px;
+}
+
+.screen .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
     
-    @keyframes fadein {
-        0%, 15% {
-        background-color: #ffffff;
-        opacity: 0; /* 0%부터 15%까지 투명도 유지 */
-        }
-        100% {
-        opacity: 1; /* 100%에서 투명도 1로 변화 */
-        }
-    }
-    .screen{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 1200px;
-        padding-bottom: 90px;
-    }
+}
+.screen .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+.screen .replybox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    gap: 42px;
+    padding-top: 50px;
     
-    .screen .topnav{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width : 1200px; 
-        height: 120px;
-        
-    }
-    .screen .onjung{
-        font-size: 40px;
-        font-weight: 600;
-        color: #FF6A00;
-    }
-    .screen .replybox{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 750px;
-        gap: 42px;
-        padding-top: 50px;
-        
-    }
-    .screen .flower-textbox-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        height: fit-content;
-    }
-    
-    .screen .icon-text{
-        width: fit-content;
-        height: fit-content;
-    }
-    
-    .screen .textbox{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #FFD4B4;
-        font-size: 35px;
-        font-weight: 400;
-        opacity: 0.7;
-        border: 2px solid #FFFFFF;
-        border-radius: 25px;
-        width: 800px;
-        height: 550px;
-        gap: 30px;
-    }
-    
-    .screen .reply-text{
-        color: #FFD4B4;
-        font-size: 35px;
-        font-weight: 400;
-    }
-    
-    .screen .reply-src{
-        color: #FFD4B4;
-        font-size: 25px;
-        font-weight: 400;
-    }
-    
-    .screen .botnavbar{
-        width: 100%;
-        height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 57px;
-    
-    }
-    
-    .screen .icon-menu{
-        width: fit-content;
-        height: fit-content;
-    }
-    
+}
+.screen .flower-textbox-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen .icon-text{
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen .textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFD4B4;
+    font-size: 35px;
+    font-weight: 400;
+    opacity: 0.7;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    width: 800px;
+    height: 550px;
+    gap: 30px;
+}
+
+.screen .reply-text{
+    color: #FFD4B4;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.screen .reply-src{
+    color: #FFD4B4;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.screen .botnavbar{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 57px;
+
+}
+
+.screen .icon-menu{
+    width: fit-content;
+    height: fit-content;
+}
