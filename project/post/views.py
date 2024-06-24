@@ -2,7 +2,6 @@ import random, re
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from main.models import Category, Sutra, Talisman
-import time
 
 # Create your views here.
 def split_text(text):
@@ -133,9 +132,17 @@ def do_108(request):
 def result_108(request):
     return render(request, 'post/result_108.html')
 
+def write_108(request):
+    my_wish = MyWish.objects.get(user=request.user)
+    if SharedWish.objects.filter(wish=my_wish).first() is None:
+        SharedWish.objects.create(wish=my_wish)
+
+    sharedwish = SharedWish.objects.all()
+    return render(request, 'post/community_108.html', {'sharedwishes' : sharedwish})
+
 def community_108(request):
     sharedwish = SharedWish.objects.all()
-    return render(request, 'post/community_108.html', {'wish' : sharedwish})
+    return render(request, 'post/community_108.html', {'sharedwishes' : sharedwish})
 
 def talisman(request): # POST 에 카테고리를 함께 전달
     if request.method == 'POST':
@@ -154,7 +161,7 @@ def talisman(request): # POST 에 카테고리를 함께 전달
 
 def talisman_end(request):
     talisman = Talisman.objects.get(user=request.user)
-    category = ""
+    category = talisman.talisman_category
     # 카테고리 번호를 입력 받아서 그대로 전달할 예정
     context = {
         'category' : category

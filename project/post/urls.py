@@ -16,6 +16,7 @@ urlpatterns = [
     path('delete/<int:id>', delete, name="delete"),
     path('likes/<int:post_id>', likes, name="likes"),
     path('result_108/', result_108, name="result_108"),
+    path('write_108/', write_108, name="write_108"),
     path('community_108/', community_108, name="community_108"),
     path('talisman/', talisman, name="talisman"),
     path('talisman_end/', talisman_end, name="talisman_end"),
