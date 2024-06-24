@@ -53,20 +53,7 @@ body .onjung{
 
 }
 
-.naranhi {
-    display: flex;
-    gap: 30px;
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
 
-}
-
-.malmal {
-    width: fit-content;
-    height: fit-content;
-}
 
 #nemo {
     width: 400px;
