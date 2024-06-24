@@ -1,16 +1,33 @@
-import random
+import random, re
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from main.models import Category, Sutra, Talisman
 import time
 
-
-from django.views.generic.detail import SingleObjectMixin
-from django.http import FileResponse
-from django.core.files.storage import FileSystemStorage
-from django.views import View
-
 # Create your views here.
+def split_text(text):
+    # 마지막 부분 추출 (예: "- 법구경 116장 -")
+    match = re.search(r"(- 법구경 \d+장 -)$", text)
+    
+    if match:
+        last_phrase = match.group(1)
+        main_text = text[:match.start()]
+    else:
+        last_phrase = ''
+        main_text = text
+
+    # 온점과 쉼표 기준으로 나누기 (구분자를 포함)
+    chunks = re.split(r'([.,])', main_text)
+    result_chunks = []
+    for i in range(0, len(chunks) - 1, 2):
+        result_chunks.append(chunks[i].strip() + chunks[i+1])
+    
+    # 마지막 구분자 뒤에 남아 있는 텍스트 처리
+    if len(chunks) % 2 != 0:
+        result_chunks.append(chunks[-1].strip())
+    
+    return result_chunks, last_phrase
+
 def past(request):
     if request.user.is_authenticated:
         return render(request, 'post/past.html')
@@ -26,11 +43,18 @@ def past_result(request):
     if sutras.exists():
         sutra = random.choice(sutras)
         past.my_sutra = sutra
-    past.user = request.user
+        past.user = request.user
+        past.category = Category.objects.get(id=1) # 참회로 고정
+        past.save()
+        
+        chunks, last_part = split_text(sutra.text)
     
-    past.category = Category.objects.get(id=1) # 참회로 고정
-    past.save()
-    return render(request, 'post/past_result.html', {'past' : past})
+        context = {
+            'chunks': chunks,
+            'last_part': last_part
+        }
+
+    return render(request, 'post/past_result.html', context)
 
 def start_108(request):
     return render(request, 'post/start_108.html')
@@ -60,7 +84,25 @@ def post_108(request):
         return redirect('post:init_108') 
     else:
         return render(request, 'post/post_108.html')
+    
 
+def detail_108(request, id):
+    my_wish = get_object_or_404(SharedWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
+    return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
+
+def delete(request, id):
+    # 로그인 여부 확인
+    if not request.user.is_authenticated:
+        return redirect('accounts:login')  # 로그인 페이지로 리디렉션
+
+    delete_post = get_object_or_404(SharedWish, pk=id)
+
+    # 권한 확인 (현재 사용자가 글쓴이인지 확인)
+    if request.user == delete_post.user:
+        delete_post.delete()
+        return redirect('post:community_108')  # 삭제 후 커뮤니티 목록 페이지로 이동
+    else:
+        return redirect('post:detail_108', id=id)  # 권한이 없으면 해당 글 상세 페이지로 이동
 
 def likes(request, post_id):
     post = get_object_or_404(SharedWish, id=post_id)
@@ -134,9 +176,15 @@ def future_result(request):
     if sutras.exists():
         sutra = random.choice(sutras)
         future.my_sutra = sutra
-    future.user = request.user
+        future.user = request.user
+        future.category = Category.objects.get(id=2) # 소망으로 고정
+        future.save()
+
+        chunks, last_part = split_text(sutra.text)
     
-    future.category = Category.objects.get(id=2) # 소망으로 고정
-    future.save()
-    return render(request, 'post/future_result.html', {'future' : future})
+        context = {
+            'chunks': chunks,
+            'last_part': last_part
+        }
+    return render(request, 'post/future_result.html', context)
 
