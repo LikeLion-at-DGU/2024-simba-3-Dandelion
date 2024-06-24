@@ -93,7 +93,7 @@ def post_108(request):
     
 @csrf_exempt
 def detail_108(request, id):
-    my_wish = get_object_or_404(MyWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
+    my_wish = get_object_or_404(SharedWish, pk=id)  # 게시물 조회, 없으면 404 에러 발생
     return render(request, 'post/detail_108.html', {'wish' : my_wish})  # 템플릿에 게시물 전달
 
 @csrf_exempt
@@ -146,9 +146,14 @@ def result_108(request):
 @csrf_exempt
 def write_108(request):
     my_wish = MyWish.objects.get(user=request.user)
-    SharedWish.objects.create(wish=my_wish)
-
-    sharedwish = SharedWish.objects.all()
+    SharedWish.objects.create(
+        title = my_wish.title,
+        user = my_wish.user,
+        text = my_wish.text,
+        created_at = my_wish.created_at,
+        like_count = my_wish.like_count,
+        num108_count = my_wish.num108_count
+    )
     return redirect('post:community_108')
 
 @csrf_exempt
@@ -163,6 +168,7 @@ def talisman(request): # POST 에 카테고리를 함께 전달
             Talisman.objects.create(user=request.user)
             
         talisman = Talisman.objects.filter(user=request.user).first()
+        talisman.text = request.POST['text']
         talisman.talisman_category = request.POST['category']
         talisman.save()
         context = {
