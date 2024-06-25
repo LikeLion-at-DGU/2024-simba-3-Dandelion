@@ -31,33 +31,61 @@
             font-family: 'GamtanRoadDotum';
             src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
             font-weight: normal;
-            font-style: normal;
+            font-style: normal.
         }
 
         @font-face {
             font-family: 'GamtanRoadDotum';
             src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
             font-weight: bold;
-            font-style: normal;
+            font-style: normal.
         }
 
         @font-face {
             font-family: 'GamtanRoadDotum';
             src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
             font-weight: 100;
-            font-style: normal;
+            font-style: normal.
         }
         @font-face {
             font-family: 'GamtanRoadGamtan';
             src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
-            font-weight: normal;
-            font-style: normal;
+            font-weight: normal.
+            font-style: normal.
         }
         @font-face {
             font-family: 'GamtanRoadTantan';
             src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
-            font-weight: normal;
-            font-style: normal;
+            font-weight: normal.
+            font-style: normal.
+        }
+
+        .text-108 {
+            transition: opacity 1s;
+            opacity: 0;
+            height: 50px; /* 고정 높이 설정 */
+        }
+
+        .text-108.fade-in {
+            opacity: 1;
+        }
+
+        .frame-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 200px;
+        }
+
+        .icon-108 {
+            position: absolute;
+            transition: opacity 1s;
+            opacity: 0;
+        }
+
+        .icon-108.show {
+            opacity: 1;
         }
     </style>
 </head>
@@ -68,14 +96,12 @@
         </div>
         <div class="text-top">
             <div class="textbox">
-                <div class="text-108">" 연기적 삶은 '나' 혹은 '내 삶'에 얽매임 없이</div>
-                <div class="text-108">변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다."</div>
+                <div class="text-108"></div>
             </div>
         </div>
         <div class="frame-img">
-            <img class="icon-108" alt="안뜸" src="{% static 'images/mainpage_img/student-108.png' %}"/>
-            <img class="icon-108" alt="안뜸" src="{% static 'images/mainpage_img/img-jeol.png' %}"/>
-
+            <img class="icon-108" id="image1" src="{% static 'images/mainpage_img/student-108.png' %}" alt="안뜸"/>
+            <img class="icon-108" id="image2" src="{% static 'images/mainpage_img/img-jeol.png' %}" alt="안뜸"/>
         </div>
         <div class="frame-notice">
             <div class="text-notice">작성하였던 번뇌를 다스리며 버튼을 눌러주세요</div>
@@ -99,28 +125,66 @@
         const progressBar = document.getElementById('progress-bar');
         const lotusImg = document.getElementById('lotus-img');
         const jeolButton = document.querySelector('.jeol-button');
-    
+        const images = [document.getElementById('image1'), document.getElementById('image2')];
+        let currentImageIndex = 0;
+
         function updateProgress() {
             const progress = (108 - count) * 4.1; // Calculate the progress in pixels
             const coloredBar = progressBar.querySelector('.colored-bar');
             coloredBar.style.width = `${progress}px`; // Update the width of the colored bar
             lotusImg.style.left = `${progress}px`; // Move the lotus image
         }
-    
+
+        function switchImage() {
+            images[currentImageIndex].classList.remove('show');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('show');
+        }
+
         jeolButton.addEventListener('click', function(event) {
             event.preventDefault();
             if (count > 1) {
                 count -= 1;
                 jeolButton.textContent = `${count}번 더 절하기`;
                 updateProgress();
+                switchImage();
             } else {
                 jeolButton.textContent = '완료';
                 window.location.href = "{% url 'post:result_108' %}";
             }
         });
-    
+
         progressBar.innerHTML = '<div class="colored-bar"></div>';
         updateProgress();
+
+        const texts = [
+            '" 연기적 삶은 \'나\' 혹은 \'내 삶\'에 얽매임 없이 변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다. "',
+            '" 항상 변하고 실체가 없는 허상에 대한 욕망과 집착은 모든 번뇌를 야기한다. "',
+            '" 제행무상 - 모든 것은 한결 같을 수 없으며 모두 변한다. "',
+            '" 마음을 잘 다스리는 자는 고요함을 얻고, 행복을 찾게 된다. "',
+            '" 진리의 길을 따르는 자는, 그 길이 끝날 때 큰 행복을 만날 것이다. "',
+            '" 늙음을 두려워하지 말고, 지금 이 순간을 충실히 살면, 밝은 미래가 기다리고 있다. "',
+            '" 지혜로운 사람은 바른 길을 선택하고, 그 길은 결국 그를 행복으로 인도한다. "'
+        ];
+        let currentTextIndex = 0;
+
+        function updateText() {
+            const textElement = document.querySelector('.text-108');
+            textElement.classList.remove('fade-in');
+
+            setTimeout(() => {
+                textElement.textContent = texts[currentTextIndex];
+                textElement.classList.add('fade-in');
+
+                currentTextIndex = (currentTextIndex + 1) % texts.length;
+            }, 1000);
+        }
+
+        setInterval(updateText, 5000);
+        updateText();
+
+        // 초기 이미지 설정
+        images[currentImageIndex].classList.add('show');
     });
 </script>  
 </html>
