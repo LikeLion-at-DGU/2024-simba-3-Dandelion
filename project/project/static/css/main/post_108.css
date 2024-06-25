@@ -180,6 +180,10 @@ line-height: normal;
 button {
     width: 147.149px;
 height: 62.858px;
+/* min-width: 147.149px;
+max-height: 62.858px; */
+/* width: fit-content;
+height: fit-content; */
 flex-shrink: 0;
 border-radius: 21px;
 background: #000;
@@ -195,13 +199,14 @@ height: 27.065px; */
 /* flex-shrink: 0; */
 color: #FFF;
 font-family: "GamtanRoad Dotum TTF";
-font-size: 20px;
+font-size: 18px;
 /* font-style: normal; */
 /* font-weight: 400; */
 /* line-height: normal; */
 display: flex;
+/* justify-content: center; */
+text-align: center;
 justify-content: center;
-align-items: center;
 }
 
 /*자연스러운 페이지 전환*/

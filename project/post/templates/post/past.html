@@ -6,6 +6,63 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/main/past.css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page Title</title>
+
+
+<style> <!--텍스트 입니다-->
+    @font-face {
+        font-family: 'GamtanRoadBatang';
+        src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Regular.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GamtanRoadBatang';
+        src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Bold.ttf' %}") format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GamtanRoadBatang';
+        src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Thin.ttf' %}") format('truetype');
+        font-weight: 100;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GamtanRoadDotum';
+        src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GamtanRoadDotum';
+        src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GamtanRoadDotum';
+        src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
+        font-weight: 100;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GamtanRoadGamtan';
+        src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GamtanRoadTantan';
+        src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+</style>
 </head>
 
 <body>
@@ -82,7 +139,7 @@
                 {% csrf_token %}
                 <div class="saytoaco">
                 <textarea type="text" id="review-box" name="user_text" placeholder="스님 아코께 드릴 말씀 작성하기"></textarea>
-                <a href="@@@"><button type="submit" class="submit-button" >제출</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
+                <a href="@@@"><button type="submit" class="submit-button" >전달하기</button></a> <!--a 태그 안 href= 다음에 법구경 페이지 링크 걸어주세요!-->
                 
             </form>
     </div> <!-- all 닫는 태그-->
