@@ -14,9 +14,6 @@ body{
     font-family: 'GamtanRoadDotum', sans-serif;
     font-weight: bold;
 }
-a {
-    text-decoration: none;
-}
 
 .screen{
     display: flex;
