@@ -26,6 +26,7 @@ class MyWish(models.Model):
     like_count = models.IntegerField(default=0)
     num108_count = models.IntegerField(default=0)
 
+    
 class SharedWish(models.Model):
     title = models.CharField(max_length=10)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -35,8 +36,5 @@ class SharedWish(models.Model):
     like_count = models.IntegerField(default=0)
     num108_count = models.IntegerField(default=0)
 
-    def __str__(self):
-        return self.title
-
-    def __str__(self):
-        return self.text[:10] + "..."
+    def summary(self):
+        return self.title[:7] + "..."
