@@ -22,6 +22,7 @@ def signup(request):
     return render(request, 'accounts/signup.html')
 
 
+
 # def login(request):
 #     if request.method == 'POST' :
 #         username = request.POST['username']
@@ -52,6 +53,7 @@ def login(request):
             return render(request, 'accounts/login.html', {'error': '아이디나 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
     else:
         return render(request, 'accounts/login.html')
+
 
 
 @csrf_exempt

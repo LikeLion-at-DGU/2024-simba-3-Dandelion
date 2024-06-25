@@ -100,9 +100,11 @@
                     <div class="icons">
                         <div class = "likes">
                             <img class="img-like" alt="안뜸" src="{%static 'images/mainpage_img/img-like.png'%}"/>
-                            <div class ="db_like">공감 {{ wish.like_count }}개</div>
+                            <a class ="db_like" href="{% url "post:likes" wish.id %}">공감 {{ wish.like_count }}개</a>
                         </div>
-                        <div class="delete">삭제하기</div>
+                        {% if request.user == wish.user %}
+                        <a class="delete" href="{% url "post:delete" wish.id %}">삭제하기</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

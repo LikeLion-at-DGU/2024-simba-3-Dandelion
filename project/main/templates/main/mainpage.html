@@ -63,6 +63,12 @@
     </style>
 </head>
 <body>
+
+    <audio id="background-audio" loop src="{% static 'images/mainpage_img/perfectbgm.mp3' %}" type="audio/mpeg">
+    브라우저가 audio 태그를 지원하지 않을 때 표시되는 문장
+</audio>
+
+
     <div class="screen">
         <div class="title">
             <div class="title-group">
@@ -81,9 +87,8 @@
                     
                 </div>
             </div>
-            <div class="bgm-button">
-                <img class="img-bgm" alt="안뜸" src="{% static 'images/mainpage_img/img-bgm.png' %}" />
-            </div>
+            <div class="bgm-button" id="bgm-toggle-button">
+                 <img class="img-bgm" alt="안뜸" src="{% static 'images/mainpage_img/img-bgm.png' %}" />             </div>
         </div>
         <div class="menus">
             <div class="menu-box">
@@ -131,5 +136,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const toggleButton = document.getElementById('bgm-toggle-button');
+        const backgroundAudio = document.getElementById('background-audio');
+        const imgElement = toggleButton.querySelector('img');
+    
+        toggleButton.addEventListener('click', () => {
+            if (backgroundAudio.paused) {
+                backgroundAudio.play();
+                imgElement.src = "{% static 'images/mainpage_img/Frame 159.png' %}"; // 브금이 재생될 때의 이미지
+            } else {
+                backgroundAudio.pause();
+                imgElement.src = "{% static 'images/mainpage_img/img-bgm.png' %}"; // 브금이 정지될 때의 이미지
+            }
+        });
+            
+       
+
+
+
+            
+   
+    </script>
 </body>
 </html>

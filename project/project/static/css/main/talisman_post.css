@@ -55,14 +55,16 @@ justify-content: center;
 
 .text1 {
     margin-bottom: 70px;
-    gap: 10px;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+
 }
 
 #nemobox {
     display: flex;
     justify-content: center;
     margin-bottom: 43.5px;
-    margin-top: 80.34px;
+    margin-top: 70.34px;
    
 }
 
@@ -275,6 +277,8 @@ color: white;
 position: absolute;
 bottom: 10px;
 right: 10px;
+font-family: 'GamtanRoadDotum', sans-serif;
+font-weight: bold;
 }
 
 .submit-button {

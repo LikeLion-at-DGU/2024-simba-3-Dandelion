@@ -61,6 +61,63 @@
       
           </style>
         <title>Page Title</title>
+         
+        <style>
+          @font-face {
+              font-family: 'GamtanRoadBatang';
+              src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Regular.ttf' %}") format('truetype');
+              font-weight: normal;
+              font-style: normal;
+          }
+  
+          @font-face {
+              font-family: 'GamtanRoadBatang';
+              src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Bold.ttf' %}") format('truetype');
+              font-weight: bold;
+              font-style: normal;
+          }
+  
+          @font-face {
+              font-family: 'GamtanRoadBatang';
+              src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Thin.ttf' %}") format('truetype');
+              font-weight: 100;
+              font-style: normal;
+          }
+          @font-face {
+              font-family: 'GamtanRoadDotum';
+              src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
+              font-weight: normal;
+              font-style: normal;
+          }
+  
+          @font-face {
+              font-family: 'GamtanRoadDotum';
+              src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
+              font-weight: bold;
+              font-style: normal;
+          }
+  
+          @font-face {
+              font-family: 'GamtanRoadDotum';
+              src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
+              font-weight: 100;
+              font-style: normal;
+          }
+          @font-face {
+              font-family: 'GamtanRoadGamtan';
+              src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
+              font-weight: normal;
+              font-style: normal;
+          }
+          @font-face {
+              font-family: 'GamtanRoadTantan';
+              src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
+              font-weight: normal;
+              font-style: normal;
+          }
+  
+      </style>
+    </head>
 
 <body>
   <div class = "screen">
@@ -115,19 +172,42 @@
 
       <div id="three_buttons">
       
-        <div id="btn">
+        <div id="btn" class="btn1">
           <a href="{% url "post:talisman" %}">
           <img id="btn_img" src="https://ifh.cc/g/5J2MVJ.png">
           <p id="btn_text">다시 제작하기</p>
         </a>
         </div>
 
-        <div id="btn">
+        {% if category == "1"%}
+        <div id="btn" class="btn2">
           <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
-          <p id="btn_text"><a href="{% static 'images/mainpage_img/acho.png' %}" download>부적 저장하기</a></p>
+          <p id="btn_text"><a href="{% static 'images/talisman/t1.png' %}" download>부적 저장하기</a></p>
         </div>
+        {% elif category == "2" %}
+        <div id="btn" class="btn2">
+          <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
+          <p id="btn_text"><a href="{% static 'images/talisman/t2.png' %}" download>부적 저장하기</a></p>
+        </div>
+        {% elif category == "3" %}
+        <div id="btn" class="btn2">
+          <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
+          <p id="btn_text"><a href="{% static 'images/talisman/t3.png' %}" download>부적 저장하기</a></p>
+        </div>
+        {% elif category == "4" %}
+        <div id="btn" class="btn2">
+          <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
+          <p id="btn_text"><a href="{% static 'images/talisman/t4.png' %}" download>부적 저장하기</a></p>
+        </div>
+        {% elif category == "5" %}
+        <div id="btn" class="btn2">
+          <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
+          <p id="btn_text"><a href="{% static 'images/talisman/t5.png' %}" download>부적 저장하기</a></p>
+        </div>
+        {% endif %}
+        
 
-        <div id="btn">
+        <div id="btn" class="btn3">
           <a href="{% url "main:mainpage" %}">
           <img id="btn_img" src="https://ifh.cc/g/5bDcgY.png">
           <p id="btn_text">홈으로 돌아가기</p>
