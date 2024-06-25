@@ -89,7 +89,9 @@
                             <input type="password" class="input-password" name="password" placeholder="비밀번호를 입력해주세요">
                         </div>
                     </div>
-                    <div class="error">법명 혹은 비밀번호가 틀렸습니다.</div>
+                    {% if error %}
+                    <div class="error">{{ error }}</div>
+                    {% endif %}
                     <div class="buttons">
                         <button type="submit" class="login-submit">
                             로그인

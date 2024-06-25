@@ -11,7 +11,19 @@ body{
 a {
     text-decoration: none;
 }
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+}
 
+@keyframes fadein {
+    0%, 15% {
+    background-color: #ffffff;
+    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+    opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+}
 .body{
     display: flex;
     flex-direction: column;

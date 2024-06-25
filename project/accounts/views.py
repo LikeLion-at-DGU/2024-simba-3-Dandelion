@@ -6,11 +6,11 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 @csrf_exempt
 def signup(request):
-    if request.method == 'POST' :
-        is_exist = User.objects.filter(username=request.POST['username'])
+    if request.method == 'POST':
+        is_exist = User.objects.filter(username=request.POST['username']).exists()
         if is_exist:
-            #유저 이름이 이미 존재할 때
-            return render(request, 'accounts/signup.html')
+            # 유저 이름이 이미 존재할 때 에러 메시지 전달
+            return render(request, 'accounts/signup.html', {'error': '중복입니다. 다른 법명을 입력해주세요.'})
         else:
             user = User.objects.create_user(
                 username=request.POST['username'],
@@ -18,8 +18,9 @@ def signup(request):
             )
             user.save()
             auth.login(request, user)
-            return render(request, 'main/mainpage.html')
+            return redirect('main:mainpage')
     return render(request, 'accounts/signup.html')
+
 
 # def login(request):
 #     if request.method == 'POST' :
@@ -51,6 +52,7 @@ def login(request):
             return render(request, 'accounts/login.html', {'error': '아이디나 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
     else:
         return render(request, 'accounts/login.html')
+
 
 @csrf_exempt
 def logout(request):

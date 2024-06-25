@@ -4,6 +4,7 @@ body{
     align-items: center;
     width: 100vw;
     /* height: fit-content; */
+    min-height: 1080px;
     margin: 0;
     background-image: url('https://ifh.cc/g/B3C9wK.png');
     background-position: center;

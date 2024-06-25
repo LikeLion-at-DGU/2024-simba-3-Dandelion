@@ -77,18 +77,22 @@
                     온정
                 </a>  
             </div>
+            
             <div class="text-wrapper">회원가입하기</div>
             <div class = "frame-boxes">
                 <form action="{% url 'accounts:signup' %}" method="post" class="form-login">
                     {% csrf_token %}
                     <div class="input-list">
                         <div class="username">
-                            <div class = "username-guide">
-                                <div class = "guide-text">1. 서비스 내에서 활용할 법명을 지어주세요.</div>
+                            <div class="username-guide" style="position: relative;">
+                                <div class="guide-text">1. 서비스 내에서 활용할 법명을 지어주세요.</div>
                                 <img class="icon" alt="안뜸" src="{%static 'images/mainpage_img/qm.png'%}"/>
                             </div>
+                            
                             <input type="text" class="input-username" name="username" placeholder="한글, 숫자 포함해주세요">
-                            <div class = "error">중복입니다. 다른 법명을 입력해주세요.</div>
+                            {% if error %}
+                            <div class="error">{{ error }}</div>
+                            {% endif %}
                         </div>
                         <div class="password">
                             <div class ="password-guide">
@@ -104,6 +108,18 @@
                         </button>
                     </div>
                 </form>
+                <div class="signup-notice">
+                    <div class="notice-content">
+                        <div class="line1">
+                            <div class="text1">법명이란 불교에 귀의한 사람이 수계하며 받는 이름을 뜻합니다.</div>
+                            <div class="text2">ex) 월광, 유진, 다정, 의천</div>
+                        </div>
+                        <div class="line2">
+                            <div class="text1">온정에서는 닉네임으로 사용되는 ‘모의 법명’을 자유롭게 짓고</div>
+                            <div class="text1">서비스를 즐겨주세요 :)</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

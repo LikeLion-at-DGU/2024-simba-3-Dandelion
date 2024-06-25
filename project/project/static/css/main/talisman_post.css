@@ -55,7 +55,7 @@ justify-content: center;
 
 .text1 {
     margin-bottom: 70px;
-
+    gap: 10px;
 }
 
 #nemobox {

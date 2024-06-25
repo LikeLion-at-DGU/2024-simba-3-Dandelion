@@ -10,6 +10,19 @@ body{
 a {
     text-decoration: none;
 }
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+}
+
+@keyframes fadein {
+    0%, 15% {
+    background-color: #ffffff;
+    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+    opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+}
 .body{
     display: flex;
     flex-direction: column;
@@ -19,6 +32,48 @@ a {
     position: relative;
     
 }
+.body .signup-notice{
+    display: block;
+    position: absolute;
+    margin-left: 1250.05px;
+    margin-top: -110px;
+    margin-bottom: 707.97px;
+    margin-right: 43.68px;
+    border: 1px solid #FF6A00;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    padding: 20px 30px;
+    gap: 35px;
+    
+}
+.body .notice-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 550px;
+    height: 130px;
+    gap: 35px;  
+}
+.body .icon .signup-notice {
+    display: block
+}
+.body .line1,
+.body .line2{
+    width: fit-content;
+    height: fit-content;
+    font-size: 22px;
+    font-weight: 400;
+    gap: 20px;
+}
+.body .text1{
+    color: #000000;
+}
+.body .text2{
+    color: #7f7f7f;
+}
+
 
 .body .topnav{
     display: flex;
@@ -101,6 +156,7 @@ a {
     color:#000000;
     gap: 10px;
     padding-bottom: 10px;
+    position: relative;
 }
 .body .password-guide{
     display: flex;
@@ -113,8 +169,8 @@ a {
     font-size: 30px;
 }
 .body .icon{
-    width: 26.86px;
-    height: 26.86px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .body .username,
