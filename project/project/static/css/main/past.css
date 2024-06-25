@@ -1,187 +1,174 @@
-/* body {
-    display: flex;
-    width: 1920px;
-    height: 1080px;
-    background: #FFF;
-    width: 100%; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /*배경화면 url 넣는 코드 */
-    /* background-image: url('https://ifh.cc/g/pky7cp.png');
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;  
-
-
-} */
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    /* height: fit-content; */
-    margin: 0;
-    background-image: url('https://ifh.cc/g/pky7cp.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;  
-}
-
-
-.screen{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 1200px;
-    padding-bottom: 90px;
-}
-
-body .topnav{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width : 1200px; 
-    height: 120px;
-    
-}
-
-body .onjung{
-    font-size: 40px;
-    font-weight: 600;
-    color: #FF6A00;
-}
-
-.all {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top:139.53px;
-    
-}
-
-
-.babyaco{
-    width: 218.159px;
-    height: 255.875px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 49.97px;
-}
-
-.babyaco::before {
-    content: "";
-    position: absolute;
-    width: 355.545px;
-    height: 355.545px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(252, 190, 146, 0.40) 0%, rgba(70, 57, 55, 0.12) 100%);
-    z-index: -1; /* 배경 그라디언트를 이미지 뒤로 보냄 */
-}
-
-.text_babyaco {
-    color: #FFF;
-    text-align: center;
-    
-    /* 질문11 */
-    font-family: "GamtanRoad Dotum TTF";
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 148.148% */
-}
-
-.container {
-    padding-top: 49.97px;
-}
-
-/* .review-container {
-    width: 1044.754px;
-    height: 265.978px;
-    flex-shrink: 0;
-    border-radius: 19.149px;
-background: #FFF;
-    position: relative;
-}
-
-.review-box {
-    color: #838383;
-text-align: left;
-font-family: "GamtanRoad Batang TTF";
-font-size: 23px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-align-self: flex-start; /* 버튼을 왼쪽 정렬 */
-/* }  */
-
-.saytoaco {
-    display:flex;
-    position: relative;
-
-}
-
-
-#review-box {
-    width: 1044.754px;
-    height: 265.978px;
-    flex-shrink: 0;
-    border-radius: 19.149px;
-opacity: 0.7;
-background: #FFF;
-display:flex;
-text-align: start;
-padding: 10px;
-border: none;
-
-}
-
-button {
-    width: 142.757px;
-    height: 55.591px;
-    flex-shrink: 0;
-    border-radius: 19.149px;
-    background: #2A1400;
-color: white;
-position: absolute;
-bottom: 10px;
-right: 10px;
-
-}
-
-textarea {
-    resize: none;
-    font-size: 30px;
-}
-
-textarea::placeholder {
-    font-size: 23px;
-  }
-
-/*맞추려고 하면 조상요소에 position: relative를
-자식 요소에 position:absolute를 해주면 된다.*/
-
-/*자연스러운 페이지 전환*/
-body {
-    animation: fadein 2s forwards; /* 애니메이션 실행 */
-  }
-  
-  @keyframes fadein {
-    0%, 15% {
-      background-color: #ffffff;
-      opacity: 0; /* 0%부터 15%까지 투명도 유지 */
-    }
-    100% {
-      opacity: 1; /* 100%에서 투명도 1로 변화 */
-    }
-  }
-
-  a {
-    text-decoration-line: none;
-}
-/*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
-
+        body{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin: 0;
+            background-image: url('https://ifh.cc/g/pky7cp.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'GamtanRoadDotum', sans-serif;
+            font-weight: bold;
+        }
+        body {
+            animation: fadein 2s forwards; /* 애니메이션 실행 */
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: 'GamtanRoadDotum', sans-serif;
+            font-weight: bold;
+        }
+        @keyframes fadein {
+            0%, 15% {
+            background-color: #ffffff;
+            opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+            }
+            100% {
+            opacity: 1; /* 100%에서 투명도 1로 변화 */
+            }
+        }
+        .screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1200px;
+        padding-bottom: 90px;
+        }
+        
+        .screen .topnavbar{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width : 1200px; 
+        height: 120px;
+        }
+        
+        .screen .onjung{
+        font-size: 40px;
+        font-weight: 600;
+        color: #FF6A00;
+        }
+        
+        
+        .screen .frame-icon{
+        width:1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 430px;
+        }
+        
+        .screen .icon-wrap{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .screen .icon{
+        width: fit-content;
+        height: fit-content;
+        }
+        
+        .screen .text-wrapper{
+        width: 1200px;
+        height: 88px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        }
+        
+        .screen .text-ask{
+        width: fit-content;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: #FFFFFF;
+        font-weight: 400;
+        }
+        .screen .text-ask1{
+        width: fit-content;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 800;
+        color: #FFFFFF;
+        }
+        
+        .screen .frame-userinput{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        padding-left: 75px;
+        padding-right: 75px;
+        width: 1200px;
+        height: 400px;
+        }
+        
+        .screen .form-future{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        
+        width: 1200px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        
+        .screen .textbox-future{
+            width: 1050px;
+            height: 300px;
+            position: relative;
+        }
+        
+        .screen .ask-acco{
+            width: 1050px;
+            height: 300px;
+            flex-shrink: 0;
+            border-radius: 19.149px;
+            opacity: 0.7;
+            background: #FFF;
+            display:flex;
+            font-size: 23px;
+            padding-top: 30px;
+            padding-left: 30px;
+            position: relative;
+            resize: none;
+        }
+        .ask-acco::placeholder{
+            color: #999999;
+            vertical-align: top;
+            
+            font-size: 23px;
+        }
+        
+        .screen .submit-button {
+            width: 143.47px;
+            height: 62.7px;
+            flex-shrink: 0;
+            border-radius: 19.149px;
+            background: #2A1400;
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 25px;
+            font-weight: 800;
+        
+        }
+        
+        
+        
+        

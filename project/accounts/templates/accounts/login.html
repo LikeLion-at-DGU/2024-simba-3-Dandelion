@@ -6,7 +6,61 @@
     <title>온 정</title>
     <link href="https://fonts.googleapis.com/css?family=210+Hayanbaram&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static "css/accounts/login.css" %}">
-    
+    <style>
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadGamtan';
+            src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadTantan';
+            src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
 
 </head>
 <head>
@@ -19,9 +73,9 @@
     <div class="body">
         <div class="frame-login">
             <div class = "topnav">
-                <div class = "onjung">
+                <a class="onjung" href="{% url 'main:mainpage' %}">
                     온정
-                </div>
+                </a>  
             </div>
             <div class="text-wrapper">로그인하기</div>
             <div class = "frame-boxes">
@@ -40,9 +94,7 @@
                         <button type="submit" class="login-submit">
                             로그인
                         </button>
-                        <button type="submit" class="link-signup">
-                            회원가입
-                        </button>
+                        <a class="link-signup" href="{% url 'accounts:signup' %}">회원가입</a>
                     </div>
                 </form>
             </div>

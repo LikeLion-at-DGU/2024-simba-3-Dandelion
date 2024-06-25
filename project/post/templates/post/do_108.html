@@ -1,41 +1,126 @@
 <!DOCTYPE html> <!--페이지 1-->
 {% load static %}
 <html>
-    <head>
-            <meta charset="utf-8" />    
-            <link rel="stylesheet" type="text/css" href="{% static 'css/main/do_108.css'%}"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>108배 하기</title>
-    </head>
+<head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/do_108.css'%}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>108배 하기</title>
+    <style>
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    <body>
-        <div class = "screen">
-            <div class = "topnav">
-                <a class="onjung" href="{% url 'main:mainpage' %}">
-                    온정
-                </a>  
-            </div>
-            <div class="text-top">
-                <div class = "textbox">
-                    <div class = "text-108">" 연기적 삶은 '나' 혹은 '내 삶'에 얽매임 없이</div>
-                    <div class = "text-108">변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다."</div>
-                </div>
-            </div>
-            <div class = "frame-img">
-                <img class="icon-108" alt="안뜸" src="{%static 'images/mainpage_img/student-108.png'%}"/>
-            </div>
-            <div class="frame-notice">
-                <div class="text-notice">작성하였던 번뇌를 다스리며 버튼을 눌러주세요</div>
-            </div>
-            <div class="frame-bar">
-                <div class="bar"></div>
-                <img class="img-lotus" alt="안뜸" src="{%static 'images/mainpage_img/img-lotus.png'%}"/>
-            </div>
-            <div class="frame-button">
-                <a class="jeol-button" href="{% url 'post:do_108' %}">
-                    {{count}}번 더 절하기
-                </a>
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadGamtan';
+            src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadTantan';
+            src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="topnav">
+            <a class="onjung" href="{% url 'main:mainpage' %}">온정</a>  
+        </div>
+        <div class="text-top">
+            <div class="textbox">
+                <div class="text-108">" 연기적 삶은 '나' 혹은 '내 삶'에 얽매임 없이</div>
+                <div class="text-108">변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다."</div>
             </div>
         </div>
-    </body>
+        <div class="frame-img">
+            <img class="icon-108" alt="안뜸" src="{% static 'images/mainpage_img/student-108.png' %}"/>
+            <img class="icon-108" alt="안뜸" src="{% static 'images/mainpage_img/img-jeol.png' %}"/>
+
+        </div>
+        <div class="frame-notice">
+            <div class="text-notice">작성하였던 번뇌를 다스리며 버튼을 눌러주세요</div>
+        </div>
+        <div class="frame-bar">
+            <div class="bar" id="progress-bar"></div>
+            <img class="img-lotus" id="lotus-img" alt="안뜸" src="{% static 'images/mainpage_img/img-lotus.png' %}"/>
+        </div>
+        <div class="frame-button">
+            <a class="jeol-button" href="{% url 'post:do_108' %}">
+                {{count}}번 더 절하기
+            </a>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let count = 108; // Initial count
+        const progressBar = document.getElementById('progress-bar');
+        const lotusImg = document.getElementById('lotus-img');
+        const jeolButton = document.querySelector('.jeol-button');
+    
+        function updateProgress() {
+            const progress = (108 - count) * 4.1; // Calculate the progress in pixels
+            const coloredBar = progressBar.querySelector('.colored-bar');
+            coloredBar.style.width = `${progress}px`; // Update the width of the colored bar
+            lotusImg.style.left = `${progress}px`; // Move the lotus image
+        }
+    
+        jeolButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (count > 1) {
+                count -= 1;
+                jeolButton.textContent = `${count}번 더 절하기`;
+                updateProgress();
+            } else {
+                jeolButton.textContent = '완료';
+                window.location.href = "{% url 'post:result_108' %}";
+            }
+        });
+    
+        progressBar.innerHTML = '<div class="colored-bar"></div>';
+        updateProgress();
+    });
+</script>  
 </html>

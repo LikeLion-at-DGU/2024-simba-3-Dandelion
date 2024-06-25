@@ -9,6 +9,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
 }
 body {
     animation: fadein 2s forwards; /* 애니메이션 실행 */
@@ -46,7 +51,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
+    font-family: 'GamtanRoadBatang', sans-serif;
+    font-weight: bold;
 }
 
 .screen .img-title {
@@ -66,9 +73,12 @@ body {
     font-size: 25px;
     color:#FF8128;
     font-weight: 600;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: normal;
 }
 
 .buttons a {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,10 +88,13 @@ body {
     font-size: 25px;
     color: #FF8128;
     border: 1px solid #FF8128;
-    background-color: #FFFFFF;
+    
     text-decoration: none;
     cursor: pointer;
     z-index: 1; /* Add z-index to ensure it is clickable */
+    
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 
 .buttons a:hover {

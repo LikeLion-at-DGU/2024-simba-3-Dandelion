@@ -9,6 +9,8 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
     body {
         animation: fadein 2s forwards; /* 애니메이션 실행 */
@@ -23,7 +25,9 @@ body{
         opacity: 1; /* 100%에서 투명도 1로 변화 */
         }
     }
-
+    a {
+        text-decoration: none;
+    }
 .screen{
     display: flex;
     flex-direction: column;

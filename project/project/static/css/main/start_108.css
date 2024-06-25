@@ -40,9 +40,13 @@ body{
     background-image: url('https://ifh.cc/g/B3C9wK.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover; 
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold; 
 }
-
+a {
+    text-decoration: none;
+}
 
 .screen{
     display: flex;

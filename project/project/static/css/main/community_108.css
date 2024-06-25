@@ -9,11 +9,15 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 body {
     animation: fadein 2s forwards; /* 애니메이션 실행 */
 }
-
+a {
+    text-decoration: none;
+}
 @keyframes fadein {
     0%, 15% {
     background-color: #ffffff;

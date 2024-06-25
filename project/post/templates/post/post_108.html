@@ -5,6 +5,61 @@
     <meta charset="utf-8" />    
     <link rel="stylesheet" type="text/css" href="{% static "css/main/post_108.css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadBatang';
+            src: url("{% static 'font/GamtanRoad_Batang_TTF/batang_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Regular.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Bold.ttf' %}") format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GamtanRoadDotum';
+            src: url("{% static 'font/GamtanRoad_Dotum_TTF/Dotum_Thin.ttf' %}") format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadGamtan';
+            src: url("{% static 'font/GamtanRoad_Gamtan_TTF/gamtan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GamtanRoadTantan';
+            src: url("{% static 'font/GamtanRoad_Tantan_TTF/tantan.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
 <title>Page Title</title>
 </head>
 
@@ -32,16 +87,16 @@
             </div> {% endcomment %}
 
             <div class="nemobox">
-            <form id="myform" action="your-action-url-here" method="POST">
+            <form id="myform" action="{% url "post:post_108" %}" method="POST">
                 <div>
                     <div id="name1"> <span>ㅣ</span>번뇌명 </div>
                 <div class="warning" id="warning">10글자 이내로 작성해주세요.</div>
-                    <input type="text" id="inputField" name="inputField" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
+                    <input type="text" id="inputField" name="title" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
                 </div>
                 
                 <div>
                     <div id="name2" > <span>ㅣ</span>번뇌 작성하기 </div>
-                    <textarea id="textareaField" name="textareaField" placeholder="마음 속 복잡한 번뇌들을 자유롭게 작성해주세요."></textarea>
+                    <textarea id="textareaField" name="text" placeholder="마음 속 복잡한 번뇌들을 자유롭게 작성해주세요."></textarea>
                 </div>
                 
                 <div>
@@ -49,7 +104,7 @@
                     <button type="submit">
                         <p>제출하기</p>
                     </button>
-               
+            
 
                 </div>
             </form>

@@ -9,9 +9,13 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 
-
+a {
+    text-decoration: none;
+}
 .screen{
     display: flex;
     flex-direction: column;

@@ -1,4 +1,3 @@
-
 body{ 
   display: flex;
   flex-direction: column;
@@ -10,11 +9,19 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 body {
   animation: fadein 2s forwards; /* 애니메이션 실행 */
 }
-
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'GamtanRoadDotum', sans-serif;
+  font-weight: bold;
+}
 @keyframes fadein {
   0%, 15% {
   background-color: #ffffff;
@@ -87,6 +94,7 @@ justify-content: center;
 align-items: center;
 font-size: 25px;
 color: #FFFFFF;
+font-weight: 400;
 }
 .screen .text-ask1{
 width: fit-content;
@@ -100,7 +108,7 @@ color: #FFFFFF;
 }
 
 .screen .frame-userinput{
-padding-top: 50px;
+padding-top: 30px;
 padding-bottom: 50px;
 padding-left: 75px;
 padding-right: 75px;
@@ -109,7 +117,7 @@ height: 400px;
 }
 
 .screen .form-future{
-padding-top: 50px;
+padding-top: 30px;
 padding-bottom: 50px;
 
 width: 1200px;

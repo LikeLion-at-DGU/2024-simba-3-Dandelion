@@ -2,6 +2,14 @@
 /* login page - CSS */
 body{
     background-color: #FFEFE4;
+    
+}
+body{
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
 }
 
 .body{
@@ -151,7 +159,7 @@ body{
 }
 .body .buttons{
     display: flex;
-    align-content: space-between;
+    align-content: center;
     justify-content: center;
     align-items: center;
     width: 1200px;
@@ -159,8 +167,10 @@ body{
     gap: 42px;
 }
 
-.body .login-submit,
-.body .link-signup{
+.body .login-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 450px;
     height: 90px;
@@ -170,6 +180,29 @@ body{
     font-size: 35px;
     font-weight: 600;
     border: #FF9D56;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
+.body .link-signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 90px;
+    border-radius: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    color:#FFFFFF;
+    background-color: #FF9D56;  
+    border: 1px solid #FF8128;
+    
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1; /* Add z-index to ensure it is clickable */
+    
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
+
 
 

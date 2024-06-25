@@ -3,7 +3,13 @@
 body{
     background-color: #FFEFE4;
 }
-
+body{
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
 .body{
     display: flex;
     flex-direction: column;
