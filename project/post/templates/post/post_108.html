@@ -146,7 +146,7 @@
             <form id="myform" action="{% url "post:post_108" %}" method="POST">
                 <div>
                     <div id="name1"> <span>ㅣ</span>번뇌명 </div>
-                <div class="warning" id="warning">10글자 이내로 작성해주세요.</div>
+                {% comment %} <div class="warning" id="warning">10글자 이내로 작성해주세요.</div> {% endcomment %}
                     <input type="text" id="inputField" name="title" placeholder="10글자 이내로 번뇌를 정의하여 작성해주세요.">
                 </div>
                 

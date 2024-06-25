@@ -10,7 +10,7 @@ def signup(request):
         is_exist = User.objects.filter(username=request.POST['username'])
         if is_exist:
             #유저 이름이 이미 존재할 때
-            return render(request, 'accounts/signup.html')
+            return render(request, 'accounts/signup.html', {'error': '이미 사용중인 법명입니다.'})
         else:
             user = User.objects.create_user(
                 username=request.POST['username'],
@@ -21,21 +21,6 @@ def signup(request):
             return render(request, 'main/mainpage.html')
     return render(request, 'accounts/signup.html')
 
-# def login(request):
-#     if request.method == 'POST' :
-#         username = request.POST['username']
-#         password = request.POST['password']
-
-#         user = auth.authenticate(request, username=username, password=password)
-        
-#         if user is not None:
-#             auth.login(request,user)
-#             return redirect("main:mainpage")
-#         else:
-#             return render(request, "accounts/signup.html")
-        
-#     elif request.method == 'GET' :
-#         return render(request, 'accounts/login.html')
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
@@ -48,7 +33,7 @@ def login(request):
             auth.login(request, user)
             return redirect('main:mainpage')
         else:
-            return render(request, 'accounts/login.html', {'error': '아이디나 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
+            return render(request, 'accounts/login.html', {'error': '아이디 혹은 비밀번호가 틀렸습니다. 다시 입력해주세요.'})
     else:
         return render(request, 'accounts/login.html')
 
