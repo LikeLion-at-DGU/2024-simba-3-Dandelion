@@ -58,6 +58,7 @@ body{
     width : 1200px; 
     height: 142px;
     gap: 96.87px;
+    padding-bottom: 70px;
 }
 .screen .icon-place{
     width: fit-content;
@@ -101,6 +102,10 @@ body{
     padding-top: 26.37px;
     width: 1200px;
     height: 650px;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    gap : 20px;
+    border-radius: 30px;
 
 }
 .screen .post-username{
@@ -109,20 +114,34 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    padding-bottom: 10px;
 }
 .screen .lotus-username{
-    width: fit-content;
-    height: fit-content;
+    width: 30px;
+    height: 25px;
 }
 .screen .db_username{
     width: fit-content;
     font-size: 30px;
-    font-weight: 800;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
+.screen .text-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1200px;
+    height: fit-content;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+
 .screen .post-time,
 .screen .post-title,
-.screen .post-content{
+.screen .post-content,
+.screen .content-box{
     width: 1200px;
     height: 30px;
     padding-left: 100px;
@@ -147,7 +166,7 @@ body{
 .screen .ok108{
     font-size: 25px;
     color: #FF8128;
-    font-weight: 400;
+    font-weight: 800;
 }
 .screen .long-bar {
     position: relative;
@@ -155,18 +174,22 @@ body{
     height: 0px;
     border-top: 1px solid #d9d9d9; 
 }
+.screen .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
 .screen .content-box{
     width: 1060px;
-    height: 250px;
-    padding-left: 67.36px;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 22px;
-    margin-top: 20px;
+    min-height: 250px;
+    height: fit-content;
     border: 1px solid #d9d9d9;
     border-radius: 25px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .screen .db_content{
     font-size: 22px;
@@ -175,98 +198,16 @@ body{
 
 }
 
-
-.screen .postbox{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 50px 100px;
-    position: relative;
-    align-self: stretch;
-    width: 1600px;
-    flex: 0 0 auto;
-}
-.screen .frame-post {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 500px;
-    height: 300px;
-    position: relative;
-    flex: 0 0 auto;
-}
-
-.screen .post-background {
-    width: fit-content;
-    height: fit-content;
-    position: absolute; /* 자식 요소를 절대 위치로 설정 */
-    top: 0;
-    left: 0;
-}
-
-.screen .frame-text {
-    padding-top: 75px; /* 상단 패딩 추가 */
-    width: 489px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0px;
-    position: relative;
-    z-index: 1; /* 텍스트가 배경 이미지 위에 오도록 설정 */
-    padding-right:10px;
-}
-
-.screen .post-username{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: 50px;
-    color: #000000;
-}
-
-.screen .post-time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: 40px;
-}
-.screen .db_time{
-    font-size: 19px;
-    color: #777777;
-    font-weight: 400;
-}
-.screen .post-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: 40px;
-    gap:10px;
-}
-.screen .db_title{
-    font-size: 19px;
-    color: #777777;
-    font-weight: 500;
-}
-.screen .ok108{
-    font-size: 19px;
-    color:#FF8128;
-    font-weight: 500;
-}
-
 .screen .icons{
-    width: 200px;
-    height: 50px;
     width: fit-content;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    margin-left: 110px;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 
 .screen .likes{
@@ -276,18 +217,38 @@ body{
     width: fit-content;
     height: 40px;
     gap: 10px;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+    padding-right: 10px;
 }
 .screen .img-like{
     width: fit-content;
     height: fit-content;
 }
 .screen .db_like{
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    
     color: #000000;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 
 .screen .img-detail{
     width: fit-content;
     height: fit-content;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
+.screen .deletebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+.screen .delete{
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color:#777777;
 }

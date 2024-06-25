@@ -81,10 +81,11 @@ a {
     font-size: 25px;
     color: #FF8128;
     border: 1px solid #FF8128;
-    background-color: #FFFFFF;
+
     text-decoration: none;
     cursor: pointer;
     z-index: 1; /* Add z-index to ensure it is clickable */
+
 }
 .screen .mainpage-button {
     display: flex;
@@ -96,7 +97,7 @@ a {
     font-size: 25px;
     color: #FF8128;
     border: 1px solid #FF8128;
-    background-color: #FFFFFF;
+
     text-decoration: none;
     cursor: pointer;
     z-index: 1; /* Add z-index to ensure it is clickable */

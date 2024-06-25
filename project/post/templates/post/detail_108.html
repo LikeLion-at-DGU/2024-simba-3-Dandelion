@@ -72,7 +72,7 @@
             <div class = "frametop">
                 <img class="icon-place" alt="안뜸" src="{%static 'images/mainpage_img/img-building.png'%}"/>
                 <div class="buttons">
-                    <a class="community-button" href="{% url 'post:community_108' %}">수행의 전당으로 돌아기기</a>
+                    <a class="community-button" href="{% url 'post:community_108' %}">수행의 전당으로 돌아가기</a>
                 </div>
             </div>
             <div class ="post-detail">
@@ -94,8 +94,10 @@
                     <div class="post-content">
                         <img class="img-content" alt="안뜸" src="{%static 'images/mainpage_img/img-detail-content.png'%}"/>
                     </div>
-                    <div class="content-box">
-                        <div class="db_content">{{ wish.text }}</div>
+                    <div class="box-container">
+                        <div class="content-box">
+                            <div class="db_content">{{ wish.text }}</div>
+                        </div>
                     </div>
                     <div class="icons">
                         <div class = "likes">
@@ -103,6 +105,7 @@
                             <a class ="db_like" href="{% url "post:likes" wish.id %}">공감 {{ wish.like_count }}개</a>
                         </div>
                         {% if request.user == wish.user %}
+                        <img class="img-delete" alt="안뜸" src="{%static 'images/mainpage_img/img-delete.png'%}"/>
                         <a class="delete" href="{% url "post:delete" wish.id %}">삭제하기</a>
                         {% endif %}
                     </div>
