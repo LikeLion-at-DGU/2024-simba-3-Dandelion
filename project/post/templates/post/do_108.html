@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!--페이지 1-->
+{% load static %}
+<html>
+    <head>
+            <meta charset="utf-8" />    
+            <link rel="stylesheet" type="text/css" href="{% static 'css/main/do_108.css'%}"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>108배 하기</title>
+    </head>
+
+    <body>
+        <div class = "screen">
+            <div class = "topnav">
+                <a class="onjung" href="{% url 'main:mainpage' %}">
+                    온정
+                </a>  
+            </div>
+            <div class="text-top">
+                <div class = "textbox">
+                    <div class = "text-108">" 연기적 삶은 '나' 혹은 '내 삶'에 얽매임 없이</div>
+                    <div class = "text-108">변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다."</div>
+                </div>
+            </div>
+            <div class = "frame-img">
+                <img class="icon-108" alt="안뜸" src="{%static 'images/mainpage_img/student-108.png'%}"/>
+            </div>
+            <div class="frame-notice">
+                <div class="text-notice">작성하였던 번뇌를 다스리며 버튼을 눌러주세요</div>
+            </div>
+            <div class="frame-bar">
+                <div class="bar"></div>
+                <img class="img-lotus" alt="안뜸" src="{%static 'images/mainpage_img/img-lotus.png'%}"/>
+            </div>
+            <div class="frame-button">
+                <a class="jeol-button" href="{% url 'post:do_108' %}">
+                    {{count}}번 더 절하기
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -13,8 +13,17 @@
             <div class="title-group">
                 <img class="img-title" alt="안뜸" src="{% static 'images/mainpage_img/img-title.png' %}" />
                 <div class="buttons">
+                    <!-- 로그인을 한 경우 -->
+                    {% if user.is_authenticated %}
+                    <p class="text-welcome">{{user.username}}님 환영합니다!</p>
+                    <a class="button-logout" href="{% url 'accounts:logout' %}">로그아웃</a>
+
+                    <!-- 로그인을 하지 않은 경우 -->
+                    {% else %}
                     <a class="login-button" href="{% url 'accounts:login' %}">로그인</a>
                     <a class="signup-button" href="{% url 'accounts:signup' %}">회원가입</a>
+                    {% endif %}
+                    
                 </div>
             </div>
             <div class="bgm-button">

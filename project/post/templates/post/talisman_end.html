@@ -15,35 +15,39 @@
         </a>
     </div> <!--topnav 닫는 태그-->
 
-
       <div id="acoong">
         {% if category == "1" %}
         <div class="column">
           <img class="health" alt="안뜸" src="{%static 'images/mainpage_img/health.png'%}"/>
-        <div id="nemo"></div>
-        {% endif %} <!--부적 데이터가 필요한 공간!-->
+        <div id="nemo">
+          <img class="icon-place" alt="안뜸" src="{%static 'images/mainpage_img/acho.png'%}"/>
+        </div><!--부적 데이터가 필요한 공간!-->
         </div>
 
+        {% elif category == "2" %}
        <div class="column">
           <img class="health" alt="안뜸" src="{%static 'images/mainpage_img/love.png'%}"/>
         <div id="nemo"></div> <!--부적 데이터가 필요한 공간!-->
         </div> 
 
+        {% elif category == "3" %}
         <div class="column">
           <img class="health" alt="안뜸" src="{%static 'images/mainpage_img/money.png'%}"/>
         <div id="nemo"></div> <!--부적 데이터가 필요한 공간!-->
         </div>
 
+        {% elif category == "4" %}
         <div class="column">
           <img class="health" alt="안뜸" src="{%static 'images/mainpage_img/work.png'%}"/>
         <div id="nemo"></div> <!--부적 데이터가 필요한 공간!-->
         </div>
-
+        {% elif category == "5" %}
         <div class="column">
           <img class="health" alt="안뜸" src="{%static 'images/mainpage_img/study.png'%}"/>
         <div id="nemo"></div> <!--부적 데이터가 필요한 공간!-->
         </div> 
 
+        {% endif %}
       </div>
 
       <div id="three_buttons">
@@ -57,7 +61,7 @@
 
         <div id="btn">
           <img id="btn_img" src="https://ifh.cc/g/56JHOb.png">
-          <p id="btn_text">부적 저장하기</p>
+          <p id="btn_text"><a href="{% static 'images/mainpage_img/acho.png' %}" download>부적 저장하기</a></p>
         </div>
 
         <div id="btn">

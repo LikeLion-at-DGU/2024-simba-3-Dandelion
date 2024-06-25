@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
+@csrf_exempt
 def signup(request):
     if request.method == 'POST' :
         is_exist = User.objects.filter(username=request.POST['username'])
@@ -34,6 +36,7 @@ def signup(request):
         
 #     elif request.method == 'GET' :
 #         return render(request, 'accounts/login.html')
+@csrf_exempt
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -49,6 +52,7 @@ def login(request):
     else:
         return render(request, 'accounts/login.html')
 
+@csrf_exempt
 def logout(request):
     auth.logout(request)
     return redirect("main:mainpage")

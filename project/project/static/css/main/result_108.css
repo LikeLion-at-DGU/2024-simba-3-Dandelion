@@ -1,0 +1,133 @@
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: fit-content;
+        margin: 0;
+        background-image: url('https://ifh.cc/g/7HHHlD.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;  
+    }
+    body {
+        animation: fadein 2s forwards; /* 애니메이션 실행 */
+    }
+    
+    @keyframes fadein {
+        0%, 15% {
+        background-color: #ffffff;
+        opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+        }
+        100% {
+        opacity: 1; /* 100%에서 투명도 1로 변화 */
+        }
+    }
+    .screen{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1200px;
+        padding-bottom: 90px;
+    
+    }
+    
+    .screen .topnav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width : 1200px; 
+        height: 120px;
+        
+    }
+    .screen .onjung{
+        font-size: 40px;
+        font-weight: 600;
+        color: #FF6A00;
+    }
+    .screen .frame-budda{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1200px;
+        height: 420px;
+    }
+    .screen .icon-108{
+        width: fit-content;
+        height: fit-content;
+    }
+    .screen .text-done{
+        font-size: 27px;
+        font-weight: 800;
+        color: #FF8128;
+        width: fit-content;
+        height: fit-content;
+    }
+    .screen .frame-textbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        height: 94px;
+        padding-top: 100px;
+    }
+    .screen .textbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        height: 94px;
+    }
+    .screen .text-result1{
+        font-size: 25px;
+        font-weight: 800;
+        width: fit-content;
+        height: fit-content;
+    }
+    .screen .text-result2{
+        font-size: 23px;
+        font-weight: 400;
+        width: fit-content;
+        height: fit-content;
+    }
+    .screen .frame-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1200px;
+        height: 350px;
+        padding-top: 40px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 400px;
+        gap: 35px;
+        
+    }
+    
+    .buttons a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1050px;
+        height: 75px;
+        border-radius: 20px;
+        font-size: 25px;
+        color: #FF8128;
+        border: 1px solid #FF8128;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 1; /* Add z-index to ensure it is clickable */
+    }
+    
+    .buttons a:hover {
+        background-color: #FF8128;
+        color: #FFFFFF;
+    }

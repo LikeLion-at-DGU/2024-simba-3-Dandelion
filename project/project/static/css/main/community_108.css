@@ -1,0 +1,228 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    background-image: url('https://ifh.cc/g/7HHHlD.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+}
+
+@keyframes fadein {
+    0%, 15% {
+    background-color: #ffffff;
+    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+    opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+}
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1600px;
+    padding-bottom: 90px;
+}
+
+.screen .topnav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width : 1200px; 
+    height: 120px;
+    
+}
+.screen .onjung{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF6A00;
+}
+
+.screen .frametop{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width : 1600px; 
+    height: 142px;
+    gap: 296.87px;
+}
+.screen .icon-place{
+    width: fit-content;
+    height: fit-content;
+}
+.screen .buttons{
+    width: 350px;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 12px;
+}
+.screen .do108-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 65px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #FF8128;
+    border: 1px solid #FF8128;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1; /* Add z-index to ensure it is clickable */
+}
+.screen .mainpage-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 65px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #FF8128;
+    border: 1px solid #FF8128;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1; /* Add z-index to ensure it is clickable */
+}
+
+.buttons a:hover {
+    background-color: #FF8128;
+    color: #FFFFFF;
+}
+
+.screen .postbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px 100px;
+    position: relative;
+    align-self: stretch;
+    width: 1600px;
+    flex: 0 0 auto;
+}
+.screen .frame-post {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.screen .post-background {
+    width: fit-content;
+    height: fit-content;
+    position: absolute; /* 자식 요소를 절대 위치로 설정 */
+    top: 0;
+    left: 0;
+}
+
+.screen .frame-text {
+    padding-top: 75px; /* 상단 패딩 추가 */
+    width: 489px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0px;
+    position: relative;
+    z-index: 1; /* 텍스트가 배경 이미지 위에 오도록 설정 */
+    padding-right:10px;
+}
+
+.screen .post-username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 50px;
+    color: #000000;
+}
+.screen .lotus-username{
+    width: fit-content;
+    height: fit-content;
+}
+.screen .db_username{
+    width: fit-content;
+    font-size: 22px;
+    font-weight: 800;
+}
+.screen .post-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+}
+.screen .db_time{
+    font-size: 19px;
+    color: #777777;
+    font-weight: 400;
+}
+.screen .post-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    gap:10px;
+}
+.screen .db_title{
+    font-size: 19px;
+    color: #777777;
+    font-weight: 500;
+}
+.screen .ok108{
+    font-size: 19px;
+    color:#FF8128;
+    font-weight: 500;
+}
+
+.screen .icons{
+    width: 200px;
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.screen .likes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    gap: 10px;
+}
+.screen .img-like{
+    width: fit-content;
+    height: fit-content;
+}
+.screen .db_like{
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.screen .img-detail{
+    width: fit-content;
+    height: fit-content;
+}

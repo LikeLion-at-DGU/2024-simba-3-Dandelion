@@ -13,24 +13,33 @@
     <body>
         <div class = "screen">
             <div class = "topnav">
-                <div class = "onjung">온정</div>
+                <a class="onjung" href="{% url 'main:mainpage' %}">
+                    온정
+                </a>  
             </div>
             <div class="replybox">
                 <div class = "flower-textbox-img">
                     <img class="icon-text" alt="안뜸" src="{%static 'images/mainpage_img/icon-text.png'%}"/>
                 </div>
                 <div class = "textbox">
-                    <div class = "relpy-text">선악의 결과는</div>
-                    <div class = "relpy-text">메아리와 같고 그림자와 같다</div>
-                    <div class = "relpy-text">그러므로 함부로 업을 지어</div>
-                    <div class = "relpy-text">괴로움을 불러드리지 마라 탕탕 후루후루</div>
-                    <div class = "relpy-src">[니건자경]</div>
+                    {% for chunk in chunks %}
+                        <div class = "relpy-text">{{ chunk }}</div>
+                    {% endfor %}
+                    {% if last_part %}
+                    <div class = "relpy-src"><strong>{{ last_part }}</strong></div>
+                    {% endif %}
                 </div>
+                
             </div>
             <div class = "botnavbar">
-                <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/ask-again.png'%}"/>
-                <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/save-text.png'%}"/>
-                <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/link-home.png'%}"/>
+                <!-- 이 부분 버튼 눌리게 수정 완료-->
+                <a href="{% url "post:future" %}">
+                    <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/ask-again.png'%}"/>
+                    </a>
+                    
+                    <a href="{% url "main:mainpage" %}">
+                    <img class="icon-menu" alt="안뜸" src="{%static 'images/mainpage_img/link-home.png'%}"/>
+                    </a>
             </div>
         </div>
     </body>

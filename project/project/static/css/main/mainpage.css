@@ -10,7 +10,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+body {
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
+}
 
+@keyframes fadein {
+    0%, 15% {
+    background-color: #ffffff;
+    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+    }
+    100% {
+    opacity: 1; /* 100%에서 투명도 1로 변화 */
+    }
+}
 .screen {
     display: flex;
     flex-direction: column;
@@ -47,8 +59,13 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    gap: 16px;
+    width: 600px;
+    gap: 30px;
+}
+.screen .text-welcome{
+    font-size: 25px;
+    color:#FF8128;
+    font-weight: 600;
 }
 
 .buttons a {
