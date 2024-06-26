@@ -1,39 +1,36 @@
 /* login page - CSS */
-/* login page - CSS */
-body{
+body {
     background-color: #FFEFE4;
-}
-body{
     font-family: 'GamtanRoadDotum', sans-serif;
     font-weight: bold;
+    animation: fadein 2s forwards; /* 애니메이션 실행 */
 }
+
 a {
     text-decoration: none;
-}
-body {
-    animation: fadein 2s forwards; /* 애니메이션 실행 */
 }
 
 @keyframes fadein {
     0%, 15% {
-    background-color: #ffffff;
-    opacity: 0; /* 0%부터 15%까지 투명도 유지 */
+        background-color: #ffffff;
+        opacity: 0; /* 0%부터 15%까지 투명도 유지 */
     }
     100% {
-    opacity: 1; /* 100%에서 투명도 1로 변화 */
+        opacity: 1; /* 100%에서 투명도 1로 변화 */
     }
 }
-.body{
+
+.body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
     position: relative;
-    
 }
-.body .signup-notice{
-    display: block;
+
+.body .signup-notice {
+    display: none;
     position: absolute;
     margin-left: 1250.05px;
     margin-top: -110px;
@@ -45,52 +42,52 @@ body {
     opacity: 0.9;
     padding: 20px 30px;
     gap: 35px;
-    
 }
-.body .notice-content{
+
+.body .notice-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 550px;
     height: 130px;
-    gap: 35px;  
+    gap: 35px;
 }
-.body .icon .signup-notice {
-    display: block
-}
+
 .body .line1,
-.body .line2{
+.body .line2 {
     width: fit-content;
     height: fit-content;
     font-size: 22px;
     font-weight: 400;
     gap: 20px;
 }
-.body .text1{
+
+.body .text1 {
     color: #000000;
 }
-.body .text2{
+
+.body .text2 {
     color: #7f7f7f;
 }
 
-
-.body .topnav{
+.body .topnav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width : 1200px; 
+    width: 1200px;
     height: 120px;
-    
 }
-.body .onjung{
+
+.body .onjung {
     font-size: 40px;
     font-weight: 600;
     color: #FF6A00;
 }
-.body .frame-login{
+
+.body .frame-login {
     display: flex;
-    flex-direction: column; /*여기*/
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 1200px;
@@ -99,7 +96,7 @@ body {
     flex: 0 0 auto;
 }
 
-.body .text-wrapper{
+.body .text-wrapper {
     position: relative;
     width: fit-content;
     font-family: "Pretendard-SemiBold", Helvetica;
@@ -112,9 +109,9 @@ body {
     white-space: nowrap;
 }
 
-.body .form-login{
+.body .form-login {
     display: flex;
-    flex-direction: column; /*여기*/
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 1200px;
@@ -123,9 +120,10 @@ body {
     position: relative;
     flex: 0 0 auto;
 }
-.body .frame-boxes{
+
+.body .frame-boxes {
     display: flex;
-    flex-direction: column; /*여기*/
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 1200px;
@@ -134,7 +132,8 @@ body {
     position: relative;
     flex: 0 0 auto;
 }
-.body .input-list{
+
+.body .input-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,46 +147,50 @@ body {
     background-color: #FFFFFF;
     border-radius: 40px;
 }
-.body .username-guide{
+
+.body .username-guide {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:30px;
-    color:#000000;
+    font-size: 30px;
+    color: #000000;
     gap: 10px;
     padding-bottom: 10px;
     position: relative;
 }
-.body .password-guide{
+
+.body .password-guide {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:30px;
+    font-size: 30px;
     padding-bottom: 10px;
 }
-.body .guide-text{
+
+.body .guide-text {
     font-size: 30px;
 }
-.body .icon{
+
+.body .icon {
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
 
 .body .username,
-.body .password{
+.body .password {
     width: 950px;
     height: 175px;
     gap: 50px;
 }
 
-.body .input-username{
+.body .input-username {
     width: 950px;
     height: 80px;
     border-top: #FFFFFF;
     border-left: #FFFFFF;
-    border-right: #FFFFFF ;
+    border-right: #FFFFFF;
     border-bottom: 5px solid #FAB66D;
-    
     color: #000000; /* 텍스트 색상 수정 */
     border-radius: 4px;
     padding: 0 10px; /* 좌우 패딩 추가 */
@@ -195,18 +198,15 @@ body {
     line-height: 46px; /* 높이와 동일하게 설정하여 중앙 정렬 */
     font-size: 30px;
     text-align: center;
-
 }
 
-
-.body .input-password{
+.body .input-password {
     width: 950px;
     height: 80px;
     border-top: #FFFFFF;
     border-left: #FFFFFF;
-    border-right: #FFFFFF ;
+    border-right: #FFFFFF;
     border-bottom: 5px solid #FAB66D;
-    
     color: #000000; /* 텍스트 색상 수정 */
     border-radius: 4px;
     padding: 0 10px; /* 좌우 패딩 추가 */
@@ -214,20 +214,17 @@ body {
     line-height: 46px; /* 높이와 동일하게 설정하여 중앙 정렬 */
     font-size: 30px;
     text-align: center;
-
-
 }
 
 .input-username::placeholder,
-.input-password::placeholder{
+.input-password::placeholder {
     color: #999999;
     vertical-align: middle;
     text-align: center;
     font-size: 30px;
-
 }
 
-.body .error{
+.body .error {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -237,7 +234,8 @@ body {
     font-weight: 600;
     padding-top: 10px;
 }
-.body .buttons{
+
+.body .buttons {
     display: flex;
     align-content: space-between;
     justify-content: center;
@@ -248,16 +246,14 @@ body {
 }
 
 .body .login-submit,
-.body .link-signup{
+.body .link-signup {
     position: relative;
     width: 450px;
     height: 90px;
-    color:#FFFFFF;
-    background-color: #FF9D56;  
+    color: #FFFFFF;
+    background-color: #FF9D56;
     border-radius: 20px;
     font-size: 35px;
     font-weight: 600;
     border: #FF9D56;
 }
-
-

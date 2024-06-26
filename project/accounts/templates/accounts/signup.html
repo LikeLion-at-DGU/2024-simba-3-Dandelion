@@ -86,7 +86,7 @@
                         <div class="username">
                             <div class="username-guide" style="position: relative;">
                                 <div class="guide-text">1. 서비스 내에서 활용할 법명을 지어주세요.</div>
-                                <img class="icon" alt="안뜸" src="{%static 'images/mainpage_img/qm.png'%}"/>
+                                <img id="icon" class="icon" alt="안뜸" src="{% static 'images/mainpage_img/qm.png' %}" onclick="toggleNotice()"/>
                             </div>
                             
                             <input type="text" class="input-username" name="username" placeholder="한글, 숫자 포함해주세요">
@@ -108,7 +108,7 @@
                         </button>
                     </div>
                 </form>
-                <div class="signup-notice">
+                <div class="signup-notice" id="signup-notice">
                     <div class="notice-content">
                         <div class="line1">
                             <div class="text1">법명이란 불교에 귀의한 사람이 수계하며 받는 이름을 뜻합니다.</div>
@@ -126,4 +126,15 @@
     </div>
     
 </body>
+<script>
+    function toggleNotice() {
+        var notice = document.getElementById("signup-notice");
+        if (notice.style.display === "block") {
+            notice.style.display = "none";
+        } else {
+            notice.style.display = "block";
+        }
+    }
+</script>
+
 </html>
