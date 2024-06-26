@@ -19,7 +19,7 @@ class Future(models.Model):
 
 
 class MyWish(models.Model):
-    title = models.CharField(max_length=10)
+    title = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -28,7 +28,7 @@ class MyWish(models.Model):
 
     
 class SharedWish(models.Model):
-    title = models.CharField(max_length=10)
+    title = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

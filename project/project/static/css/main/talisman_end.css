@@ -52,13 +52,18 @@ body .onjung{
     justify-content: center;
     /* margin-top: 139.53px; */
 
+
 }
 
-
+.icon-place {
+    filter: drop-shadow(0 50px 50px rgba(253, 154, 61, 0.827));
+    /* 그림자 효과 추가 */
+}
 
 #nemo {
 display: flex;
 justify-content: center;
+
 }
 
 .column {
@@ -74,6 +79,7 @@ display: inline-flex;
 justify-content: center;
 gap: 57px;
 padding-top: 31.59px;
+margin-top: 120px;
 }
 
 #btn {
