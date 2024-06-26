@@ -62,7 +62,10 @@ def past_result(request):
 
 @csrf_exempt
 def start_108(request):
-    return render(request, 'post/start_108.html')
+    if request.user.is_authenticated:
+        return render(request, 'post/start_108.html')
+    else:
+        return redirect('accounts:login')
 
 @csrf_exempt
 def init_108(request):
@@ -113,17 +116,21 @@ def delete(request, id):
 
 @csrf_exempt
 def likes(request, post_id):
-    post = get_object_or_404(SharedWish, id=post_id)
-    if request.user in post.like.all():
-        post.like.remove(request.user)
-        post.like_count -= 1
-        post.save()
 
+    if request.user.is_authenticated:
+        post = get_object_or_404(SharedWish, id=post_id)
+        if request.user in post.like.all():
+            post.like.remove(request.user)
+            post.like_count -= 1
+            post.save()
+
+        else:
+            post.like.add(request.user)
+            post.like_count += 1
+            post.save()
+        return redirect('post:detail_108', post_id)  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지 # 수정: post.id 제거
     else:
-        post.like.add(request.user)
-        post.like_count += 1
-        post.save()
-    return redirect('post:detail_108', post_id)  # 좋아요 처리 후 커뮤니티 페이지에 계속 유지 # 수정: post.id 제거
+        return redirect('accounts:login')
 
 @csrf_exempt   
 def do_108(request):
@@ -163,20 +170,24 @@ def community_108(request):
 
 @csrf_exempt
 def talisman(request): # POST 에 카테고리를 함께 전달
-    if request.method == 'POST':
-        if Talisman.objects.filter(user=request.user).first() is None:
-            Talisman.objects.create(user=request.user)
-            
-        talisman = Talisman.objects.filter(user=request.user).first()
-        talisman.text = request.POST['text']
-        talisman.talisman_category = request.POST['category']
-        talisman.save()
-        context = {
-            'talisman' : talisman
-        }
-        return render(request, 'post/talisman_ing.html', context)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            if Talisman.objects.filter(user=request.user).first() is None:
+                Talisman.objects.create(user=request.user)
+                
+            talisman = Talisman.objects.filter(user=request.user).first()
+            talisman.text = request.POST['text']
+            talisman.talisman_category = request.POST['category']
+            talisman.save()
+            context = {
+                'talisman' : talisman
+            }
+            return render(request, 'post/talisman_ing.html', context)
+        else:
+            return render(request, 'post/talisman_post.html')
     else:
-        return render(request, 'post/talisman_post.html')
+        return redirect('accounts:login')
+    
 
 @csrf_exempt
 def talisman_end(request):

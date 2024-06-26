@@ -138,17 +138,16 @@
     </div>
 
     <script>
-        const toggleButton = document.getElementById('bgm-toggle-button');
+        const toggleButton = document.querySelector('.img-bgm');
         const backgroundAudio = document.getElementById('background-audio');
-        const imgElement = toggleButton.querySelector('img');
-    
+
         toggleButton.addEventListener('click', () => {
             if (backgroundAudio.paused) {
                 backgroundAudio.play();
-                imgElement.src = "{% static 'images/mainpage_img/Frame 159.png' %}"; // 브금이 재생될 때의 이미지
+                toggleButton.src = "{% static 'images/mainpage_img/Frame 159.png' %}"; // 브금이 재생될 때의 이미지
             } else {
                 backgroundAudio.pause();
-                imgElement.src = "{% static 'images/mainpage_img/img-bgm.png' %}"; // 브금이 정지될 때의 이미지
+                toggleButton.src = "{% static 'images/mainpage_img/img-bgm.png' %}"; // 브금이 정지될 때의 이미지
             }
         });
         
