@@ -81,7 +81,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #FFD4B4;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 400;
     opacity: 0.7;
     border: 2px solid #FFFFFF;
@@ -89,18 +89,27 @@ body {
     width: 800px;
     height: 550px;
     gap: 30px;
+    font-family: "Kyobo Handwriting 2023";
+    font-style: normal;
+    font-weight: normal;
 }
 
 .screen .reply-text{
     color: #FFD4B4;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 400;
+    font-family: "Kyobo Handwriting 2023";
+    font-style: normal;
+    font-weight: normal;
 }
 
 .screen .reply-src{
     color: #FFD4B4;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 400;
+    font-family: "Kyobo Handwriting 2023";
+    font-style: normal;
+    font-weight: normal;
 }
 
 .screen .botnavbar{

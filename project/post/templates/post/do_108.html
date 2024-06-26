@@ -94,9 +94,11 @@
         <div class="topnav">
             <a class="onjung" href="{% url 'main:mainpage' %}">온정</a>  
         </div>
-        <div class="text-top">
-            <div class="textbox">
-                <div class="text-108"></div>
+        <div class="container">
+            <div class="text-top">
+                <div class="textbox">
+                    <div class="text-108"></div>
+                </div>
             </div>
         </div>
         <div class="frame-img">
@@ -127,20 +129,20 @@
         const jeolButton = document.querySelector('.jeol-button');
         const images = [document.getElementById('image1'), document.getElementById('image2')];
         let currentImageIndex = 0;
-
+    
         function updateProgress() {
             const progress = (108 - count) * 4.1; // Calculate the progress in pixels
             const coloredBar = progressBar.querySelector('.colored-bar');
             coloredBar.style.width = `${progress}px`; // Update the width of the colored bar
             lotusImg.style.left = `${progress}px`; // Move the lotus image
         }
-
+    
         function switchImage() {
             images[currentImageIndex].classList.remove('show');
             currentImageIndex = (currentImageIndex + 1) % images.length;
             images[currentImageIndex].classList.add('show');
         }
-
+    
         jeolButton.addEventListener('click', function(event) {
             event.preventDefault();
             if (count > 1) {
@@ -153,10 +155,10 @@
                 window.location.href = "{% url 'post:result_108' %}";
             }
         });
-
+    
         progressBar.innerHTML = '<div class="colored-bar"></div>';
         updateProgress();
-
+    
         const texts = [
             '" 연기적 삶은 \'나\' 혹은 \'내 삶\'에 얽매임 없이 변화의 관계로서의 열린 자세로 자유롭게 역사를 꾸려가는 것이다. "',
             '" 항상 변하고 실체가 없는 허상에 대한 욕망과 집착은 모든 번뇌를 야기한다. "',
@@ -167,24 +169,31 @@
             '" 지혜로운 사람은 바른 길을 선택하고, 그 길은 결국 그를 행복으로 인도한다. "'
         ];
         let currentTextIndex = 0;
-
+    
         function updateText() {
             const textElement = document.querySelector('.text-108');
             textElement.classList.remove('fade-in');
-
+    
             setTimeout(() => {
                 textElement.textContent = texts[currentTextIndex];
                 textElement.classList.add('fade-in');
-
+    
                 currentTextIndex = (currentTextIndex + 1) % texts.length;
             }, 1000);
         }
-
+    
+        // Set initial text immediately
+        const initialTextElement = document.querySelector('.text-108');
+        initialTextElement.textContent = texts[currentTextIndex];
+        initialTextElement.classList.add('fade-in');
+        currentTextIndex = (currentTextIndex + 1) % texts.length;
+    
         setInterval(updateText, 5000);
         updateText();
-
+    
         // 초기 이미지 설정
         images[currentImageIndex].classList.add('show');
     });
+    
 </script>  
 </html>

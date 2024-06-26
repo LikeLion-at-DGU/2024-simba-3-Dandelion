@@ -74,17 +74,32 @@ body .onjung{
 
 #text-center {
     text-align: center;
-font-family: "GamtanRoad Dotum TTF";
-font-size: 27px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 64.34px;
+    font-family: "GamtanRoad Dotum TTF";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 30px;
+    width: 1200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
 
 }
 
 .text-center1 {
     margin-bottom: 50px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+}
+.text-center2 {
+    
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
 }
 
 .text-center1 span {

@@ -61,22 +61,45 @@ a {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    height: 100px;
 }
 
+.screen .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+}
 .screen .textbox{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;  
+    height: 100px;
+
 }
 
-.screen .text-108{
+.screen .text-108 {
     font-size: 25px;
-    width: fit-content;
-    height: fit-content;
-    font-weight: 400;
+    width: 800px; /* Set a fixed width to avoid layout shifting */
+    height: 50px; /* Set a fixed height to avoid layout shifting */
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+    transition: opacity 1s;
+    opacity: 0;
+    overflow: hidden; /* Ensure overflow text is handled */
+    text-align: center; /* Center align text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
+
+.text-108.fade-in {
+    opacity: 1;
+}
+
 
 .screen .frame-img{
     display: flex;
@@ -85,6 +108,7 @@ a {
     justify-content: center;
     align-items: center;
     padding-top: 72px;  
+    
 }
 
 .screen .icon-108{
