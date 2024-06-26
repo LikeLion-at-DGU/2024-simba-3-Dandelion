@@ -137,7 +137,9 @@ body {
 /*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 
 .btn2 a{
-    color:#FF8128;
     font-family: 'GamtanRoadDotum', sans-serif;
     font-weight: bold;
+    font-size: 30px;
+    line-height: 40px; /* 133.333% */
+    color:#FF8128;
 }
