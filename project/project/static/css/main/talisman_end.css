@@ -91,16 +91,15 @@ margin-top: 120px;
 }
 
 #btn_img {
-    width: 39.75px;
-height: 40.5px;
+    width: fit-content;
+    height: fit-content;
 flex-shrink: 0;
 }
 
 #btn_text {
-    font-family: "GamtanRoad Dotum";
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
     font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 40px; /* 133.333% */
     color:#FF8128;
 
@@ -137,3 +136,8 @@ body {
 }
 /*자연스러운 페이지 전환 효과 @@@여기야 여기@@@*/
 
+.btn2 a{
+    color:#FF8128;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
+}
