@@ -66,7 +66,7 @@ body .onjung{
     color: var(--Color, #FF6A00);
 font-family: "GamtanRoad Dotum TTF";
 font-size: 27px;
-font-style: normal;
+font-style: thin;
 font-weight: 400;
 line-height: 30px;
 display: flex;
@@ -154,7 +154,7 @@ input#inputField{
     top:85.82px;
     padding-left: 20px;
     font-family: 'GamtanRoadDotum', sans-serif;
-    font-weight: bold;
+    font-weight: 800;
 
 
 
@@ -175,7 +175,7 @@ padding: 5px;
 padding-left: 20px;
 padding-top: 20px;
 font-family: 'GamtanRoadDotum', sans-serif;
-    font-weight: bold;
+    font-weight: 800    ;
 
 }
 
@@ -186,9 +186,10 @@ align-items: center;
 font-family: "GamtanRoad Dotum TTF";
 font-size: 23px;
 font-style: normal;
-font-weight: 400;
+font-weight: 800;
 line-height: normal;
 }
+
 
 button {
     width: 147.149px;
@@ -217,13 +218,16 @@ right: 59.72px;
 button{
     top: 510px;
     left: 1000px;
+    font-family: 'GamtanRoadDotum', sans-serif;
+    font-weight: bold;
 }
 button p {
     /* width: 94.5px;
 height: 27.065px; */
 /* flex-shrink: 0; */
 color: #FFF;
-font-family: "GamtanRoad Dotum TTF";
+font-family: 'GamtanRoadDotum', sans-serif;
+font-weight: 800;  
 font-size: 18px;
 /* font-style: normal; */
 /* font-weight: 400; */
