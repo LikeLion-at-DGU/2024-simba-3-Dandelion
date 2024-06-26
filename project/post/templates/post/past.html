@@ -92,4 +92,51 @@
             </div> 
         </div>
         </body>
+        <script>
+            let backgroundAudio;
+    
+            // 페이지가 언로드되기 전에 오디오 상태를 저장합니다.
+            window.addEventListener('beforeunload', () => {
+                if (backgroundAudio) {
+                    localStorage.setItem('audioCurrentTime', backgroundAudio.currentTime);
+                    localStorage.setItem('isAudioPlaying', !backgroundAudio.paused);
+                }
+            });
+            
+            // 페이지 로드 시 오디오 객체를 생성하고 상태를 복원합니다.
+            document.addEventListener('DOMContentLoaded', () => {
+                backgroundAudio = new Audio("/static/images/mainpage_img/perfectbgm.mp3"); // 적절한 경로로 수정하세요.
+                backgroundAudio.loop = true;
+            
+                const toggleButton = document.querySelector('.img-bgm');
+            
+                // 로컬 스토리지에서 저장된 재생 시간을 가져와 설정합니다.
+                const audioCurrentTime = localStorage.getItem('audioCurrentTime');
+                if (audioCurrentTime) {
+                    backgroundAudio.currentTime = parseFloat(audioCurrentTime);
+                }
+            
+                // 로컬 스토리지에서 가져온 상태에 따라 오디오를 재생 또는 정지합니다.
+                const isAudioPlaying = localStorage.getItem('isAudioPlaying') === 'true';
+                if (isAudioPlaying) {
+                    backgroundAudio.play();
+                    toggleButton.src = "/static/images/mainpage_img/Frame 159.png"; // 브금이 재생될 때의 이미지
+                } else {
+                    toggleButton.src = "/static/images/mainpage_img/img-bgm.png"; // 브금이 정지될 때의 이미지
+                }
+            
+                // 클릭 이벤트를 추가하여 오디오 재생 및 정지 기능을 구현합니다.
+                toggleButton.addEventListener('click', () => {
+                    if (backgroundAudio.paused) {
+                        backgroundAudio.play();
+                        toggleButton.src = "/static/images/mainpage_img/Frame 159.png"; // 브금이 재생될 때의 이미지
+                        localStorage.setItem('isAudioPlaying', 'true'); // 오디오 상태를 로컬 스토리지에 저장합니다.
+                    } else {
+                        backgroundAudio.pause();
+                        toggleButton.src = "/static/images/mainpage_img/img-bgm.png"; // 브금이 정지될 때의 이미지
+                        localStorage.setItem('isAudioPlaying', 'false'); // 오디오 상태를 로컬 스토리지에 저장합니다.
+                    }
+                });
+            });
+        </script>
         </html>

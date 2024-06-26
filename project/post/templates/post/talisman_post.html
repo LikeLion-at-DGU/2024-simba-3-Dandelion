@@ -154,7 +154,7 @@
             <div id="non-click" class="nemobox5" onclick="selectCategory(5)">건강</div>
         </div>
         
-        <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}">
+        <form id="review-form" class="review-container" method="post" action="{% url "post:talisman" %}" onsubmit="return validateForm()">
             {% csrf_token %}
             <input type="hidden" id="selected-category" name="category">
             <textarea class="review-box" name="text" id="review" placeholder="내용을 입력해주세요"></textarea>
@@ -172,26 +172,74 @@
                 document.querySelector('.nemobox' + category).classList.add('selected');
                 document.getElementById('selected-category').value = category;
             }
-
-
+        
+            function validateForm() {
+                if (selectedCategory === null) {
+                    alert("카테고리를 선택해주세요.");
+                    return false; // Prevent form submission
+                }
+                return true; // Allow form submission
+            }
+        
             const nonClick = document.querySelectorAll("#non-click");
-
-function handleClick(event) {
-  // div에서 모든 "click" 클래스 제거
-  nonClick.forEach((e) => {
-    e.classList.remove("click");
-  });
-  // 클릭한 div만 "click"클래스 추가
-  event.target.classList.add("click");
-}
-
-nonClick.forEach((e) => {
-  e.addEventListener("click", handleClick);
-});
+        
+            function handleClick(event) {
+                nonClick.forEach((e) => {
+                    e.classList.remove("click");
+                });
+                event.target.classList.add("click");
+            }
+        
+            nonClick.forEach((e) => {
+                e.addEventListener("click", handleClick);
+            });
+        
+            let backgroundAudio;
+        
+            window.addEventListener('beforeunload', () => {
+                if (backgroundAudio) {
+                    localStorage.setItem('audioCurrentTime', backgroundAudio.currentTime);
+                    localStorage.setItem('isAudioPlaying', !backgroundAudio.paused);
+                }
+            });
+        
+            document.addEventListener('DOMContentLoaded', () => {
+                backgroundAudio = new Audio("/static/images/mainpage_img/perfectbgm.mp3");
+                backgroundAudio.loop = true;
+        
+                const toggleButton = document.querySelector('.img-bgm');
+        
+                const audioCurrentTime = localStorage.getItem('audioCurrentTime');
+                if (audioCurrentTime) {
+                    backgroundAudio.currentTime = parseFloat(audioCurrentTime);
+                }
+        
+                const isAudioPlaying = localStorage.getItem('isAudioPlaying') === 'true';
+                if (isAudioPlaying) {
+                    backgroundAudio.play();
+                    toggleButton.src = "/static/images/mainpage_img/Frame 159.png";
+                } else {
+                    toggleButton.src = "/static/images/mainpage_img/img-bgm.png";
+                }
+        
+                toggleButton.addEventListener('click', () => {
+                    if (backgroundAudio.paused) {
+                        backgroundAudio.play();
+                        toggleButton.src = "/static/images/mainpage_img/Frame 159.png";
+                        localStorage.setItem('isAudioPlaying', 'true');
+                    } else {
+                        backgroundAudio.pause();
+                        toggleButton.src = "/static/images/mainpage_img/img-bgm.png";
+                        localStorage.setItem('isAudioPlaying', 'false');
+                    }
+                });
+            });
         </script>
+        
 
         {% comment %} <div class="textbottom">* 해당 이야기는 아무에게도 공유되지 않습니다.</div> {% endcomment %}
 
     </div> <!--스크린 닫는 태그-->
 </body>
+
 </html>
